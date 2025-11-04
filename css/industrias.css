@@ -1,0 +1,58 @@
+.industrias-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--carbon-black);
+}
+
+.industrias-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.industrias-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.industria-card {
+    background-color: var(--gray-900);
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid var(--gray-800);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+}
+
+.industria-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--lamarr-blue);
+    box-shadow: 0 10px 20px rgba(0, 174, 239, 0.1);
+}
+
+.industria-icon {
+    width: 64px;
+    height: 64px;
+    color: var(--lamarr-blue);
+    margin-bottom: 24px;
+}
+
+.industria-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.industria-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 12px;
+    color: #fff;
+}
+
+.industria-card p {
+    font-size: 1em;
+    color: var(--gray-400);
+    line-height: 1.6;
+    margin-bottom: 20px;
+}

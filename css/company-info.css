@@ -1,0 +1,374 @@
+/* Estilos para la nueva sección de introducción */
+.company-intro-section {
+    padding: 60px 0;
+    background-color: var(--white);
+    text-align: center;
+}
+
+.company-intro-section .container {
+    max-width: 900px;
+}
+
+.intro-brand {
+    display: inline-block;
+    padding: 6px 12px;
+    background-color: var(--gray-800);
+    color: var(--lamarr-blue);
+    font-weight: 600;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+.company-intro-section h1 {
+    font-size: 2.8em;
+    line-height: 1.2;
+    margin-bottom: 20px;
+    text-align: center; /* Centrado */
+}
+
+.company-intro-section .intro-subtitle {
+    font-size: 1.25em;
+    color: var(--gray-500);
+    margin-bottom: 24px;
+    text-align: center; /* Centrado */
+}
+
+.company-intro-section p {
+    font-size: 1.1em;
+    color: var(--gray-500);
+    line-height: 1.7;
+    text-align: center; /* Centrado */
+}
+
+.intro-pillars {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    text-align: left;
+    margin-top: 40px;
+}
+
+.pillar {
+    background-color: var(--gray-900);
+    border: 1px solid var(--gray-800);
+    padding: 24px;
+    border-radius: 12px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadida transición */
+}
+
+/* Efecto hover para pilares */
+.pillar:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+.pillar h3 {
+    font-size: 1.2em;
+    color: var(--carbon-black);
+    margin-bottom: 10px;
+}
+
+.pillar p {
+    font-size: 1em;
+    color: var(--gray-500);
+    margin-bottom: 0;
+}
+
+/* Estilos para el overview de soluciones */
+.solutions-overview-section {
+    padding: 80px 0;
+    background-color: var(--gray-900);
+}
+
+.solutions-overview-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 60px;
+}
+
+.solution-block {
+    background-color: var(--white);
+    border: 1px solid var(--gray-800);
+    border-radius: 16px;
+    padding: 40px;
+    margin-bottom: 40px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadida transición */
+}
+
+/* Efecto hover para bloques de solución */
+.solution-block:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
+}
+
+.solution-icon {
+    font-size: 2.5em;
+    margin-bottom: 16px;
+}
+
+.solution-block h2 {
+    text-align: left;
+    font-size: 2em;
+    margin-bottom: 8px;
+    color: var(--lamarr-blue);
+}
+
+.solution-block h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: var(--carbon-black);
+}
+
+.solution-block p {
+    font-size: 1.1em;
+    color: var(--gray-500);
+    max-width: 800px;
+    line-height: 1.7;
+}
+
+.solution-block h4 {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--carbon-black);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid var(--gray-800);
+    padding-bottom: 8px;
+}
+
+.solution-products {
+    list-style: none;
+    padding: 0;
+    columns: 2;
+    column-gap: 30px;
+}
+
+.solution-products li {
+    font-size: 1.05em;
+    color: var(--gray-500);
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.solution-products li::before {
+    content: '→';
+    position: absolute;
+    left: 0;
+    color: var(--lamarr-blue);
+    font-weight: 600;
+}
+
+.solution-ideal-for {
+    font-size: 1.1em !important;
+    font-weight: 600;
+    color: var(--carbon-black) !important;
+    background-color: var(--gray-900);
+    border: 1px solid var(--gray-800);
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 30px;
+}
+
+/* Estilos para la sección "Por qué Lamarr" */
+.why-lamarr-section {
+    padding: 80px 0;
+    background-color: var(--white);
+}
+
+.why-lamarr-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+.table-container {
+    overflow-x: auto;
+}
+
+.why-lamarr-section table {
+    width: 100%;
+    border-collapse: collapse;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--gray-800);
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.why-lamarr-section th,
+.why-lamarr-section td {
+    padding: 20px;
+    text-align: left;
+    border-bottom: 1px solid var(--gray-800);
+}
+
+.why-lamarr-section thead {
+    background-color: var(--gray-900);
+}
+
+.why-lamarr-section th {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    color: var(--carbon-black);
+}
+
+.why-lamarr-section td {
+    font-size: 1.05em;
+    color: var(--gray-500);
+}
+
+.why-lamarr-section tbody tr:last-child td {
+    border-bottom: none;
+}
+
+.why-lamarr-section tbody tr td:first-child {
+    font-weight: 600;
+    color: var(--carbon-black);
+}
+
+/* Estilos para "Cómo trabajamos" */
+.how-we-work-section {
+    padding: 80px 0;
+    background-color: var(--gray-900);
+}
+
+.how-we-work-section h2 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 50px;
+}
+
+/* --- ESTILOS REDISEÑADOS PARA "CÓMO TRABAJAMOS" --- */
+.work-steps-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    display: grid;
+    /* Se ajustará automáticamente de 1 a 4 columnas */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+}
+
+.step-card {
+    background-color: var(--white);
+    border: 1px solid var(--gray-800);
+    padding: 32px 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden; /* Para el número */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.step-number {
+    font-size: 4.5em; /* Número grande */
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    color: var(--gray-800);
+    opacity: 0.5;
+    position: absolute;
+    top: -10px;
+    left: 15px;
+    z-index: 1;
+    line-height: 1;
+    user-select: none; /* Evita que se seleccione el número */
+}
+
+.step-card h4 {
+    font-size: 1.3em;
+    color: var(--carbon-black);
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2; /* Encima del número */
+    margin-top: 20px; /* Espacio para el número */
+}
+
+.step-card p {
+    font-size: 1em;
+    color: var(--gray-500);
+    line-height: 1.6;
+    position: relative;
+    z-index: 2; /* Encima del número */
+    margin-bottom: 0;
+}
+/* --- FIN DE ESTILOS REDISEÑADOS --- */
+
+
+/* Estilos para el CTA final */
+.final-transform-section {
+    padding: 80px 0;
+    background-color: var(--lamarr-blue);
+    text-align: center;
+}
+
+.final-transform-section h2 {
+    font-size: 2.8em;
+    color: var(--carbon-black);
+    margin-bottom: 20px;
+}
+
+.final-transform-section p {
+    font-size: 1.25em;
+    color: var(--carbon-black);
+    margin-bottom: 30px;
+}
+
+.final-cta-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+
+.final-cta-links .cta-button {
+    background-color: var(--carbon-black);
+    color: var(--white);
+    padding: 14px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1em;
+    transition: all 0.3s ease;
+}
+
+.final-cta-links .cta-button:hover {
+    background-color: var(--white);
+    color: var(--carbon-black);
+    transform: scale(1.05);
+}
+
+.final-cta-links .cta-link {
+    font-size: 1.1em;
+    color: var(--carbon-black);
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.final-cta-links .cta-link:hover {
+    opacity: 0.7;
+}
+
+/* Media queries para responsividad */
+@media (max-width: 768px) {
+    .intro-pillars {
+        grid-template-columns: 1fr;
+    }
+
+    .solution-products {
+        columns: 1;
+    }
+
+    /* Ajuste para "Cómo Trabajamos" en móviles */
+    .work-steps-list {
+        grid-template-columns: 1fr; /* Una columna en móvil */
+    }
+}
+

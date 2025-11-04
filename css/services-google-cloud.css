@@ -1,0 +1,123 @@
+.services-google-cloud {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--white);
+    color: var(--carbon-black);
+}
+
+.services-google-cloud h1 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    color: var(--carbon-black);
+    position: relative;
+    padding-bottom: 10px;
+}
+
+.services-google-cloud h1::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background-color: var(--lamarr-blue);
+}
+
+.services-google-cloud p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    color: var(--gray-500);
+}
+
+.service-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    margin-bottom: 40px;
+    padding: 0 20px;
+}
+
+.service-item:nth-child(-n + 3) { 
+    grid-row: 1 / 2;
+}
+
+.service-item:nth-child(4) {
+    grid-column: 1 / 2; 
+    grid-row: 2 / 3; 
+}
+
+.service-item:nth-child(5) {
+    grid-column: 3 / 4; 
+    grid-row: 2 / 3; 
+}
+
+.service-item {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--gray-800);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.service-item h3 {
+    margin-bottom: 15px;
+    color: var(--lamarr-blue);
+    font-size: 1.5em;
+    position: relative;
+    padding-bottom: 8px;
+}
+
+.service-item h3::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--lamarr-blue);
+}
+
+.service-item p {
+    margin-bottom: 20px;
+    font-size: 1em;
+    line-height: 1.6;
+    color: var(--gray-500);
+}
+
+.trust-message {
+    font-weight: 600;
+    font-size: 1.2em;
+    color: var(--lamarr-blue);
+    padding: 0 20px;
+}
+
+.contact-button-container {
+    text-align: center;
+    margin-top: 40px;
+  }
+  
+  .contact-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--lamarr-blue);
+    color: #fff; 
+    text-decoration: none;
+    border-radius: 5px; 
+    font-weight: bold; 
+    transition: background-color 0.3s ease; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+  }
+  
+  .contact-button:hover {
+    background-color: #009ad6;
+  }
+

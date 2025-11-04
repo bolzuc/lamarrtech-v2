@@ -1,0 +1,141 @@
+.soluciones-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--gray-900);
+}
+
+.soluciones-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+.section-subtitle {
+    font-size: 1.2em;
+    color: var(--gray-500);
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+    line-height: 1.6;
+}
+
+.soluciones-grid {
+    display: none;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-content: center;
+}
+
+.solucion-card {
+    background-color: var(--white);
+    padding: 32px;
+    border-radius: 12px;
+    border: 1px solid var(--gray-800);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+    text-align: left;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.solucion-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--lamarr-blue);
+    box-shadow: 0 10px 20px rgba(0, 174, 239, 0.1);
+}
+
+.solucion-icon {
+    height: 64px;
+    width: auto;
+    margin-bottom: 24px;
+}
+
+.solucion-icon-svg {
+    height: 64px;
+    width: 64px;
+    margin-bottom: 24px;
+    color: var(--lamarr-blue);
+}
+
+.solucion-icon-svg svg {
+    width: 100%;
+    height: 100%;
+}
+
+.solucion-card h3 {
+    font-size: 1.5em;
+    margin-bottom: 12px;
+    color: var(--carbon-black);
+}
+
+.solucion-card p {
+    font-size: 1em;
+    color: var(--gray-500);
+    line-height: 1.6;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.solucion-link {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    color: var(--lamarr-blue);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.solucion-link:hover {
+    color: var(--carbon-black);
+}
+
+.swiper-container.solutions-carousel {
+    width: 100%;
+    padding-bottom: 50px;
+}
+
+.swiper-slide {
+    display: flex;
+    justify-content: center;
+    height: auto;
+}
+
+.swiper-pagination-bullet {
+    background-color: var(--gray-400);
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: var(--lamarr-blue);
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--lamarr-blue);
+    transition: opacity 0.3s ease;
+}
+
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 2rem;
+}
+
+.swiper-button-disabled {
+    opacity: 0.3;
+}
+
+
+.services,
+.service-cards,
+.service-card,
+.service-link,
+.service-section,
+.service-carousel,
+.service-content,
+.service-image,
+.service-details,
+.contact-section-services,
+.google-cloud-card,
+.infinity-symbol-inline {
+    display: none;
+}
+
+

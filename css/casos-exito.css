@@ -1,0 +1,122 @@
+.casos-exito {
+    padding: 80px 0; 
+    text-align: left; 
+    background-color: var(--white); 
+}
+
+.casos-exito h1 {
+    font-size: 3.5em; 
+    margin-bottom: 40px; 
+    color: var(--carbon-black); 
+    font-weight: bold; 
+    text-align: center; 
+}
+
+.casos-exito .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.casos-lista {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px; 
+}
+
+.caso {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+    border: 1px solid var(--gray-800);
+}
+
+.caso:hover {
+    transform: translateY(-5px);
+}
+
+.caso img {
+    max-width: 100%; 
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 8px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+}
+
+.caso h2 {
+    font-size: 2em; 
+    color: var(--lamarr-blue); 
+    margin-bottom: 10px;
+    transition: color 0.3s ease; 
+}
+
+.caso:hover h2 {
+    color: #009ad6; 
+}
+
+.caso p {
+    font-size: 1.1em; 
+    line-height: 1.6;
+    color: var(--gray-500);
+    margin-bottom: 15px;
+}
+
+.resultados {
+    margin-bottom: 20px;
+}
+
+.resultados h3 {
+    color: var(--lamarr-blue); 
+    margin-bottom: 10px;
+}
+
+.resultados ul {
+    list-style: disc; 
+    padding-left: 20px; 
+    color: var(--gray-500);
+}
+
+.leer-mas {
+    display: inline-block;
+    padding: 10px 20px; 
+    background-color: var(--lamarr-blue);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-weight: bold; 
+}
+
+.leer-mas:hover {
+    background-color: #009ad6; 
+}
+
+.paginacion {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px; 
+}
+
+.pagina {
+    display: inline-block;
+    padding: 10px 20px; 
+    margin: 0 5px;
+    text-decoration: none;
+    color: var(--lamarr-blue); 
+    border: 1px solid var(--gray-800);
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagina:hover,
+.pagina.activa {
+    background-color: var(--lamarr-blue);
+    color: #fff;
+}
+
+.pagina.activa {
+    border-color: var(--lamarr-blue);
+}
+

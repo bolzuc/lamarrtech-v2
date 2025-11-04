@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lamarr Tech - Hub de Soluciones</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/industrias.css">
+    <link rel="stylesheet" href="css/knowledge-hub.css">
+    <link rel="stylesheet" href="css/partners-section.css">
+    <link rel="stylesheet" href="css/company-info.css">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body class="loading">
+
+    <div id="loading-container">
+        <img src="img/infinito.gif" alt="Cargando..." id="loading-gif">
+        <div id="loading-bar">
+            <div id="loading-progress"></div>
+        </div>
+    </div>
+
+    <header>
+        <div class="container">
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#soluciones">Soluciones</a>
+                        <ul class="dropdown-content">
+                            <!-- CORREGIDO: Enlaces a páginas, no a anclas -->
+                            <li><a href="services.html">Lamarr Cloud</a></li>
+                            <li><a href="services-google-cloud.html">Lamarr Data + AI</a></li>
+                            <li><a href="services-sap.html">Lamarr SAP</a></li>
+                            <li><a href="services-sap.html">Integración (MDDS)</a></li>
+                            <li><a href="contact.html">Cybersecurity (Acronis)</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="javascript:void(0);">Industrias</a>
+                        <ul class="dropdown-content">
+                            <!-- CORREGIDO: Enlaces desactivados y marcados como "Próximamente" -->
+                            <li><a href="javascript:void(0);" style="cursor: default; color: #9ca3af;">Retail (Próximamente)</a></li>
+                            <li><a href="javascript:void(0);" style="cursor: default; color: #9ca3af;">Manufactura (Próximamente)</a></li>
+                            <li><a href="javascript:void(0);" style="cursor: default; color: #9ca3af;">Finanzas (Próximamente)</a></li>
+                            <li><a href="javascript:void(0);" style="cursor: default; color: #9ca3af;">Gobierno (Próximamente)</a></li>
+                            <li><a href="javascript:void(0);" style="cursor: default; color: #9ca3af;">Salud (Próximamente)</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#ecosistema">Ecosistema</a></li>
+                    <!-- CORREGIDO: Enlace a casos-exito.html -->
+                    <li><a href="casos-exito.html">Centro de Conocimiento</a></li>
+                    <li><a href="contact.html" class="cta-button">Agenda tu Demo</a></li>
+                </ul>
+            </nav>
+            <div class="logo">
+                <a href="index.html"><img src="img/logo-azul-oscuro.png" alt="Lamarr Tech Logo"></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero" id="hero">
+            <video autoplay loop muted playsinline class="hero-video" poster="https://placehold.co/1920x1080/0D0D0D/0D0D0D?text=Video+Loop">
+                <!-- <source src="tu-video.mp4" type="video/mp4"> -->
+            </video>
+            <div class="hero-scrim"></div>
+            <div class="hero-content">
+                <div class="container">
+                    <h1 class="typing-effect">Soluciones inteligentes para un mundo conectado.</h1>
+                    <p>Centralizamos la innovación para que puedas aprender, conectar y resolver los desafíos más complejos de tu negocio.</p>
+                    <div class="hero-cta">
+                        <a href="#soluciones" class="cta-button-hero secondary">Explora Soluciones</a>
+                        <a href="contact.html" class="cta-button-hero primary">Agenda una demo gratuita</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- AÑADIDA CLASE DE ANIMACIÓN -->
+        <section class="company-intro-section slide-up-fade" id="soluciones">
+            <div class="container">
+                <div class="company-intro-header">
+                    <h2>Sobre LAMARR TECH</h2>
+                    <h3>Tecnología que se siente simple. Resultados que se notan.</h3>
+                    <p>En Lamarr Tech ayudamos a las empresas a conectarse, protegerse y evolucionar en la era digital, combinando nube, datos, inteligencia artificial e integración.</p>
+                    <p>Somos una empresa multicloud y multidisciplinaria, partner de Huawei Cloud, Google Cloud y AWS, con amplia experiencia en ecosistemas SAP y plataformas empresariales. Nuestro compromiso es simple: que la tecnología trabaje para ti, no al revés.</p>
+                </div>
+
+                <div class="company-vision-promise">
+                    <div class="vision-card">
+                        <h4>NUESTRA VISIÓN</h4>
+                        <p>Ser el aliado tecnológico que simplifica lo complejo y transforma los datos en decisiones.</p>
+                    </div>
+                    <div class="vision-card">
+                        <h4>NUESTRA PROMESA</h4>
+                        <p>Innovamos para que tu empresa opere sin interrupciones, con información confiable, procesos conectados y seguridad garantizada.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AÑADIDA CLASE DE ANIMACIÓN -->
+        <section class="solutions-lines-section slide-up-fade">
+            <div class="container">
+                <h2 style="text-align: center;">NUESTRAS LÍNEAS DE SOLUCIÓN</h2>
+
+                <article class="solution-item" id="solucion-cloud">
+                    <div class="solution-header">
+                        <span class="solution-icon"></span>
+                        <a href="services.html"><h3>LAMARR | CLOUD</h3></a>
+                        <p class="solution-subtitle">Tu nube, a tu manera.</p>
+                    </div>
+                    <div class="solution-body">
+                        <p>Ayudamos a las empresas a migrar, administrar y optimizar su infraestructura en la nube, con soluciones híbridas, multi-nube y seguras.</p>
+                        <p>Somos partners de Huawei Cloud, Google Cloud y AWS, por lo que diseñamos la nube ideal según tus necesidades, no las del proveedor.</p>
+                        <h4>Productos y servicios</h4>
+                        <ul>
+                            <li>LAMARR | CLOUD MIGRATION → Migra tus sistemas (SAP, ERP, web o bases de datos) de forma segura y planificada.</li>
+                            <li>LAMARR | CLOUD MANAGED SERVICES → Supervisamos y optimizamos tu infraestructura en la nube 24×7.</li>
+                            <li>LAMARR | CLOUD SECURE → Protege tu entorno con firewalls, cifrado y políticas de seguridad Zero Trust.</li>
+                            <li>LAMARR | CLOUD HYBRID & MULTI → Combina lo mejor de cada nube (AWS, GCP, Huawei).</li>
+                            <li>LAMARR | CLOUD OPTIMIZE → Mejora rendimiento y reduce costos con prácticas FinOps.</li>
+                            <li>LAMARR | CLOUD INTEGRATION → Conecta tus sistemas SAP y datos a tu entorno cloud.</li>
+                            <li>LAMARR | CLOUD 360 → Servicio integral: migración, gestión, seguridad y optimización.</li>
+                        </ul>
+                        <p class="solution-ideal">📌 Ideal para empresas que buscan escalar sin perder control, reducir costos y aumentar agilidad.</p>
+                    </div>
+                </article>
+
+                <article class="solution-item" id="solucion-integrate">
+                    <div class="solution-header">
+                        <span class="solution-icon"></span>
+                        <a href="services-sap.html"><h3>LAMARR | INTEGRATE</h3></a>
+                        <p class="solution-subtitle">Haz que todos tus sistemas hablen el mismo idioma.</p>
+                    </div>
+                    <div class="solution-body">
+                        <p>Integramos SAP, CRM, plataformas web, legacy y APIs en un solo ecosistema conectado.</p>
+                        <p>Diseñamos flujos de datos inteligentes y seguros usando SAP CPI, SAP Integration Suite, API Management e iPaaS.</p>
+                        <h4>Productos y servicios</h4>
+                        <ul>
+                            <li>LAMARR | CONNECT API → Desarrollo y gestión de APIs entre SAP, CRM y plataformas externas.</li>
+                            <li>LAMARR | FLOW INTEGRATION → Automatización de flujos de datos y procesos sin intervención manual.</li>
+                            <li>LAMARR | CLOUD / HYBRID INTEGRATION → Conectividad entre entornos locales y nubes.</li>
+                            <li>LAMARR | DATA INTEGRATE & ANALYTICS READY → Prepara tus datos SAP para analítica y modelos de IA.</li>
+                            <li>LAMARR | INTEGRATE 360 → Conecta, automatiza y analiza todo tu ecosistema empresarial.</li>
+                        </ul>
+                        <p class="solution-ideal">📌 Ideal para empresas con SAP que quieren integrar todo su ecosistema sin fricción.</p>
+                    </div>
+                </article>
+
+                <article class="solution-item" id="solucion-data">
+                    <div class="solution-header">
+                        <span class="solution-icon"></span>
+                        <a href="services-google-cloud.html"><h3>LAMARR | DATA + AI</h3></a>
+                        <p class="solution-subtitle">Convierte tus datos en decisiones inteligentes.</p>
+                    </div>
+                    <div class="solution-body">
+                        <p>Los datos por sí solos no sirven. Te ayudamos a capturarlos, ordenarlos y convertirlos en inteligencia accionable.</p>
+                        <p>Creamos arquitecturas modernas con Data Lakes, dashboards y modelos predictivos para que veas lo que está pasando… y lo que viene.</p>
+                        <h4>Productos y servicios</h4>
+                        <ul>
+                            <li>LAMARR | DATALAKE → Centraliza todos tus datos (SAP, ERP, web, Excel, APIs) en un solo lugar.</li>
+                            <li>LAMARR | INSIGHTS → Dashboards automáticos para visualizar ventas, clientes, operaciones y más.</li>
+                            <li>LAMARR | PREDICT → Modelos de IA que anticipan demanda, rotación o fallas.</li>
+                            <li>LAMARR | DECISION AI → Recomendaciones inteligentes para tomar mejores decisiones.</li>
+                            <li>LAMARR | DATA 360 → Solución integral: DataLake + IA + Analítica en un solo entorno.</li>
+                        </ul>
+                        <p class="solution-ideal">📌 Ideal para empresas que quieren usar sus datos para crecer, no solo almacenarlos.</p>
+                    </div>
+                </article>
+
+                <article class="solution-item" id="solucion-secure">
+                    <div class="solution-header">
+                        <span class="solution-icon"></span>
+                        <a href="contact.html"><h3>LAMARR | SECURE</h3></a>
+                        <p class="solution-subtitle">Protección inteligente para tu negocio.</p>
+                    </div>
+                    <div class="solution-body">
+                        <p>Tu información es tu activo más valioso.</p>
+                        <p>Con LAMARR | SECURE, ofrecemos soluciones de respaldo, continuidad y ciberprotección basadas en Acronis, bajo marca blanca Lamarr Tech.</p>
+                        <h4>Productos y servicios</h4>
+                        <ul>
+                            <li>LAMARR | BACKUP → Copias automáticas y cifradas en la nube.</li>
+                            <li>LAMARR | DRaaS → Recuperación ante desastres para que tu negocio nunca se detenga.</li>
+                            <li>LAMARR | ENDPOINT DEFENSE → Protección de equipos y servidores con IA.</li>
+                            <li>LAMARR | SAAS PROTECT → Backup para Microsoft 365, Google Workspace y más.</li>
+                            <li>LAMARR | MONITOR 24x7 → SOC & NOC gestionados para detección y respuesta a incidentes.</li>
+                            <li>LAMARR | COMPLIANCE & AUDIT → Auditorías, reportes y cumplimiento normativo.</li>
+                            <li>LAMARR | SECURE 360 → Seguridad completa: backup, DR, endpoint y monitoreo en una sola solución.</li>
+                        </ul>
+                        <p class="solution-ideal">📌 Ideal para empresas que necesitan continuidad, protección y confianza digital.</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- AÑADIDA CLASE DE ANIMACIÓN -->
+        <section class="why-choose-section slide-up-fade">
+            <div class="container">
+                <h2>¿POR QUÉ ELEGIR LAMARR TECH?</h2>
+                <div class="why-table-wrapper">
+                    <table class="why-table">
+                        <thead>
+                            <tr>
+                                <th>Valor diferencial</th>
+                                <th>Qué significa para el cliente</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Multicloud Partner</td>
+                                <td>Elegimos la nube que más te conviene (Huawei, GCP o AWS).</td>
+                            </tr>
+                            <tr>
+                                <td>Integración SAP-nativa</td>
+                                <td>Conectamos datos y procesos directamente con SAP.</td>
+                            </tr>
+                            <tr>
+                                <td>Data + AI con sentido práctico</td>
+                                <td>Analizamos tus datos con IA para resolver problemas reales.</td>
+                            </tr>
+                            <tr>
+                                <td>Seguridad avanzada Acronis</td>
+                                <td>Protección total de tus sistemas, información y usuarios.</td>
+                            </tr>
+                            <tr>
+                                <td>Equipo con +20 años en tecnología SAP</td>
+                                <td>Experiencia comprobada en proyectos de migración, integración y nube.</td>
+                            </tr>
+                            <tr>
+                                <td>Soporte cercano y humano</td>
+                                <td>Hablamos tu idioma. Respondemos rápido. Nos importan tus resultados.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- AÑADIDA CLASE DE ANIMACIÓN Y HTML MODIFICADO -->
+        <section class="how-we-work-section slide-up-fade">
+            <div class="container">
+                <h2>CÓMO TRABAJAMOS</h2>
+                <ol class="work-steps-list">
+                    <li class="step-card">
+                        <span class="step-number">01</span>
+                        <h4>Diagnóstico gratuito</h4>
+                        <p>Evaluamos tu entorno actual y objetivos de negocio sin costo.</p>
+                    </li>
+                    <li class="step-card">
+                        <span class="step-number">02</span>
+                        <h4>Diseño de solución</h4>
+                        <p>Definimos una propuesta técnica-comercial ajustada a tu presupuesto.</p>
+                    </li>
+                    <li class="step-card">
+                        <span class="step-number">03</span>
+                        <h4>Implementación ágil</h4>
+                        <p>Desarrollamos e integramos por fases, con mínima interrupción operativa.</p>
+                    </li>
+                    <li class="step-card">
+                        <span class="step-number">04</span>
+                        <h4>Soporte y optimización</h4>
+                        <p>Acompañamos tu crecimiento con soporte 24/7 y mejora continua.</p>
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <section class="final-cta-section" id="conocimiento">
+            <div class="container">
+                <h2>TRANSFORMA TU NEGOCIO CON LAMARR TECH</h2>
+                <p>La innovación no debería ser complicada. Nosotros la hacemos simple, segura y rentable.</p>
+                <div class="final-cta-links">
+                    <a href="contact.html" class="cta-button">Agenda una conversación con nuestros expertos</a>
+                    <div class="secondary-links">
+                        <a href="casos-exito.html">Ver casos de éxito</a>
+                        <span>|</span>
+                        <a href="contact.html">Contacto</a>
+                        <span>|</span>
+                        <a href="#">Descargar brochure</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- REORDENADO: Sección de Socios movida aquí -->
+        <section class="partners-section slide-up-fade" id="ecosistema">
+            <div class="container">
+                <h2>Socios Tecnológicos de Confianza</h2>
+                <p>Nuestras alianzas estratégicas con líderes tecnológicos mundiales, combinadas con nuestro profundo conocimiento del mercado local, nos permiten ofrecerte innovación de vanguardia con soporte cercano y financiamiento adaptado a tu realidad.</p>
+                <div class="partners-container">
+                    <div class="partners-band">
+                        <div class="partner-group">
+                            <div class="partner-item"><img src="img/logo-google.png" alt="Logo Google"></div>
+                        </div>
+                        <div class="partner-group">
+                            <div class="partner-item"><img src="img/aws-logo.png" alt="Logo AWS"></div>
+                        </div>
+                        <div class="partner-group">
+                            <div class="partner-item"><img src="img/logo-licencia-on-line.png" alt="Logo Licencias On Line"></div>
+                        </div>
+                        <div class="partner-group">
+                            <div class="partner-item"><img src="img/sap-icon.png" alt="Logo SAP"></div>
+                        </div>
+                        <div class="partner-group">
+                            <div class="partner-item"><img src="img/logo-ubuntu.png" alt="Logo Ubuntu"></div>
+                        </div>
+                        <div class="partner-group">
+                            <div class="partner-item"><img src="img/logo-mercado-publico.png" alt="Logo Mercado Público"></div>
+                        </div>
+                        <div class="partner-group">
+                            <div class="partner-item"><img src="img/logo-noventiq.png" alt="Logo Noventiq"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Lamarr Tech. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
+

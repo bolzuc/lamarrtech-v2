@@ -1,0 +1,29 @@
+/* Smartphones pequeños */
+@media (max-width: 480px) {
+    nav ul {
+      display: none;
+    }
+    .mobile-menu {
+      display: block; 
+    }
+    .column {
+      width: 100%; 
+    }
+  }
+  
+  /* Tablets */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .column {
+      width: 50%; 
+    }
+    .hero-image {
+      width: 80%; 
+    }
+  }
+  
+  /* Pantallas de escritorio */
+  @media (min-width: 1025px) {
+    .column {
+      width: 33.33%;
+    }
+  }
