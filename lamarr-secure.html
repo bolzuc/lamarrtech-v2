@@ -8,6 +8,38 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/services-sap.css">
+    <style>
+        .service-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px;
+            margin-bottom: 40px;
+            padding: 0;
+        }
+        .secure-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        .secure-section h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .secure-section .page-description {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto 50px auto;
+            color: var(--color-text-secondary);
+        }
+        .section-subtitle {
+            font-size: 2.2em;
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: 30px;
+            font-weight: 600;
+            color: var(--color-text);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -30,18 +62,49 @@
     </header>
 
     <main>
-        <section style="padding: 80px 0; text-align: center;">
+        <section class="secure-section">
             <div class="container">
-                <h1 style="font-size: 3em;">LAMARR | SECURE</h1>
-                <p style="font-size: 1.2em; max-width: 700px; margin: 20px auto;">Ciberprotección nativa para tu negocio. Basado en Acronis Cyber Protect Cloud, protegemos tus datos, aplicaciones y sistemas con una plataforma integrada de backup, DR y seguridad avanzada.</p>
-                <a href="contact.html" class="btn-primary" style="margin-top: 20px;">Contactar a Ventas</a>
+                <h1>LAMARR | SECURE</h1>
+                <p class="page-description">Ciberprotección nativa para tu negocio. Basado en Acronis Cyber Protect Cloud, protegemos tus datos, aplicaciones y sistemas con una plataforma integrada de backup, DR, seguridad avanzada y monitoreo continuo.</p>
+                
+                <h2 class="section-subtitle">Productos y Servicios de Ciberprotección</h2>
+                <div class="service-details">
+                    <div class="service-detail-card">
+                        <h3>Cyber Backup & Recovery</h3>
+                        <p>Copias de seguridad rápidas y fiables de cualquier carga de trabajo. Almacenamiento seguro en Acronis Cloud, AWS, GCP o local, con restauración instantánea de datos críticos.</p>
+                    </div>
+                    <div class="service-detail-card">
+                        <h3>Disaster Recovery (DRaaS)</h3>
+                        <p>Recuperación ante desastres como servicio. Minimice el tiempo de inactividad y garantice la continuidad del negocio con conmutación por error a la nube de Acronis.</p>
+                    </div>
+                    <div class="service-detail-card">
+                        <h3>Advanced Security</h3>
+                        <p>Protección proactiva contra ransomware y malware impulsada por IA. Antivirus, antimalware y análisis de vulnerabilidades en una sola solución.</p>
+                    </div>
+                    <div class="service-detail-card">
+                        <h3>Endpoint Defense</h3>
+                        <p>Protección inteligente en cada dispositivo. Protección con IA para estaciones de trabajo y servidores contra malware, phishing y amenazas desconocidas.</p>
+                    </div>
+                    <div class="service-detail-card">
+                        <h3>SaaS Protect</h3>
+                        <p>Protección completa para Microsoft 365 y Google Workspace. Garantizamos backups nube a nube para correos, archivos (OneDrive, SharePoint) y colaboraciones (Teams).</p>
+                    </div>
+                    <div class="service-detail-card">
+                        <h3>SOC & NOC 24x7</h3>
+                        <p>Monitoreamos tu seguridad todo el tiempo. Nuestro centro de operaciones supervisa infraestructura, aplicaciones y eventos de seguridad en tiempo real.</p>
+                    </div>
+                </div>
+
+                <div class="contact-button-container" style="margin-top: 30px;">
+                    <a href="contact.html" class="btn-primary">Agenda una evaluación</a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Lamarr Tech. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Lamarr Tech. Todos los derechos reservados.</p>
         </div>
     </footer>
 </body>

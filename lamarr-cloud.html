@@ -8,6 +8,50 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/footer.css">
+    <style>
+        .cloud-section {
+            padding: 80px 0;
+        }
+        .cloud-section h1 {
+            text-align: center;
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .cloud-section .page-description {
+            text-align: center;
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto 60px auto;
+            color: var(--color-text-secondary);
+        }
+        .cloud-provider-section {
+            margin-bottom: 50px;
+            background-color: #f8f9fa;
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid var(--color-border);
+        }
+        .cloud-provider-section h2 {
+            font-size: 2.2em;
+            color: var(--color-primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--color-primary);
+            display: inline-block;
+        }
+        .service-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px;
+            margin-top: 20px;
+        }
+        .service-detail-card ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 0;
+            color: var(--color-text-secondary);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,9 +62,10 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
                     <li><a href="lamarr-cloud.html" class="active">LAMARR | CLOUD</a></li>
-                    <li><a href="lamarr-automatizacion.html">LAMARR | AUTOMATIZACIÓN</a></li>
+                    <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
+                    <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
+                    <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
                     <li><a href="casos-exito.html">Casos de Éxito</a></li>
                     <li><a href="contact.html">Contacto</a></li>
                 </ul>
@@ -29,15 +74,70 @@
     </header>
 
     <main>
-        <section style="padding: 80px 0; text-align: center;">
+        <section class="cloud-section">
             <div class="container">
-                <h1 style="font-size: 3em;">LAMARR | CLOUD</h1>
-                <p style="font-size: 1.2em; max-width: 700px; margin: 20px auto;">Página de la solución Cloud. Esta página agrupará nuestras capacidades en SAP, AWS y Google Cloud. Contenido en construcción.</p>
+                <h1>LAMARR | CLOUD</h1>
+                <p class="page-description">Tu nube, a tu manera. Te ayudamos a elegir, migrar y gestionar la nube ideal para tu negocio, combinando AWS, Google Cloud y Huawei Cloud con una estrategia híbrida, segura y optimizada para SAP.</p>
                 
-                <div style="display: flex; justify-content: center; gap: 20px; margin-top: 40px;">
-                    <a href="services-sap.html" class="btn-outline">Ver Servicios SAP</a>
-                    <a href="services-aws.html" class="btn-outline">Ver Servicios AWS</a>
-                    <a href="services-google-cloud.html" class="btn-outline">Ver Servicios GCP</a>
+                <div class="cloud-provider-section">
+                    <h2>Nuestras Capacidades en SAP</h2>
+                    <p>Somos expertos en la administración de entornos SAP, incluyendo la implementación de soluciones avanzadas como SAP Business AI, y en la gestión de infraestructuras en la nube, proporcionando rendimiento, seguridad y optimización de costos.</p>
+                    <div class="service-details">
+                        <div class="service-detail-card">
+                            <h3>Administración Integral SAP</h3>
+                            <p>Gestionamos y optimizamos plataformas SAP S/4HANA, SAP BTP, SAP Analytics Cloud (SAC) y SAP Cloud Platform Integration (CPI).</p>
+                        </div>
+                        <div class="service-detail-card">
+                            <h3>Estrategia SAP Multi-Cloud</h3>
+                            <p>Facilitamos la migración y gestión de entornos SAP en infraestructuras escalables y seguras, utilizando AWS y GCP para ofrecer flexibilidad.</p>
+                        </div>
+                        <div class="service-detail-card">
+                            <h3>Respaldo y DRaaS para SAP</h3>
+                            <p>Diseñamos y ofrecemos Recuperación ante Desastres como Servicio (DRaaS), asegurando que tus datos y operaciones SAP estén protegidos.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cloud-provider-section">
+                    <h2>Nuestras Capacidades en AWS</h2>
+                    <p>Ayudamos a las empresas a adoptar y maximizar el valor de la nube de Amazon Web Services (AWS) a través de servicios completos de migración, optimización y administración.</p>
+                    <div class="service-details">
+                        <div class="service-detail-card">
+                            <h3>Migración y Adopción</h3>
+                            <p>Planes de migración personalizados con un assessment de infraestructura inicial para facilitar una migración fluida y eficiente hacia AWS.</p>
+                        </div>
+                        <div class="service-detail-card">
+                            <h3>Gestión Integral (Cloud Management)</h3>
+                            <p>Monitorización 24/7, optimización de costos, automatización y escalabilidad para maximizar el rendimiento de tus recursos en AWS.</p>
+                        </div>
+                        <div class="service-detail-card">
+                            <h3>Seguridad y Cumplimiento</h3>
+                            <p>Nos aseguramos de que cada sistema en la nube cumpla con las normativas internacionales y las mejores prácticas de AWS, incluyendo IAM y DRaaS.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cloud-provider-section">
+                    <h2>Nuestras Capacidades en Google Cloud</h2>
+                    <p>Ofrecemos servicios integrales de Google Cloud Platform (GCP) para ayudarte a aprovechar al máximo la infraestructura de nube de Google, desde la migración hasta la analítica avanzada.</p>
+                    <div class="service-details">
+                        <div class="service-detail-card">
+                            <h3>Migración a Google Cloud</h3>
+                            <p>Te ayudamos a migrar tus aplicaciones y datos a GCP de manera segura y eficiente, minimizando el tiempo de inactividad.</p>
+                        </div>
+                        <div class="service-detail-card">
+                            <h3>Análisis de Datos y ML</h3>
+                            <p>Aprovechamos las capacidades de análisis de datos y machine learning de GCP para ayudarte a obtener información valiosa de tus datos.</p>
+                        </div>
+                        <div class="service-detail-card">
+                            <h3>Desarrollo Cloud-Native</h3>
+                            <p>Desarrollamos aplicaciones nativas de la nube utilizando los servicios de GCP, como Google Kubernetes Engine (GKE) y Cloud Functions.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-button-container" style="text-align: center; margin-top: 50px;">
+                    <a href="contact.html" class="btn-primary">Contactar a Ventas</a>
                 </div>
             </div>
         </section>
@@ -45,7 +145,7 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Lamarr Tech. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Lamarr Tech. Todos los derechos reservados.</p>
         </div>
     </footer>
 </body>

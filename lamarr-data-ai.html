@@ -8,6 +8,78 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/services-sap.css">
+    <style>
+        .service-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px;
+            margin-bottom: 40px;
+            padding: 0;
+        }
+        .data-ai-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        .data-ai-section h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .data-ai-section .page-description {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto 50px auto;
+            color: var(--color-text-secondary);
+        }
+        .section-subtitle {
+            font-size: 2.2em;
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: 30px;
+            font-weight: 600;
+            color: var(--color-text);
+        }
+        .philosophy-360 {
+            background-color: #f8f9fa;
+            padding: 40px;
+            border-radius: 12px;
+            text-align: left;
+            border: 1px solid var(--color-border);
+        }
+        .philosophy-360 h3 {
+            color: var(--color-primary);
+            margin-bottom: 15px;
+            font-size: 1.8em;
+        }
+        .table-container {
+            overflow-x: auto;
+            margin-top: 30px;
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+        }
+        th, td {
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--color-border);
+        }
+        th {
+            background-color: #f8f9fa;
+            font-size: 1.1em;
+            color: var(--color-text);
+        }
+        tr:last-child td {
+            border-bottom: none;
+        }
+        td:first-child {
+            font-weight: 600;
+            color: var(--color-primary);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -18,9 +90,10 @@
             <nav>
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="lamarr-data-ai.html" class="active">LAMARR | DATA+AI</a></li>
                     <li><a href="lamarr-cloud.html">LAMARR | CLOUD</a></li>
-                    <li><a href="lamarr-automatizacion.html">LAMARR | AUTOMATIZACIÓN</a></li>
+                    <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
+                    <li><a href="lamarr-data-ai.html" class="active">LAMARR | DATA+AI</a></li>
+                    <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
                     <li><a href="casos-exito.html">Casos de Éxito</a></li>
                     <li><a href="contact.html">Contacto</a></li>
                 </ul>
@@ -29,18 +102,94 @@
     </header>
 
     <main>
-        <section style="padding: 80px 0; text-align: center;">
+        <section class="data-ai-section">
             <div class="container">
-                <h1 style="font-size: 3em;">LAMARR | DATA+AI</h1>
-                <p style="font-size: 1.2em; max-width: 700px; margin: 20px auto;">Página de la solución de Data e Inteligencia Artificial. Contenido en construcción.</p>
-                <a href="contact.html" class="btn-primary" style="margin-top: 20px;">Contactar a Ventas</a>
+                <h1>LAMARR | DATA+AI</h1>
+                <p class="page-description">Inteligencia que transforma datos en decisiones reales. Combinamos el conocimiento técnico de Lamarr Tech con la metodología y soluciones Plug & Play de ScaleUp Al, para que tu negocio escale con IA desde el primer día.</p>
+
+                <div class="philosophy-360">
+                    <h3>Filosofía 360: Múltiples Puntos de Entrada, Una Sola Dirección</h3>
+                    <p>Entendemos que cada empresa se encuentra en una etapa diferente. Nuestra "Filosofía 360" nos permite agregar valor con IA independientemente de su punto de partida, acompañándolo desde la estrategia hasta la ejecución y el escalamiento.</p>
+                </div>
+
+                <h2 class="section-subtitle">Etapas de Madurez</h2>
+                <div class="service-details">
+                    <div class="service-detail-card">
+                        <h3>DATA READINESS</h3>
+                        <p>Evaluamos tu punto de partida para usar IA con éxito. Realizamos un diagnóstico que analiza tu madurez tecnológica, la calidad de tus datos y la alineación de tu estrategia de IA con los objetivos de negocio.</p>
+                    </div>
+                    <div class="service-detail-card">
+                        <h3>DATALAKE</h3>
+                        <p>Centraliza todos tus datos en una base segura y escalable. Integramos información de SAP, CRM, ERP, hojas de cálculo, aplicaciones web y sensores IoT en un solo entorno limpio y listo para análisis.</p>
+                    </div>
+                    <div class="service-detail-card">
+                        <h3>PREDICT & INSIGHTS</h3>
+                        <p>Ve lo que está pasando y lo que viene. Con modelos predictivos y analítica avanzada, detectamos patrones, anticipamos comportamientos y generamos recomendaciones prácticas.</p>
+                    </div>
+                    <div class="service-detail-card">
+                        <h3>AI SOLUTIONS</h3>
+                        <p>Soluciones Plug & Play de IA listas para usar (scaleAssist, scaleRep) que se integran de inmediato en tus procesos clave, sin desarrollos eternos ni inversiones iniciales altas.</p>
+                    </div>
+                    <div class="service-detail-card">
+                        <h3>AI FACTORY</h3>
+                        <p>Desarrollo a la medida para tu industria. Ponemos a tu disposición equipos especializados en Gen AI, Machine Learning y Data Science para crear soluciones únicas.</p>
+                    </div>
+                    <div class="service-detail-card">
+                        <h3>DATA 360</h3>
+                        <p>Tu ecosistema de datos y IA completo, bajo control. Combina todas nuestras soluciones en un entorno único, escalable y seguro en AWS, GCP o Huawei Cloud.</p>
+                    </div>
+                </div>
+
+                <h2 class="section-subtitle">Soluciones Plug & Play de ScaleUp AI</h2>
+                <div class="table-container">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Solución</th>
+                                <th>Qué hace</th>
+                                <th>Beneficio inmediato</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>scaleAssist</td>
+                                <td>Unifica datos de CRM, ERP y fuentes externas para una visión completa.</td>
+                                <td>Decisiones más rápidas y precisas.</td>
+                            </tr>
+                            <tr>
+                                <td>scaleRep</td>
+                                <td>Agentes de voz IA que califican leads y ejecutan encuestas 24/7.</td>
+                                <td>Ventas automatizadas y mejor experiencia cliente.</td>
+                            </tr>
+                            <tr>
+                                <td>scaleHR</td>
+                                <td>Reclutamiento inteligente: IA que entrevista, analiza y recomienda.</td>
+                                <td>Selección más rápida y con menor sesgo.</td>
+                            </tr>
+                            <tr>
+                                <td>scaleTrain</td>
+                                <td>Convierte presentaciones en cursos con narración y evaluación IA.</td>
+                                <td>Formación interna ágil y continua.</td>
+                            </tr>
+                            <tr>
+                                <td>scaleCapture</td>
+                                <td>Automatiza gestión documental y validación con IA.</td>
+                                <td>Ahorro de tiempo y detección de fraudes.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="contact-button-container" style="margin-top: 50px;">
+                    <a href="contact.html" class="btn-primary">Solicita un Assessment</a>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 Lamarr Tech. Todos los derechos reservados.</p>
+            <p>&copy; 2025 Lamarr Tech. Todos los derechos reservados.</p>
         </div>
     </footer>
 </body>
