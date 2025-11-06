@@ -1,42 +1,54 @@
 header {
-    background-color: #fff;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: var(--color-background);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
     position: sticky;
     top: 0;
     z-index: 100;
-    padding: 10px 0; /* Reducir el padding vertical */
+    padding: 0;
 }
 
 header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    padding: 1rem 0;
 }
 
 nav ul {
     list-style: none;
     display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+nav li {
+    margin-left: 5px;
 }
 
 nav a {
     display: inline-block;
     text-decoration: none;
-    color: #333;
-    padding: 15px 20px;
-    font-size: 1.1em;
-    border-radius: 5px;
+    color: var(--color-text-secondary);
+    padding: 10px 12px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 8px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-nav a[href="index.html"] {
-    background-color: #007bff;
-    color: #fff;
+nav a:hover {
+    background-color: rgba(0, 123, 255, 0.05);
+    color: var(--color-primary);
+    text-decoration: none;
 }
 
-nav a:not([href="index.html"]):hover {
-    background-color: #007bff;
-    color: #fff;
+nav a.active {
+    color: var(--color-primary);
+    font-weight: 600;
+}
+
+.logo img {
+    height: 35px;
 }
 
 .dropdown {
@@ -46,27 +58,26 @@ nav a:not([href="index.html"]):hover {
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    background-color: var(--color-background);
+    min-width: 200px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.1);
     z-index: 1;
+    border-radius: 8px;
+    margin-top: 5px;
 }
 
 .dropdown-content a {
-    color: black;
+    color: var(--color-text);
     padding: 12px 16px;
     text-decoration: none;
     display: block;
+    width: 100%;
 }
 
 .dropdown-content a:hover {
-    background-color: #f1f1f1;
+    background-color: rgba(0, 123, 255, 0.05);
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
-}
-
-.logo img {
-    height: 40px;
 }

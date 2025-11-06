@@ -1,16 +1,15 @@
-/* Estilos generales para la página de Servicios AWS */
 .services-aws {
     padding: 80px 0;
     text-align: center;
-    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
-    color: #333;
+    background-color: var(--color-background);
+    color: var(--color-text);
 }
 
 .services-aws h1 {
     font-size: 3em;
     font-weight: 600;
     margin-bottom: 30px;
-    color: #333;
+    color: var(--color-text);
     position: relative; 
     padding-bottom: 10px; 
 }
@@ -23,77 +22,30 @@
     transform: translateX(-50%);
     width: 60px;
     height: 2px;
-    background-color: #007bff;
+    background-color: var(--color-primary);
 }
 
-.services-aws p {
+.services-aws > .container > p {
     font-size: 1.1em;
     line-height: 1.7;
     margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-/* Estilos para los detalles de los servicios */
 .service-details {
     display: grid;
-    grid-template-columns: repeat(3, 1fr); 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
     gap: 30px;
     margin-bottom: 50px;
     padding: 0 20px; 
 }
 
-.service-item:nth-child(4) { 
-    grid-column: 1 / 2; 
-    grid-row: 2 / 3; 
-}
-
-.service-item:nth-child(5) { 
-    grid-column: 3 / 4; 
-    grid-row: 2 / 3; 
-}
-
-.service-item {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border: 1px solid #eee;
-    text-align: left;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.service-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-}
-
-.service-item h3 {
-    margin-bottom: 15px;
-    color: #007bff;
-    position: relative; 
-    padding-bottom: 8px; 
-    font-size: 1.5em;
-    font-weight: 600;
-}
-
-.service-item h3::after { 
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 40px;
-    height: 2px;
-    background-color: #007bff;
-}
-
-.service-item p {
-    font-size: 1em;
-    line-height: 1.6;
-    margin-bottom: 20px;
-}
-
 .service-item ul {
     list-style-type: disc;
     margin-left: 20px;
+    padding-left: 0;
 }
 
 .service-item li {
@@ -104,28 +56,11 @@
 .trust-message {
     font-weight: 600;
     font-size: 1.2em;
-    color: #007bff;
+    color: var(--color-primary);
     padding: 0 20px; 
 }
 
-/* Estilos para el botón de contacto */
 .contact-button-container {
     text-align: center; 
     margin-top: 40px; 
-  }
-  
-  .contact-button {
-    display: inline-block;
-    padding: 15px 30px;
-    background-color: #007bff; 
-    color: #fff; 
-    text-decoration: none;
-    border-radius: 5px; 
-    font-weight: bold; 
-    transition: background-color 0.3s ease; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-  }
-  
-  .contact-button:hover {
-    background-color: #0069d9; 
-  }
+}

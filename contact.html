@@ -6,6 +6,7 @@
     <title>Contacto - Lamarr Tech</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/animations.css">
@@ -14,23 +15,20 @@
 <body>
     <header>
         <div class="container">
-            <nav>
-                <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li class="dropdown">
-                        <a href="#">Servicios</a>
-                        <ul class="dropdown-content">
-                            <li><a href="services-sap.html">Servicios SAP</a></li>
-                            <li><a href="services-aws.html">Servicios AWS</a></li>
-                            <li><a href="services-google-cloud.html">Servicios Google Cloud</a></li> </ul>
-                    </li>
-                    <li><a href="contact.html">Contacto</a></li>
-                    <li><a href="casos-exito.html">Casos de Éxito</a></li>
-                </ul>
-            </nav>
             <div class="logo">
                 <a href="index.html"><img src="img/logo-azul-oscuro.png" alt="Lamarr Tech Logo"></a>
             </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="lamarr-cloud.html">LAMARR | CLOUD</a></li>
+                    <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
+                    <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
+                    <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
+                    <li><a href="casos-exito.html">Casos de Éxito</a></li>
+                    <li><a href="contact.html" class="active">Contacto</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
 
@@ -40,15 +38,15 @@
                 <h2>Contáctanos</h2>
                 <form>
                     <div class="form-group">
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" required placeholder=" ">
                         <label for="name">Nombre</label>
                     </div>
                     <div class="form-group">
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" required placeholder=" ">
                         <label for="email">Correo electrónico</label>
                     </div>
                     <div class="form-group">
-                        <textarea id="message" name="message" required></textarea>
+                        <textarea id="message" name="message" required placeholder=" "></textarea>
                         <label for="message">Mensaje</label>
                     </div>
                     <button type="submit">Enviar</button>

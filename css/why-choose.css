@@ -1,5 +1,5 @@
 .why-choose {
-    background-color: #e8f5e9;
+    background-color: var(--color-background);
     padding: 80px 0;
     text-align: center;
 }
@@ -14,12 +14,13 @@
 .why-choose-item {
     background-color: #fff;
     padding: 30px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--color-border);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .why-choose-item:hover {
     transform: translateY(-10px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
 }

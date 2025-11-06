@@ -1,52 +1,60 @@
 .partners-section {
-    background-color: #f0f0f0;
-    padding: 20px;
+    background-color: var(--color-background);
+    padding: 40px 0;
     text-align: center;
     overflow: hidden;
-  }
+    border-top: 1px solid #f0f0f0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.partners-section h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
   
-  .partners-container {
+.partners-container {
     display: flex;
-    flex-direction: column;
     align-items: center;
     width: 100%;
-  }
+    overflow: hidden;
+}
   
-  .lamarr-logo {
-    margin-bottom: 20px;
-  }
-  
-  .lamarr-logo img {
-    max-width: 200px;
-    height: auto;
-  }
-  
-  .partners-band {
+.partners-band {
     display: flex;
-    width: 175%; /* 7 logos * 25% (ancho de cada logo con espacio) */
+    width: 200%; 
     animation: scroll 30s linear infinite;
-    justify-content: center;
-  }
+}
   
-  @keyframes scroll {
-    0% { transform: translateX(12.5%); }
+@keyframes scroll {
+    0% { transform: translateX(0%); }
     100% { transform: translateX(-50%); } 
-  }
+}
   
-  .partner-group {
+.partner-group {
     display: flex;
     flex-shrink: 0;
-    width: 14.2857%; 
+    width: 50%;
     justify-content: space-around;
     align-items: center;
-    padding: 0 10px;
-  }
+}
   
-  .partner-item {
-    margin: 0;
-  }
+.partner-item {
+    margin: 0 20px;
+}
   
-  .partner-item img {
-    max-width: 80px;
+.partner-item img {
+    max-width: 100px;
     height: auto;
-  }
+    filter: grayscale(100%);
+    opacity: 0.6;
+    transition: filter 0.3s ease, opacity 0.3s ease;
+}
+
+.partner-item img:hover {
+    filter: grayscale(0%);
+    opacity: 1;
+}

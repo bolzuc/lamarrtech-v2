@@ -1,46 +1,41 @@
-/* Estilos para la nueva sección de introducción */
 .company-intro-section {
     padding: 60px 0;
     background-color: var(--white);
     text-align: center;
+    animation: subtle-gradient-bg 20s infinite linear alternate;
 }
 
 .company-intro-section .container {
     max-width: 900px;
 }
 
-.intro-brand {
-    display: inline-block;
-    padding: 6px 12px;
-    background-color: var(--gray-800);
-    color: var(--lamarr-blue);
-    font-weight: 600;
-    border-radius: 8px;
-    margin-bottom: 24px;
+.company-intro-header {
+    text-align: left;
+    max-width: 900px;
+    margin: 0 auto 40px auto;
 }
 
-.company-intro-section h1 {
-    font-size: 2.8em;
-    line-height: 1.2;
+.company-intro-header h2 {
+    font-size: 2.5em;
     margin-bottom: 20px;
-    text-align: center; /* Centrado */
+    text-align: center;
 }
 
-.company-intro-section .intro-subtitle {
-    font-size: 1.25em;
-    color: var(--gray-500);
-    margin-bottom: 24px;
-    text-align: center; /* Centrado */
+.company-intro-header h3 {
+    font-size: 1.8em;
+    margin-bottom: 20px;
+    text-align: center;
 }
 
-.company-intro-section p {
+.company-intro-header p {
     font-size: 1.1em;
     color: var(--gray-500);
     line-height: 1.7;
-    text-align: center; /* Centrado */
+    text-align: center;
+    margin-bottom: 15px;
 }
 
-.intro-pillars {
+.company-vision-promise {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
@@ -48,87 +43,116 @@
     margin-top: 40px;
 }
 
-.pillar {
+.vision-card {
     background-color: var(--gray-900);
     border: 1px solid var(--gray-800);
     padding: 24px;
     border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadida transición */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Efecto hover para pilares */
-.pillar:hover {
+.vision-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
 }
 
-.pillar h3 {
-    font-size: 1.2em;
+.vision-card h4 {
+    font-size: 1.1em;
     color: var(--carbon-black);
     margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.pillar p {
+.vision-card p {
     font-size: 1em;
     color: var(--gray-500);
     margin-bottom: 0;
 }
 
-/* Estilos para el overview de soluciones */
-.solutions-overview-section {
+.solutions-lines-section {
     padding: 80px 0;
     background-color: var(--gray-900);
 }
 
-.solutions-overview-section h2 {
+.solutions-lines-section h2 {
     text-align: center;
     font-size: 2.5em;
     margin-bottom: 60px;
 }
 
-.solution-block {
+.solution-item {
     background-color: var(--white);
     border: 1px solid var(--gray-800);
     border-radius: 16px;
-    padding: 40px;
     margin-bottom: 40px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Añadida transición */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
 }
 
-/* Efecto hover para bloques de solución */
-.solution-block:hover {
+.solution-item:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.07);
 }
 
-.solution-icon {
-    font-size: 2.5em;
-    margin-bottom: 16px;
+.solution-header {
+    padding: 30px 40px;
+    position: relative;
+    border-bottom: 1px solid var(--gray-800);
+    background-color: var(--gray-900);
+    padding-left: 90px;
 }
 
-.solution-block h2 {
-    text-align: left;
-    font-size: 2em;
-    margin-bottom: 8px;
+.solution-header .solution-icon {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    color: var(--lamarr-blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.solution-header .solution-icon i {
+    width: 32px;
+    height: 32px;
+}
+
+.solution-header h3 {
+    font-size: 1.5em;
+    font-weight: 600;
+    margin: 0 0 5px 0;
+}
+
+.solution-header h3 a {
+    text-decoration: none;
+    color: var(--carbon-black);
+    transition: color 0.3s ease;
+}
+
+.solution-header h3 a:hover {
     color: var(--lamarr-blue);
 }
 
-.solution-block h3 {
-    font-size: 1.5em;
-    font-weight: 600;
-    margin-bottom: 20px;
-    color: var(--carbon-black);
+.solution-header .solution-subtitle {
+    font-size: 1.1em;
+    color: var(--gray-500);
+    margin: 0;
 }
 
-.solution-block p {
+.solution-body {
+    padding: 30px 40px;
+}
+
+.solution-body > p {
     font-size: 1.1em;
     color: var(--gray-500);
     max-width: 800px;
     line-height: 1.7;
 }
 
-.solution-block h4 {
+.solution-body h4 {
     font-size: 1.1em;
     font-weight: 600;
     color: var(--carbon-black);
@@ -136,16 +160,55 @@
     margin-bottom: 15px;
     border-bottom: 1px solid var(--gray-800);
     padding-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
-.solution-products {
+.solution-product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.solution-product-card {
+    background-color: var(--gray-900);
+    border: 1px solid var(--gray-800);
+    padding: 20px;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.solution-product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+.solution-product-card h5 {
+    font-size: 1.1em;
+    font-weight: 600;
+    color: var(--carbon-black);
+    margin: 0 0 8px 0;
+}
+
+.solution-product-card p {
+    font-size: 0.95em;
+    color: var(--gray-500);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.solution-product-card.solution-product-card-full {
+    grid-column: 1 / -1;
+}
+
+.solution-product-list {
     list-style: none;
     padding: 0;
     columns: 2;
     column-gap: 30px;
 }
 
-.solution-products li {
+.solution-product-list li {
     font-size: 1.05em;
     color: var(--gray-500);
     margin-bottom: 12px;
@@ -153,7 +216,7 @@
     padding-left: 20px;
 }
 
-.solution-products li::before {
+.solution-product-list li::before {
     content: '→';
     position: absolute;
     left: 0;
@@ -161,7 +224,7 @@
     font-weight: 600;
 }
 
-.solution-ideal-for {
+.solution-ideal {
     font-size: 1.1em !important;
     font-weight: 600;
     color: var(--carbon-black) !important;
@@ -172,13 +235,15 @@
     margin-top: 30px;
 }
 
-/* Estilos para la sección "Por qué Lamarr" */
-.why-lamarr-section {
+.why-lamarr-section,
+.why-choose-section {
     padding: 80px 0;
     background-color: var(--white);
+    animation: subtle-gradient-bg 20s infinite linear alternate;
 }
 
-.why-lamarr-section h2 {
+.why-lamarr-section h2,
+.why-choose-section h2 {
     text-align: center;
     font-size: 2.5em;
     margin-bottom: 50px;
@@ -228,7 +293,6 @@
     color: var(--carbon-black);
 }
 
-/* Estilos para "Cómo trabajamos" */
 .how-we-work-section {
     padding: 80px 0;
     background-color: var(--gray-900);
@@ -240,13 +304,11 @@
     margin-bottom: 50px;
 }
 
-/* --- ESTILOS REDISEÑADOS PARA "CÓMO TRABAJAMOS" --- */
 .work-steps-list {
     list-style: none;
     padding: 0;
     margin: 0 auto;
     display: grid;
-    /* Se ajustará automáticamente de 1 a 4 columnas */
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 30px;
 }
@@ -258,7 +320,7 @@
     border-radius: 12px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
     position: relative;
-    overflow: hidden; /* Para el número */
+    overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -268,7 +330,7 @@
 }
 
 .step-number {
-    font-size: 4.5em; /* Número grande */
+    font-size: 4.5em;
     font-weight: 700;
     font-family: 'Poppins', sans-serif;
     color: var(--gray-800);
@@ -278,7 +340,7 @@
     left: 15px;
     z-index: 1;
     line-height: 1;
-    user-select: none; /* Evita que se seleccione el número */
+    user-select: none;
 }
 
 .step-card h4 {
@@ -286,8 +348,8 @@
     color: var(--carbon-black);
     margin-bottom: 10px;
     position: relative;
-    z-index: 2; /* Encima del número */
-    margin-top: 20px; /* Espacio para el número */
+    z-index: 2;
+    margin-top: 20px;
 }
 
 .step-card p {
@@ -295,17 +357,23 @@
     color: var(--gray-500);
     line-height: 1.6;
     position: relative;
-    z-index: 2; /* Encima del número */
+    z-index: 2;
     margin-bottom: 0;
 }
-/* --- FIN DE ESTILOS REDISEÑADOS --- */
 
-
-/* Estilos para el CTA final */
 .final-transform-section {
     padding: 80px 0;
     background-color: var(--lamarr-blue);
     text-align: center;
+    position: relative;
+    overflow: hidden;
+    animation: pulse-blue 10s infinite ease-in-out;
+}
+
+@keyframes pulse-blue {
+    0% { background-color: var(--lamarr-blue); }
+    50% { background-color: #009ad6; }
+    100% { background-color: var(--lamarr-blue); }
 }
 
 .final-transform-section h2 {
@@ -325,6 +393,7 @@
     justify-content: center;
     align-items: center;
     gap: 24px;
+    flex-wrap: wrap;
 }
 
 .final-cta-links .cta-button {
@@ -336,12 +405,42 @@
     font-weight: 600;
     font-size: 1.1em;
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
 }
 
 .final-cta-links .cta-button:hover {
-    background-color: var(--white);
+    background-color: #333;
+    transform: translateY(-3px) scale(1.03);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.final-cta-links .cta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer 4s infinite;
+}
+
+@keyframes shimmer {
+    0% { left: -100%; }
+    40% { left: 100%; }
+    100% { left: 100%; }
+}
+
+.final-cta-links .secondary-links {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.final-cta-links .secondary-links span {
     color: var(--carbon-black);
-    transform: scale(1.05);
+    opacity: 0.6;
 }
 
 .final-cta-links .cta-link {
@@ -350,25 +449,53 @@
     text-decoration: none;
     font-weight: 600;
     transition: all 0.3s ease;
+    position: relative;
+    padding-bottom: 4px;
+}
+
+.final-cta-links .cta-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--carbon-black);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
 }
 
 .final-cta-links .cta-link:hover {
-    opacity: 0.7;
+    transform: translateY(-2px);
 }
 
-/* Media queries para responsividad */
+.final-cta-links .cta-link:hover::after {
+    transform: scaleX(1);
+}
+
 @media (max-width: 768px) {
-    .intro-pillars {
+    .company-vision-promise {
         grid-template-columns: 1fr;
     }
 
-    .solution-products {
+    .solution-product-list {
         columns: 1;
     }
 
-    /* Ajuste para "Cómo Trabajamos" en móviles */
     .work-steps-list {
-        grid-template-columns: 1fr; /* Una columna en móvil */
+        grid-template-columns: 1fr;
+    }
+    
+    .solution-header {
+        padding-left: 40px;
+    }
+    
+    .solution-header .solution-icon {
+        display: none;
+    }
+
+    .final-cta-links {
+        flex-direction: column;
     }
 }
-

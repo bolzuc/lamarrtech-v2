@@ -1,14 +1,13 @@
-/* Estilos generales para la página Casos de Éxito */
 .casos-exito {
     padding: 80px 0; 
     text-align: left; 
-    background-color: #f8f8f8; 
+    background-color: var(--color-background); 
 }
 
 .casos-exito h1 {
     font-size: 3.5em; 
     margin-bottom: 40px; 
-    color: #333; 
+    color: var(--color-text); 
     font-weight: bold; 
     text-align: center; 
 }
@@ -19,7 +18,6 @@
     padding: 0 20px;
 }
 
-/* Estilos para la lista de casos */
 .casos-lista {
     display: grid; 
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
@@ -27,28 +25,32 @@
 }
 
 .caso {
-    background-color: #fff; /* Fondo blanco para cada caso */
-    padding: 30px; /* Espacio interno */
-    border-radius: 8px; /* Bordes redondeados */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra sutil */
-    transition: transform 0.3s ease; /* Transición suave al pasar el ratón */
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05); 
+    border: 1px solid var(--color-border);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .caso:hover {
-    transform: translateY(-5px); /* Eleva el caso al pasar el ratón */
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.08);
 }
 
 .caso img {
     max-width: 100%; 
-    height: auto;
+    height: 60px;
+    object-fit: contain;
     margin-bottom: 20px;
     border-radius: 8px; 
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
+    text-align: left;
+    display: block;
 }
 
 .caso h2 {
-    font-size: 2em; 
-    color: #007bff; 
+    font-size: 1.5em; 
+    color: var(--color-primary); 
     margin-bottom: 10px;
     transition: color 0.3s ease; 
 }
@@ -58,9 +60,9 @@
 }
 
 .caso p {
-    font-size: 1.2em; 
+    font-size: 1rem; 
     line-height: 1.6;
-    color: #555;
+    color: var(--color-text-secondary);
     margin-bottom: 15px;
 }
 
@@ -69,8 +71,9 @@
 }
 
 .resultados h3 {
-    color: #007bff; 
+    color: var(--color-primary); 
     margin-bottom: 10px;
+    font-size: 1.1em;
 }
 
 .resultados ul {
@@ -81,19 +84,20 @@
 .leer-mas {
     display: inline-block;
     padding: 10px 20px; 
-    background-color: #007bff; /* Azul para el botón */
+    background-color: var(--color-primary);
     color: #fff;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: background-color 0.3s ease;
-    font-weight: bold; 
+    font-weight: 500; 
 }
 
 .leer-mas:hover {
     background-color: #0056b3; 
+    color: #fff;
+    text-decoration: none;
 }
 
-/* Estilos para la paginación */
 .paginacion {
     display: flex;
     justify-content: center;
@@ -105,18 +109,19 @@
     padding: 10px 20px; 
     margin: 0 5px;
     text-decoration: none;
-    color: #007bff; 
-    border: 1px solid #ddd;
-    border-radius: 5px;
+    color: var(--color-primary); 
+    border: 1px solid var(--color-border);
+    border-radius: 8px;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .pagina:hover,
 .pagina.activa {
-    background-color: #007bff;
+    background-color: var(--color-primary);
     color: #fff;
+    text-decoration: none;
 }
 
 .pagina.activa {
-    border-color: #007bff;
+    border-color: var(--color-primary);
 }

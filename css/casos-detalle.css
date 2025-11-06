@@ -1,0 +1,64 @@
+/* Tarea 1 y 4: Tema Oscuro para Páginas Secundarias */
+.caso-detalle {
+    padding: 80px 0;
+    background-color: #111827;
+    color: #f0f0f0;
+}
+
+.caso-detalle .container {
+    max-width: 900px;
+}
+
+.caso-detalle h2 {
+    font-size: 2.5em;
+    color: #38BDF8; /* Acento (Celeste) */
+    margin-bottom: 20px;
+}
+
+.caso-detalle p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.caso-detalle h3 {
+    font-size: 1.8em;
+    color: #ffffff; /* Título claro */
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #38BDF8; /* Acento (Celeste) */
+    padding-bottom: 5px;
+}
+
+.caso-detalle ul {
+    list-style-position: inside;
+    padding-left: 10px;
+}
+
+.caso-detalle li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+}
+
+.volver {
+    /* APLICANDO NUEVO ESTILO DE BOTÓN */
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 30px; /* Más redondeado */
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    /* Nuevo color Celeste */
+    background-color: #38BDF8; 
+    color: #111827; /* Texto oscuro para contraste */
+    /* Sombra más profesional */
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.2);
+    margin-top: 30px;
+}
+
+.volver:hover {
+    transform: translateY(-2px); /* Efecto de elevación */
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.3); /* Sombra más grande */
+}

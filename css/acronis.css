@@ -1,0 +1,134 @@
+/* Tarea 1 y 4: Tema Oscuro para la nueva página de Acronis */
+.services-acronis {
+    padding: 80px 0;
+    text-align: center;
+    background: #111827; /* Fondo oscuro */
+    color: #f0f0f0; /* Texto claro */
+}
+
+.services-acronis h1 {
+    font-size: 3em;
+    margin-bottom: 30px;
+    color: #ffffff; /* Título claro */
+    position: relative; 
+    padding-bottom: 10px; 
+}
+
+.services-acronis h1::after { 
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background-color: #38BDF8; /* Acento (Celeste) */
+}
+
+.services-acronis p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 40px;
+}
+
+.service-details {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    margin-bottom: 50px;
+    padding: 0 20px; 
+}
+
+.service-item:nth-child(4) { 
+    grid-column: 1 / 2; 
+    grid-row: 2 / 3; 
+}
+
+.service-item:nth-child(5) { 
+    grid-column: 3 / 4; 
+    grid-row: 2 / 3; 
+}
+
+.service-item {
+    background-color: #1a202c; /* Tarjeta oscura */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #38BDF8; /* Borde de acento (Celeste) */
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(56, 189, 248, 0.15); /* Brillo de acento (Celeste) */
+}
+
+.service-item h3 {
+    margin-bottom: 15px;
+    color: #38BDF8; /* Acento (Celeste) */
+    position: relative; 
+    padding-bottom: 8px; 
+    font-size: 1.5em;
+    font-weight: 600;
+}
+
+.service-item h3::after { 
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: #38BDF8; /* Acento (Celeste) */
+}
+
+.service-item p {
+    font-size: 1em;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.service-item ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    color: #f0f0f0;
+}
+
+.service-item li {
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+.trust-message {
+    font-weight: 600;
+    font-size: 1.2em;
+    color: #38BDF8; /* Acento (Celeste) */
+    padding: 0 20px; 
+}
+  
+.contact-button {
+    /* Aplicando nuevo estilo de botón */
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 30px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border: none;
+    cursor: pointer;
+    background-color: #38BDF8; 
+    color: #111827;
+    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.2);
+}
+
+.contact-button-container {
+  text-align: center; 
+  margin-top: 40px; 
+}
+  
+.contact-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(56, 189, 248, 0.3);
+    background-color: #0ea5e9; 
+}

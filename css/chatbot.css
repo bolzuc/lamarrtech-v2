@@ -1,17 +1,18 @@
+/* Tarea 1: Tema Oscuro para Chatbot */
 #chat-bubble {
     position: fixed;
     bottom: 20px;
     right: 20px;
     width: 60px;
     height: 60px;
-    background-color: #007bff;
-    color: white;
+    background-color: #38BDF8; /* Acento (Celeste) */
+    color: #111827; /* Texto oscuro */
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.3); /* Sombra de acento */
     z-index: 1000;
     transition: transform 0.3s ease;
 }
@@ -22,31 +23,32 @@
 
 #chat-window {
     position: fixed;
-    bottom: 90px;
+    bottom: 90px; /* Ajustado para estar sobre la burbuja */
     right: 20px;
     width: 320px;
     max-height: 450px;
-    background-color: #ffffff;
+    background-color: #1a202c; /* Fondo oscuro */
     border-radius: 10px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.25);
-    z-index: 1001;
-    display: none;
+    z-index: 1001; /* Aseguramos que esté sobre la burbuja */
+    display: none; /* Inicia oculto */
     flex-direction: column;
     overflow: hidden;
-    transform: translateY(20px);
-    opacity: 0;
+    transform: translateY(20px); /* Para la animación de entrada */
+    opacity: 0; /* Para la animación de entrada */
     transition: opacity 0.3s ease, transform 0.3s ease;
+    border: 1px solid #38BDF8; /* Acento (Celeste) */
 }
 
 #chat-window.open {
-    display: flex;
+    display: flex; /* Se muestra al abrir */
     opacity: 1;
     transform: translateY(0);
 }
 
 #chat-header {
-    background-color: #007bff;
-    color: white;
+    background-color: #38BDF8; /* Acento (Celeste) */
+    color: #111827; /* Texto oscuro */
     padding: 15px;
     font-weight: bold;
     display: flex;
@@ -78,35 +80,36 @@
 }
 
 .bot-message {
-    background-color: #f1f0f0;
-    color: #333;
+    background-color: #2d3748; /* Gris oscuro */
+    color: #f0f0f0; /* Texto claro */
     align-self: flex-start;
     border-bottom-left-radius: 2px;
 }
 
 .user-message {
-    background-color: #007bff;
-    color: white;
+    background-color: #38BDF8; /* Acento (Celeste) */
+    color: #111827; /* Texto oscuro */
     align-self: flex-end;
     border-bottom-right-radius: 2px;
 }
 
 #chat-input-area {
     padding: 15px;
-    border-top: 1px solid #e0e0e0;
-    background: #f9f9f9;
+    border-top: 1px solid #38BDF8; /* Acento (Celeste) */
+    background: #1a202c;
 }
 
 #chat-options {
     display: flex;
     flex-direction: column;
     gap: 8px;
+    margin-bottom: 10px; /* Espacio antes del input */
 }
 
 .chat-option-button {
-    background-color: #ffffff;
-    border: 1px solid #007bff;
-    color: #007bff;
+    background-color: #2d3748;
+    border: 1px solid #38BDF8; /* Acento (Celeste) */
+    color: #38BDF8; /* Acento (Celeste) */
     padding: 10px;
     border-radius: 20px;
     cursor: pointer;
@@ -116,8 +119,8 @@
 }
 
 .chat-option-button:hover {
-    background-color: #007bff;
-    color: white;
+    background-color: #38BDF8; /* Acento (Celeste) */
+    color: #111827;
 }
 
 #chat-input-container {
@@ -126,15 +129,17 @@
 
 #chat-email-input {
     flex-grow: 1;
-    border: 1px solid #ccc;
+    border: 1px solid #38BDF8; /* Acento (Celeste) */
     padding: 10px;
     border-radius: 5px 0 0 5px;
     outline: none;
+    background-color: #2d3748;
+    color: #f0f0f0;
 }
 
 #chat-submit-email {
-    background-color: #007bff;
-    color: white;
+    background-color: #38BDF8; /* Acento (Celeste) */
+    color: #111827;
     border: none;
     padding: 0 15px;
     border-radius: 0 5px 5px 0;
@@ -143,5 +148,5 @@
 }
 
 #chat-submit-email:hover {
-    background-color: #0056b3;
+    background-color: #0ea5e9; /* Celeste más oscuro */
 }
