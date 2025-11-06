@@ -1,3 +1,4 @@
+
 .fade-in {
     opacity: 0;
     transition: opacity 1s ease;
@@ -18,21 +19,22 @@
     opacity: 1;
 }
 
-.typing-effect {
+typing-effect {
     overflow: hidden;
-    border-right: .15em solid var(--lamarr-blue);
+    white-space: nowrap;
+    border-right: .15em solid orange;
     width: 0;
-    animation: typing 2.5s forwards, blink-caret .75s step-end 4 forwards;
+    animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
 }
 
 @keyframes typing {
     from { width: 0 }
-    to { width: 100%; }
+    to { width: 100% }
 }
 
 @keyframes blink-caret {
     from, to { border-color: transparent }
-    50% { border-color: var(--lamarr-blue); }
+    50% { border-color: orange; }
 }
 
 
@@ -46,30 +48,3 @@
     transform: translateY(0);
     opacity: 1;
 }
-
-/* --- NUEVA ANIMACIÓN "SLIDE UP" --- */
-
-@keyframes slideUpFadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Clase base para los elementos a animar */
-.slide-up-fade {
-    opacity: 0;
-    transform: translateY(30px);
-}
-
-/* Clase que añade el JS cuando el elemento es visible */
-.slide-up-fade.visible {
-    opacity: 1;
-    transform: translateY(0);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
-}
-

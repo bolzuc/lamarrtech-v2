@@ -1,8 +1,7 @@
 footer {
-    background-color: var(--white);
+    background-color: #f0f0f0;
     padding: 20px 0;
     text-align: center;
-    border-top: 1px solid var(--gray-800);
 }
 
 footer .container {
@@ -13,6 +12,5 @@ footer .container {
 footer p {
     margin: 0;
     font-size: 14px;
-    color: var(--gray-500);
+    color: #333;
 }
-

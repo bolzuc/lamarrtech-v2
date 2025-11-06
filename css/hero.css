@@ -1,108 +1,137 @@
 .hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+    padding: 120px 0;
     text-align: center;
     position: relative;
     overflow: hidden;
-    padding: 0;
-    background-color: var(--carbon-black);
-}
-
-.hero-video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transform: translate(-50%, -50%);
-    z-index: 1;
-}
-
-.hero-scrim {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(13, 13, 13, 0.6);
-    z-index: 2;
 }
 
 .hero-content {
     position: relative;
-    z-index: 3;
-    max-width: 900px;
+    z-index: 1;
 }
 
 .hero h1 {
     font-size: 3.5em;
     margin-bottom: 20px;
     margin-top: 20px;
-    color: #fff;
-    font-family: 'Poppins', sans-serif;
+    color: #333;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.2;
 }
 
-.hero h1 .text-blue {
-    color: var(--lamarr-blue);
-}
-
-.hero-subtitle {
-    font-size: 1.25em;
-    color: var(--gray-300);
-    max-width: 700px;
-    margin: 20px auto 0;
-    line-height: 1.6;
-    font-family: 'Inter', sans-serif;
-}
-
-.hero-cta {
-    margin-top: 40px;
+.services-container {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 30px;
+    margin-top: 40px;
+    align-items: stretch; 
 }
 
-.cta-button-hero {
-    display: inline-block;
-    background-color: var(--lamarr-blue);
-    color: var(--carbon-black);
-    font-family: 'Poppins', sans-serif;
-    font-weight: 700;
-    font-size: 1.1em;
-    padding: 14px 28px;
-    border-radius: 8px;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border: 2px solid var(--lamarr-blue);
+.service-item {
+    width: 300px;
+    padding: 15px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.cta-button-hero:hover {
-    background-color: #fff;
-    transform: scale(1.05);
+.service-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); 
 }
 
-.cta-button-hero.secondary {
-    background-color: transparent;
-    color: var(--lamarr-blue);
-    border: 2px solid var(--lamarr-blue);
+.service-icon {
+    width: 70px;
+    margin-bottom: 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
 }
 
-.cta-button-hero.secondary:hover {
-    background-color: var(--lamarr-blue);
-    color: var(--carbon-black);
+.service-icon img {
+    width: 100%;
+    display: block;
+    max-height: 70px;
 }
 
-.services-container,
-.service-item,
-.service-icon,
-.service-text,
-.about-us-section,
-.about-us-cards,
+.service-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex-grow: 1;
+    justify-content: center;
+}
+
+.service-text-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.service-text p {
+    margin-bottom: 15px;
+    font-size: 1.2em;
+    line-height: 1.8;
+    color: #555;
+}
+
+.about-us-section {
+    margin-top: 60px;
+    text-align: center;
+}
+
+.about-us-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 35px;
+    margin-top: 40px;
+}
+
 .about-us-card {
-    display: none;
+    background-color: #fff;
+    padding: 35px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border: 1px solid #eee;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+}
+
+.about-us-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+.card-image {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 20px;
+}
+
+.about-us-card h3 {
+    color: #007bff;
+}
+
+.service-item.google-cloud-card {
+    align-self: normal;
+}
+.more-info {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #007bff; 
+    border: none;
+    color: white; 
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    width: fit-content; 
 }
 

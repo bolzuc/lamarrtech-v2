@@ -1,15 +1,9 @@
 .partners-section {
-    background-color: var(--white);
-    padding: 80px 0;
+    background-color: #f0f0f0;
+    padding: 20px;
     text-align: center;
     overflow: hidden;
   }
-
-.partners-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    color: var(--carbon-black);
-}
   
   .partners-container {
     display: flex;
@@ -20,7 +14,6 @@
   
   .lamarr-logo {
     margin-bottom: 20px;
-    display: none;
   }
   
   .lamarr-logo img {
@@ -30,11 +23,9 @@
   
   .partners-band {
     display: flex;
-    width: 175%;
+    width: 175%; /* 7 logos * 25% (ancho de cada logo con espacio) */
     animation: scroll 30s linear infinite;
     justify-content: center;
-    /* Añadido para centrar verticalmente los logos */
-    align-items: center; 
   }
   
   @keyframes scroll {
@@ -53,27 +44,9 @@
   
   .partner-item {
     margin: 0;
-    padding: 0 20px; /* Añadido espacio entre logos */
   }
   
   .partner-item img {
-    /* REGLAS ACTUALIZADAS PARA TAMAÑO UNIFORME */
-    max-height: 55px;  /* Altura máxima consistente */
-    width: auto;       /* Ancho automático para mantener proporción */
-    max-width: 160px;  /* Límite para logos muy anchos */
-    filter: grayscale(100%); /* Efecto B&N */
-    opacity: 0.7;
-    transition: all 0.3s ease-in-out;
+    max-width: 80px;
+    height: auto;
   }
-
-  .partner-item img:hover {
-    /* Efecto hover profesional */
-    filter: grayscale(0%);
-    opacity: 1;
-    transform: scale(1.05);
-  }
-
-  .partner-item img.logo-inverted {
-    filter: none;
-  }
-
