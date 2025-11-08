@@ -3,11 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LAMARR | INTEGRATE - Lamarr Tech</title>
+    <title>Automatización (scaleCapture) - Lamarr Tech</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/services-sap.css">
+    <style>
+        .automation-section {
+            padding: 80px 0;
+            text-align: center;
+        }
+        .automation-section h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .automation-section .page-description {
+            font-size: 1.2em;
+            max-width: 800px;
+            margin: 0 auto 50px auto;
+            color: var(--color-text-secondary);
+        }
+        .content-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            text-align: left;
+            align-items: center;
+        }
+        .content-text {
+            flex: 1;
+            min-width: 300px;
+        }
+        .content-text h2 {
+            font-size: 2.2em;
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: 20px;
+        }
+        .content-text ul {
+            list-style-position: inside;
+            padding-left: 10px;
+            margin-top: 20px;
+        }
+        .content-text li {
+            font-size: 1.1em;
+            color: var(--color-text-secondary);
+            margin-bottom: 10px;
+            line-height: 1.6;
+        }
+        .content-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        .content-image img {
+            max-width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -19,8 +74,8 @@
                 <ul>
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="lamarr-cloud.html">LAMARR | CLOUD</a></li>
-                    <li><a href="lamarr-integrate.html" class="active">LAMARR | INTEGRATE</a></li>
-                    <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
+                    <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
+                    <li><a href="lamarr-data-ai.html" class="active">LAMARR | DATA+AI</a></li>
                     <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
                     <li><a href="casos-exito.html">Casos de Éxito</a></li>
                     <li><a href="contact.html">Contacto</a></li>
@@ -30,11 +85,30 @@
     </header>
 
     <main>
-        <section style="padding: 80px 0; text-align: center;">
+        <section class="automation-section">
             <div class="container">
-                <h1 style="font-size: 3em;">LAMARR | INTEGRATE</h1>
-                <p style="font-size: 1.2em; max-width: 700px; margin: 20px auto;">Haz que tus sistemas hablen el mismo idioma. Conectamos SAP, CRM, Data Lakes y APIs en un ecosistema fluido y seguro.</p>
-                <a href="contact.html" class="btn-primary" style="margin-top: 20px;">Contactar a Ventas</a>
+                <h1>scaleCapture</h1>
+                <p class="page-description">Una solución de automatización inteligente de la línea de productos <strong>LAMARR | DATA+AI</strong>, desarrollada en conjunto con ScaleUp AI.</p>
+                
+                <div class="content-wrapper">
+                    <div class="content-text">
+                        <h2>Automatiza la gestión documental y validación con IA</h2>
+                        <p>scaleCapture elimina el trabajo manual de la gestión de documentos. Nuestra plataforma utiliza Inteligencia Artificial para extraer datos, agilizar aprobaciones y validar información automáticamente, detectando errores y potenciales fraudes antes de que impacten tu operación.</p>
+                        <ul>
+                            <li><strong>Extracción Inteligente:</strong> Lee y procesa facturas, órdenes de compra, contratos y más.</li>
+                            <li><strong>Validación Automática:</strong> Compara datos contra tus sistemas (SAP, ERP) para asegurar consistencia.</li>
+                            <li><strong>Detección de Fraudes:</strong> Modelos de IA que identifican anomalías y patrones sospechosos.</li>
+                            <li><strong>Flujos de Aprobación:</strong> Agiliza el proceso de aprobación enviando la información correcta a la persona indicada.</li>
+                        </ul>
+                        <div class="contact-button-container" style="text-align: left; margin-top: 30px;">
+                            <a href="contact.html" class="btn-primary">Solicitar una Demo</a>
+                        </div>
+                    </div>
+                    <div class="content-image">
+                        <img src="https://placehold.co/500x350/f4f8ff/007bff?text=Ilustración+de+scaleCapture" alt="Automatización con IA">
+                    </div>
+                </div>
+
             </div>
         </section>
     </main>
