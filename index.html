@@ -68,8 +68,15 @@
         .connection-line {
             stroke: var(--color-primary);
             stroke-opacity: 0.9;
-            stroke-width: 3;
+            stroke-width: 2; 
             stroke-dasharray: none;
+            fill: none;
+        }
+
+        @media (max-width: 768px) {
+            .connection-line {
+                stroke-width: 1.5; 
+            }
         }
 
         .partners-section {
@@ -583,10 +590,50 @@
     </footer>
     
     <script>
+        
+        function makeCurved(from, to, factor) {
+            const latLngs = [from, to];
+            const middle = [
+                (from[0] + to[0]) / 2,
+                (from[1] + to[1]) / 2
+            ];
+            
+            const dLat = to[0] - from[0];
+            const dLon = to[1] - from[1];
+            
+            const perpSlope = dLon / dLat;
+            const dist = Math.sqrt(dLat * dLat + dLon * dLon);
+            const offset = dist * factor;
+
+            let controlLat, controlLon;
+            
+            if (Math.abs(dLat) < 0.001) { 
+                controlLat = middle[0] + offset;
+                controlLon = middle[1];
+            } else if (Math.abs(dLon) < 0.001) { 
+                controlLat = middle[0];
+                controlLon = middle[1] + offset;
+            } else {
+                controlLat = middle[0] - (offset / Math.sqrt(1 + perpSlope * perpSlope));
+                controlLon = middle[1] - (offset * perpSlope / Math.sqrt(1 + perpSlope * perpSlope));
+            }
+            
+            const controlPoint = [controlLat, controlLon];
+
+            return L.bezier.default(latLngs, controlPoint);
+        }
+
         document.addEventListener('DOMContentLoaded', function () {
             
             if (document.getElementById('map')) {
                 
+                if (typeof L.bezier === 'undefined') {
+                    L.bezier = {};
+                    L.bezier.default = function (latLngs, controlPoint) {
+                        return L.polyline([latLngs[0], controlPoint, latLngs[1]], { renderer: L.svg({ smoothFactor: 1.0 }) });
+                    };
+                }
+
                 const locations = [
                     { lat: -33.4188, lon: -70.6017, tipo: 'hq', ciudad: "Santiago, Chile", funcion: "Headquarters (HQ) y centro de delivery técnico." },
                     { lat: -23.5505, lon: -46.6333, tipo: 'delivery', ciudad: "São Paulo, Brasil", funcion: "Centro principal de delivery técnico y proyectos SAP." },
@@ -645,9 +692,14 @@
                     });
 
                     if (loc.tipo !== 'hq') {
-                        L.polyline([hqLatLng, [loc.lat, loc.lon]], {
+                        const targetLatLng = [loc.lat, loc.lon];
+                        const curve = makeCurved(hqLatLng, targetLatLng, 0.5); 
+
+                        curve.setStyle({
                             className: 'connection-line'
-                        }).addTo(map);
+                        });
+
+                        map.addLayer(curve);
                     }
                 });
                 
