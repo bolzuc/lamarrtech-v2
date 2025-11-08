@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestro Equipo - Lamarr Tech</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/page-section.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <style>
+        .section-subtitle {
+            font-size: 2.2em;
+            text-align: center;
+            margin-top: 60px;
+            margin-bottom: 30px;
+            font-weight: 600;
+            color: var(--color-text);
+            border-bottom: 2px solid var(--color-primary);
+            display: inline-block;
+            padding-bottom: 10px;
+        }
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            text-align: left;
+        }
+        .team-card {
+            background-color: var(--color-background);
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--color-border);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+        }
+        .team-card h3 {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 5px;
+        }
+        .team-card-role {
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--color-text);
+            margin-bottom: 15px;
+        }
+        .team-card p {
+            font-size: 0.95rem;
+            color: var(--color-text-secondary);
+            margin-bottom: 0;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="img/logo-azul-oscuro.png" alt="Lamarr Tech Logo"></a>
+            </div>
+            <nav class="desktop-nav">
+                <ul>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li class="dropdown">
+                        <a href="#">LAMARR SERVICES
+                            <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </a>
+                        <ul class="dropdown-content">
+                            <li><a href="lamarr-cloud.html">LAMARR | CLOUD</a></li>
+                            <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
+                            <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
+                            <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="casos-exito.html">CASOS DE ÉXITO</a></li>
+                    <li><a href="nuestro-equipo.html" class="active">EQUIPO</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACTO</a></li>
+                </ul>
+            </nav>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
+        </div>
+    </header>
+
+    <div class="mobile-nav-container">
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li class="mobile-submenu">
+                    <a href="#" class="mobile-submenu-toggle">LAMARR
+                        <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    </a>
+                    <ul class="mobile-submenu-content">
+                        <li><a href="lamarr-cloud.html">LAMARR | CLOUD</a></li>
+                        <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
+                        <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
+                        <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
+                    </ul>
+                </li>
+                <li><a href="casos-exito.html">CASOS DE ÉXITO</a></li>
+                <li><a href="nuestro-equipo.html">EQUIPO</a></li>
+                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="contact.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <main>
+        <section class="page-section">
+            <div class="container">
+                <h1>Nuestro Equipo</h1>
+                <p>Conoce a los líderes y las unidades que impulsan la innovación en Lamarr Tech.</p>
+
+                <h2 class="section-subtitle">Dirección y Estrategia</h2>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <img src="https://placehold.co/150x150/EBF8FF/007BFF?text=Foto" alt="Foto de Daniela Santos Escalona" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 20px; align-self: center;">
+                        <h3>Daniela Santos Escalona</h3>
+                        <p class="team-card-role">Founder & CEO | Gerente Comercial</p>
+                        <p>Lidera la estrategia global de Lamarr Tech, alianzas con AWS, Google Cloud y Huawei, desarrollo de mercado y relación directa con clientes medianos y grandes. Responsable del posicionamiento comercial, propuestas de valor, negociaciones y cierre de oportunidades estratégicas.</p>
+                    </div>
+                    <div class="team-card">
+                        <img src="https://placehold.co/150x150/EBF8FF/007BFF?text=Foto" alt="Foto de Alcides Lizardo" style="width: 150px; height: 150px; border-radius: 50%; margin-bottom: 20px; align-self: center;">
+                        <h3>Alcides Lizardo</h3>
+                        <p class="team-card-role">Co-Founder | Director de Operaciones y Finanzas</p>
+                        <p>Responsable de la operación interna de proyectos, finanzas, control de costos, contratación de personal, relaciones con proveedores y aseguramiento de calidad. Supervisa las áreas técnicas y el cumplimiento de los SLA en servicios gestionados.</p>
+                    </div>
+                </div>
+
+                <h2 class="section-subtitle">Unidad LAMARR | CLOUD</h2>
+                <p style="text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">(Infraestructura, migraciones y soporte Cloud – AWS, GCP, Huawei Cloud)</p>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <h3>Arquitecto Cloud / Líder Técnico</h3>
+                        <p class="team-card-role">(Rol variable por proyecto)</p>
+                        <p>Diseño de arquitecturas en nube, evaluaciones de infraestructura (AWS OLA, MAP, GCP Assessment), planes de migración y soporte avanzado. (Este rol puede ser personalizado según proyecto: Ej. Arquitecto AWS Senior, Arquitecto GCP, etc.)</p>
+                    </div>
+                    <div class="team-card">
+                        <h3>Consultores Cloud y DevOps</h3>
+                        <p class="team-card-role">Implementación y Operación</p>
+                        <p>Implementación de entornos, automatización, optimización de costos, monitoreo, backup & DRP, seguridad gestionada y administración diaria de plataformas cloud.</p>
+                    </div>
+                </div>
+
+                <h2 class="section-subtitle">Unidad LAMARR | SAP</h2>
+                <p style="text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">(Consultoría, soporte y migraciones SAP Business One & SAP S/4HANA)</p>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <h3>Consultor SAP Business One Senior</h3>
+                        <p class="team-card-role">Funcional y Procesos</p>
+                        <p>Lidera diagnósticos funcionales, levantamiento de procesos, parametrización y mejoras operacionales.</p>
+                    </div>
+                    <div class="team-card">
+                        <h3>Consultor SAP Business One Técnico / Basis</h3>
+                        <p class="team-card-role">Administración y Soporte Técnico</p>
+                        <p>Administración de servidores SAP B1, instalación, upgrades, performance tuning y soporte técnico.</p>
+                    </div>
+                    <div class="team-card">
+                        <h3>Consultor SAP Integraciones</h3>
+                        <p class="team-card-role">(SAP BTP / APIs / Conectores)</p>
+                        <p>Diseño e implementación de integraciones entre SAP y sistemas externos (ERP, logística, finanzas, BI, IA).</p>
+                    </div>
+                </div>
+
+                <h2 class="section-subtitle">Unidad DATA + AI | Inteligencia y Automatización</h2>
+                <p style="text-align: center; max-width: 800px; margin-left: auto; margin-right: auto;">(Modelos predictivos, reporting financiero, cuadros de mando y RPA/IA)</p>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <h3>Data Engineer / BI Specialist</h3>
+                        <p class="team-card-role">Ingeniería y Visualización</p>
+                        <p>Modelado de datos, construcción de ETL, dashboards dinámicos (Power BI, Looker, ModelArts, QuickSight).</p>
+                    </div>
+                    <div class="team-card">
+                        <h3>Especialista en IA Aplicada</h3>
+                        <p class="team-card-role">Automatización Inteligente</p>
+                        <p>Automatización de procesos, generación de reportes inteligentes, asistentes empresariales y motores de análisis basados en IA.</p>
+                    </div>
+                </div>
+
+                <h2 class="section-subtitle">Unidad Administración & Control</h2>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <h3>Coordinación Administrativa</h3>
+                        <p class="team-card-role">Gestión y Finanzas</p>
+                        <p>Gestión de proveedores, control de pagos, emisión de documentos contables, reportes internos, conciliaciones y soporte administrativo a las unidades de negocio.</p>
+                    </div>
+                    <div class="team-card">
+                        <h3>Soporte Operativo y Gestión de Proyectos</h3>
+                        <p class="team-card-role">Planificación y Seguimiento</p>
+                        <p>Planificación de tareas, coordinación entre equipo técnico y clientes, seguimiento de SLA y entregables.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Lamarr Tech. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="js/script.js"></script>
+</body>
+</html>
