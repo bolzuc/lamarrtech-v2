@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/services-aws.css">
+    <link rel="stylesheet" href="css/page-section.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
     <header>
@@ -16,28 +17,70 @@
             <div class="logo">
                 <a href="index.html"><img src="img/logo-azul-oscuro.png" alt="Lamarr Tech Logo"></a>
             </div>
-            <nav>
+            <nav class="desktop-nav">
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="lamarr-cloud.html" class="active">LAMARR | CLOUD</a></li>
-                    <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
-                    <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
-                    <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
-                    <li><a href="casos-exito.html">Casos de Éxito</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="active">LAMARR SERVICES
+                            <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </a>
+                        <ul class="dropdown-content">
+                            <li><a href="lamarr-cloud.html">LAMARR | CLOUD</a></li>
+                            <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
+                            <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
+                            <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
+                            <li><a href="lamarr-automatizacion.html">LAMARR | AUTOMATIZACIÓN</a></li>
+                            <li><a href="services-sap.html">Servicios SAP</a></li>
+                            <li><a href="services-aws.html">Servicios AWS</a></li>
+                            <li><a href="services-google-cloud.html">Servicios Google Cloud</a></li>
+                            <li><a href="services-acronis.html">Servicios Acronis</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="casos-exito.html">CASOS DE ÉXITO</a></li>
+                    <li><a href="contact.html">CONTACTO</a></li>
                 </ul>
             </nav>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
         </div>
     </header>
 
+    <div class="mobile-nav-container">
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li class="mobile-submenu">
+                    <a href="#" class="mobile-submenu-toggle">LAMARR
+                        <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    </a>
+                    <ul class="mobile-submenu-content">
+                        <li><a href="lamarr-cloud.html">LAMARR | CLOUD</a></li>
+                        <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
+                        <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
+                        <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
+                        <li><a href="lamarr-automatizacion.html">LAMARR | AUTOMATIZACIÓN</a></li>
+                        <li><a href="services-sap.html">Servicios SAP</a></li>
+                        <li><a href="services-aws.html">Servicios AWS</a></li>
+                        <li><a href="services-google-cloud.html">Servicios Google Cloud</a></li>
+                        <li><a href="services-acronis.html">Servicios Acronis</a></li>
+                    </ul>
+                </li>
+                <li><a href="casos-exito.html">CASOS DE ÉXITO</a></li>
+                <li><a href="contact.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <main>
-        <section class="services-aws">
+        <section class="page-section">
             <div class="container">
                 <h1>Servicios Cloud en AWS</h1>
                 <p>En Lamarr Tech, ayudamos a las empresas a adoptar y maximizar el valor de la nube de Amazon Web Services (AWS) a través de servicios completos de migración, optimización y administración en la nube.</p>
 
-                <div class="service-details">
-                    <div class="service-detail-card service-item">
+                <div class="page-details-grid">
+                    <div class="page-detail-card">
                         <h3>Servicios de Migración y Adopción de AWS</h3>
                         <p>Nuestro equipo está capacitado para facilitar una migración fluida y eficiente hacia AWS, asegurando la continuidad operativa y minimizando riesgos. Nos enfocamos en realizar un assessment de infraestructura inicial para identificar necesidades específicas, seguido por un plan de migración personalizado.</p>
                         <ul>
@@ -47,7 +90,7 @@
                         </ul>
                     </div>
 
-                    <div class="service-detail-card service-item">
+                    <div class="page-detail-card">
                         <h3>Gestión Integral en la Nube (Cloud Management)</h3>
                         <p>Una vez que tus sistemas están en AWS, ofrecemos servicios de Cloud Management para maximizar el rendimiento y reducir costos de operación. Nos encargamos de la supervisión, administración y optimización de recursos en AWS.</p>
                         <ul>
@@ -57,7 +100,7 @@
                         </ul>
                     </div>
 
-                    <div class="service-detail-card service-item">
+                    <div class="page-detail-card">
                         <h3>Soluciones de Seguridad y Cumplimiento en AWS</h3>
                         <p>La seguridad es una prioridad en nuestras soluciones AWS. Nos aseguramos de que cada sistema en la nube cumpla con las normativas internacionales de seguridad y las mejores prácticas de AWS.</p>
                         <ul>
@@ -67,12 +110,12 @@
                         </ul>
                     </div>
 
-                    <div class="service-detail-card service-item">
+                    <div class="page-detail-card">
                         <h3>Recuperación ante Desastres como Servicio (DRaaS)</h3>
                         <p>En Lamarr Tech, ofrecemos Recuperación ante Desastres como Servicio (DRaaS) en AWS, asegurando que tus datos y operaciones estén preparados para cualquier contingencia.</p>
                     </div>
 
-                    <div class="service-detail-card service-item">
+                    <div class="page-detail-card">
                         <h3>Actualización Continua y Mejoras en AWS</h3>
                         <p>Nos aseguramos de que tus sistemas AWS estén siempre actualizados y optimizados. Nos encargamos de las actualizaciones de seguridad, mejoras de rendimiento y nuevas funcionalidades.</p>
                     </div>
@@ -92,5 +135,6 @@
             <p>&copy; 2025 Lamarr Tech. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

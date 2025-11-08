@@ -8,29 +8,8 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/services-sap.css">
+    <link rel="stylesheet" href="css/page-section.css">
     <style>
-        .service-details {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 30px;
-            margin-bottom: 40px;
-            padding: 0;
-        }
-        .secure-section {
-            padding: 80px 0;
-            text-align: center;
-        }
-        .secure-section h1 {
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-        .secure-section .page-description {
-            font-size: 1.2em;
-            max-width: 800px;
-            margin: 0 auto 50px auto;
-            color: var(--color-text-secondary);
-        }
         .section-subtitle {
             font-size: 2.2em;
             text-align: center;
@@ -47,49 +26,91 @@
             <div class="logo">
                 <a href="index.html"><img src="img/logo-azul-oscuro.png" alt="Lamarr Tech Logo"></a>
             </div>
-            <nav>
+            <nav class="desktop-nav">
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="lamarr-cloud.html">LAMARR | CLOUD</a></li>
-                    <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
-                    <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
-                    <li><a href="lamarr-secure.html" class="active">LAMARR | SECURE</a></li>
-                    <li><a href="casos-exito.html">Casos de Éxito</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="active">LAMARR SERVICES
+                            <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </a>
+                        <ul class="dropdown-content">
+                            <li><a href="lamarr-cloud.html">LAMARR | CLOUD</a></li>
+                            <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
+                            <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
+                            <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
+                            <li><a href="lamarr-automatizacion.html">LAMARR | AUTOMATIZACIÓN</a></li>
+                            <li><a href="services-sap.html">Servicios SAP</a></li>
+                            <li><a href="services-aws.html">Servicios AWS</a></li>
+                            <li><a href="services-google-cloud.html">Servicios Google Cloud</a></li>
+                            <li><a href="services-acronis.html">Servicios Acronis</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="casos-exito.html">CASOS DE ÉXITO</a></li>
+                    <li><a href="contact.html">CONTACTO</a></li>
                 </ul>
             </nav>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
         </div>
     </header>
 
+    <div class="mobile-nav-container">
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li class="mobile-submenu">
+                    <a href="#" class="mobile-submenu-toggle">LAMARR
+                        <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    </a>
+                    <ul class="mobile-submenu-content">
+                        <li><a href="lamarr-cloud.html">LAMARR | CLOUD</a></li>
+                        <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
+                        <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
+                        <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
+                        <li><a href="lamarr-automatizacion.html">LAMARR | AUTOMATIZACIÓN</a></li>
+                        <li><a href="services-sap.html">Servicios SAP</a></li>
+                        <li><a href="services-aws.html">Servicios AWS</a></li>
+                        <li><a href="services-google-cloud.html">Servicios Google Cloud</a></li>
+                        <li><a href="services-acronis.html">Servicios Acronis</a></li>
+                    </ul>
+                </li>
+                <li><a href="casos-exito.html">CASOS DE ÉXITO</a></li>
+                <li><a href="contact.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <main>
-        <section class="secure-section">
+        <section class="page-section">
             <div class="container">
                 <h1>LAMARR | SECURE</h1>
-                <p class="page-description">Ciberprotección nativa para tu negocio. Basado en Acronis Cyber Protect Cloud, protegemos tus datos, aplicaciones y sistemas con una plataforma integrada de backup, DR, seguridad avanzada y monitoreo continuo.</p>
+                <p>Ciberprotección nativa para tu negocio. Basado en Acronis Cyber Protect Cloud, protegemos tus datos, aplicaciones y sistemas con una plataforma integrada de backup, DR, seguridad avanzada y monitoreo continuo. <a href="services-acronis.html" style="font-weight: 600; text-decoration: underline;">Ver detalles de Acronis</a>.</p>
                 
                 <h2 class="section-subtitle">Productos y Servicios de Ciberprotección</h2>
-                <div class="service-details">
-                    <div class="service-detail-card">
+                <div class="page-details-grid">
+                    <div class="page-detail-card">
                         <h3>Cyber Backup & Recovery</h3>
                         <p>Copias de seguridad rápidas y fiables de cualquier carga de trabajo. Almacenamiento seguro en Acronis Cloud, AWS, GCP o local, con restauración instantánea de datos críticos.</p>
                     </div>
-                    <div class="service-detail-card">
+                    <div class="page-detail-card">
                         <h3>Disaster Recovery (DRaaS)</h3>
                         <p>Recuperación ante desastres como servicio. Minimice el tiempo de inactividad y garantice la continuidad del negocio con conmutación por error a la nube de Acronis.</p>
                     </div>
-                    <div class="service-detail-card">
+                    <div class="page-detail-card">
                         <h3>Advanced Security</h3>
                         <p>Protección proactiva contra ransomware y malware impulsada por IA. Antivirus, antimalware y análisis de vulnerabilidades en una sola solución.</p>
                     </div>
-                    <div class="service-detail-card">
+                    <div class="page-detail-card">
                         <h3>Endpoint Defense</h3>
                         <p>Protección inteligente en cada dispositivo. Protección con IA para estaciones de trabajo y servidores contra malware, phishing y amenazas desconocidas.</p>
                     </div>
-                    <div class="service-detail-card">
+                    <div class="page-detail-card">
                         <h3>SaaS Protect</h3>
                         <p>Protección completa para Microsoft 365 y Google Workspace. Garantizamos backups nube a nube para correos, archivos (OneDrive, SharePoint) y colaboraciones (Teams).</p>
                     </div>
-                    <div class="service-detail-card">
+                    <div class="page-detail-card">
                         <h3>SOC & NOC 24x7</h3>
                         <p>Monitoreamos tu seguridad todo el tiempo. Nuestro centro de operaciones supervisa infraestructura, aplicaciones y eventos de seguridad en tiempo real.</p>
                     </div>
@@ -107,5 +128,6 @@
             <p>&copy; 2025 Lamarr Tech. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

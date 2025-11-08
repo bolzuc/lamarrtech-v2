@@ -8,22 +8,8 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/page-section.css">
     <style>
-        .cloud-section {
-            padding: 80px 0;
-        }
-        .cloud-section h1 {
-            text-align: center;
-            font-size: 3em;
-            margin-bottom: 20px;
-        }
-        .cloud-section .page-description {
-            text-align: center;
-            font-size: 1.2em;
-            max-width: 800px;
-            margin: 0 auto 60px auto;
-            color: var(--color-text-secondary);
-        }
         .cloud-provider-section {
             margin-bottom: 50px;
             background-color: #f8f9fa;
@@ -39,13 +25,7 @@
             border-bottom: 2px solid var(--color-primary);
             display: inline-block;
         }
-        .service-details {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 30px;
-            margin-top: 20px;
-        }
-        .service-detail-card ul {
+        .cloud-provider-section ul {
             list-style-type: disc;
             margin-left: 20px;
             padding-left: 0;
@@ -59,80 +39,131 @@
             <div class="logo">
                 <a href="index.html"><img src="img/logo-azul-oscuro.png" alt="Lamarr Tech Logo"></a>
             </div>
-            <nav>
+            <nav class="desktop-nav">
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="lamarr-cloud.html" class="active">LAMARR | CLOUD</a></li>
-                    <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
-                    <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
-                    <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
-                    <li><a href="casos-exito.html">Casos de Éxito</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="active">LAMARR SERVICES
+                            <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </a>
+                        <ul class="dropdown-content">
+                            <li><a href="lamarr-cloud.html">LAMARR | CLOUD</a></li>
+                            <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
+                            <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
+                            <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
+                            <li><a href="lamarr-automatizacion.html">LAMARR | AUTOMATIZACIÓN</a></li>
+                            <li><a href="services-sap.html">Servicios SAP</a></li>
+                            <li><a href="services-aws.html">Servicios AWS</a></li>
+                            <li><a href="services-google-cloud.html">Servicios Google Cloud</a></li>
+                            <li><a href="services-acronis.html">Servicios Acronis</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="casos-exito.html">CASOS DE ÉXITO</a></li>
+                    <li><a href="contact.html">CONTACTO</a></li>
                 </ul>
             </nav>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
         </div>
     </header>
 
+    <div class="mobile-nav-container">
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li class="mobile-submenu">
+                    <a href="#" class="mobile-submenu-toggle">LAMARR
+                        <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    </a>
+                    <ul class="mobile-submenu-content">
+                        <li><a href="lamarr-cloud.html">LAMARR | CLOUD</a></li>
+                        <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
+                        <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
+                        <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
+                        <li><a href="lamarr-automatizacion.html">LAMARR | AUTOMATIZACIÓN</a></li>
+                        <li><a href="services-sap.html">Servicios SAP</a></li>
+                        <li><a href="services-aws.html">Servicios AWS</a></li>
+                        <li><a href="services-google-cloud.html">Servicios Google Cloud</a></li>
+                        <li><a href="services-acronis.html">Servicios Acronis</a></li>
+                    </ul>
+                </li>
+                <li><a href="casos-exito.html">CASOS DE ÉXITO</a></li>
+                <li><a href="contact.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <main>
-        <section class="cloud-section">
+        <section class="page-section">
             <div class="container">
                 <h1>LAMARR | CLOUD</h1>
-                <p class="page-description">Tu nube, a tu manera. Te ayudamos a elegir, migrar y gestionar la nube ideal para tu negocio, combinando AWS, Google Cloud y Huawei Cloud con una estrategia híbrida, segura y optimizada para SAP.</p>
+                <p>Tu nube, a tu manera. Te ayudamos a elegir, migrar y gestionar la nube ideal para tu negocio, combinando AWS, Google Cloud y Huawei Cloud con una estrategia híbrida, segura y optimizada para SAP.</p>
                 
                 <div class="cloud-provider-section">
                     <h2>Nuestras Capacidades en SAP</h2>
                     <p>Somos expertos en la administración de entornos SAP, incluyendo la implementación de soluciones avanzadas como SAP Business AI, y en la gestión de infraestructuras en la nube, proporcionando rendimiento, seguridad y optimización de costos.</p>
-                    <div class="service-details">
-                        <div class="service-detail-card">
+                    <div class="page-details-grid">
+                        <div class="page-detail-card">
                             <h3>Administración Integral SAP</h3>
                             <p>Gestionamos y optimizamos plataformas SAP S/4HANA, SAP BTP, SAP Analytics Cloud (SAC) y SAP Cloud Platform Integration (CPI).</p>
                         </div>
-                        <div class="service-detail-card">
+                        <div class="page-detail-card">
                             <h3>Estrategia SAP Multi-Cloud</h3>
                             <p>Facilitamos la migración y gestión de entornos SAP en infraestructuras escalables y seguras, utilizando AWS y GCP para ofrecer flexibilidad.</p>
                         </div>
-                        <div class="service-detail-card">
+                        <div class="page-detail-card">
                             <h3>Respaldo y DRaaS para SAP</h3>
                             <p>Diseñamos y ofrecemos Recuperación ante Desastres como Servicio (DRaaS), asegurando que tus datos y operaciones SAP estén protegidos.</p>
                         </div>
+                    </div>
+                    <div class="contact-button-container" style="text-align: left; margin-top: 20px;">
+                        <a href="services-sap.html" class="btn-primary">Ver Detalles SAP</a>
                     </div>
                 </div>
 
                 <div class="cloud-provider-section">
                     <h2>Nuestras Capacidades en AWS</h2>
                     <p>Ayudamos a las empresas a adoptar y maximizar el valor de la nube de Amazon Web Services (AWS) a través de servicios completos de migración, optimización y administración.</p>
-                    <div class="service-details">
-                        <div class="service-detail-card">
+                    <div class="page-details-grid">
+                        <div class="page-detail-card">
                             <h3>Migración y Adopción</h3>
                             <p>Planes de migración personalizados con un assessment de infraestructura inicial para facilitar una migración fluida y eficiente hacia AWS.</p>
                         </div>
-                        <div class="service-detail-card">
+                        <div class="page-detail-card">
                             <h3>Gestión Integral (Cloud Management)</h3>
                             <p>Monitorización 24/7, optimización de costos, automatización y escalabilidad para maximizar el rendimiento de tus recursos en AWS.</p>
                         </div>
-                        <div class="service-detail-card">
+                        <div class="page-detail-card">
                             <h3>Seguridad y Cumplimiento</h3>
                             <p>Nos aseguramos de que cada sistema en la nube cumpla con las normativas internacionales y las mejores prácticas de AWS, incluyendo IAM y DRaaS.</p>
                         </div>
+                    </div>
+                    <div class="contact-button-container" style="text-align: left; margin-top: 20px;">
+                        <a href="services-aws.html" class="btn-primary">Ver Detalles AWS</a>
                     </div>
                 </div>
 
                 <div class="cloud-provider-section">
                     <h2>Nuestras Capacidades en Google Cloud</h2>
                     <p>Ofrecemos servicios integrales de Google Cloud Platform (GCP) para ayudarte a aprovechar al máximo la infraestructura de nube de Google, desde la migración hasta la analítica avanzada.</p>
-                    <div class="service-details">
-                        <div class="service-detail-card">
+                    <div class="page-details-grid">
+                        <div class="page-detail-card">
                             <h3>Migración a Google Cloud</h3>
                             <p>Te ayudamos a migrar tus aplicaciones y datos a GCP de manera segura y eficiente, minimizando el tiempo de inactividad.</p>
                         </div>
-                        <div class="service-detail-card">
+                        <div class="page-detail-card">
                             <h3>Análisis de Datos y ML</h3>
                             <p>Aprovechamos las capacidades de análisis de datos y machine learning de GCP para ayudarte a obtener información valiosa de tus datos.</p>
                         </div>
-                        <div class="service-detail-card">
+                        <div class="page-detail-card">
                             <h3>Desarrollo Cloud-Native</h3>
                             <p>Desarrollamos aplicaciones nativas de la nube utilizando los servicios de GCP, como Google Kubernetes Engine (GKE) y Cloud Functions.</p>
                         </div>
+                    </div>
+                    <div class="contact-button-container" style="text-align: left; margin-top: 20px;">
+                        <a href="services-google-cloud.html" class="btn-primary">Ver Detalles Google Cloud</a>
                     </div>
                 </div>
 
@@ -148,5 +179,6 @@
             <p>&copy; 2025 Lamarr Tech. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

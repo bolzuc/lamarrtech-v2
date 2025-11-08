@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/caso-detalle.css"> 
+    <link rel="stylesheet" href="css/page-section.css"> 
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
     <header>
@@ -16,37 +17,103 @@
             <div class="logo">
                 <a href="index.html"><img src="img/logo-azul-oscuro.png" alt="Lamarr Tech Logo"></a>
             </div>
-            <nav>
+            <nav class="desktop-nav">
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="lamarr-cloud.html">LAMARR | CLOUD</a></li>
-                    <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
-                    <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
-                    <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
-                    <li><a href="casos-exito.html" class="active">Casos de Éxito</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li class="dropdown">
+                        <a href="#">LAMARR SERVICES
+                            <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </a>
+                        <ul class="dropdown-content">
+                            <li><a href="lamarr-cloud.html">LAMARR | CLOUD</a></li>
+                            <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
+                            <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
+                            <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
+                            <li><a href="lamarr-automatizacion.html">LAMARR | AUTOMATIZACIÓN</a></li>
+                            <li><a href="services-sap.html">Servicios SAP</a></li>
+                            <li><a href="services-aws.html">Servicios AWS</a></li>
+                            <li><a href="services-google-cloud.html">Servicios Google Cloud</a></li>
+                            <li><a href="services-acronis.html">Servicios Acronis</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="casos-exito.html" class="active">CASOS DE ÉXITO</a></li>
+                    <li><a href="contact.html">CONTACTO</a></li>
                 </ul>
             </nav>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
         </div>
     </header>
+
+    <div class="mobile-nav-container">
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li class="mobile-submenu">
+                    <a href="#" class="mobile-submenu-toggle">LAMARR
+                        <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    </a>
+                    <ul class="mobile-submenu-content">
+                        <li><a href="lamarr-cloud.html">LAMARR | CLOUD</a></li>
+                        <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
+                        <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
+                        <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
+                        <li><a href="lamarr-automatizacion.html">LAMARR | AUTOMATIZACIÓN</a></li>
+                        <li><a href="services-sap.html">Servicios SAP</a></li>
+                        <li><a href="services-aws.html">Servicios AWS</a></li>
+                        <li><a href="services-google-cloud.html">Servicios Google Cloud</a></li>
+                        <li><a href="services-acronis.html">Servicios Acronis</a></li>
+                    </ul>
+                </li>
+                <li><a href="casos-exito.html">CASOS DE ÉXITO</a></li>
+                <li><a href="contact.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <main>
-        <section class="caso-detalle">
+        <section class="page-section caso-detalle-section">
             <div class="container">
 
                 <h2>SMU - Retail</h2>
                 <p><strong>Proyecto:</strong> Conversión a SAP S/4HANA y migración desde la nube privada de Entel hacia la nube pública de Huawei.</p>
-                <p><strong>Alcance:</strong> Conversión de SAP ERP 6 a SAP S/4HANA 2022, migración del sistema convertido a la nube pública de Huawei, uso de herramientas de terceros para migración selectiva de datos, minimizando el downtime operativo.</p> 
-                <h3>Descripción del Proyecto</h3>
-                <p>Antes del proyecto, SMU operaba con un ecosistema SAP compuesto por: SAP ERP 6, SAP Solution Manager, SAP NetWeaver 7.5 PO (Process Orchestration), SAP GRC (Governance, Risk, and Compliance), SAP WMS (Warehouse Management System), SAP WebDispatcher y SAP Router. El proyecto consistió en la conversión de SAP ERP 6 a S/4HANA 2022 utilizando un enfoque de "System Move", que permitió mantener el sistema fuente operativo durante la conversión y migración. Se migraron datos a Huawei Cloud con herramientas de terceros para la selección de datos específicos, optimizando el tiempo de inactividad. Se consolidaron aproximadamente 34 TB de datos en la nube de Huawei, utilizando una copia del sistema PRD como base para los entornos DEV y QAS.</p>
-                <h3>Duración</h3>
-                <p>El proyecto tuvo una duración de 11 meses calendario, abarcando análisis, conversión, migración, pruebas y estabilización post-Go Live.</p>
-                <h3>Inconvenientes</h3>
-                <p>Se encontraron inconvenientes en la remediación de datos transaccionales y financieros, la eliminación de add-ons de terceros no soportados, las limitaciones en el ancho de banda entre el sitio principal y la nube de Huawei, la necesidad de conservar el direccionamiento IP existente, las capacidades insuficientes en la nube de Huawei que generaron interrupciones en la operación, y los problemas con interfaces no documentadas que no fueron probadas adecuadamente.</p>
-                <h3>Factores de Éxito</h3>
-                <p>Uso de herramientas especializadas para la migración selectiva, colaboración con expertos externos y proveedores de infraestructura, y enfoque en la modernización tecnológica.</p>
-                <h3>Resultados</h3>
-                <p>Modernización del sistema central de gestión con S/4HANA 2022, consolidación de toda la infraestructura en Huawei Cloud, y optimización del rendimiento del sistema después de ajustes en la infraestructura.</p>
-                <a href="casos-exito.html" class="volver btn-outline">Volver a Casos de Éxito</a> 
+                
+                <div class="caso-detalle-grid">
+                    <div class="caso-info-main">
+                        <h3>Descripción del Proyecto</h3>
+                        <p>Antes del proyecto, SMU operaba con un ecosistema SAP compuesto por: SAP ERP 6, SAP Solution Manager, SAP NetWeaver 7.5 PO (Process Orchestration), SAP GRC (Governance, Risk, and Compliance), SAP WMS (Warehouse Management System), SAP WebDispatcher y SAP Router. El proyecto consistió en la conversión de SAP ERP 6 a S/4HANA 2022 utilizando un enfoque de "System Move", que permitió mantener el sistema fuente operativo durante la conversión y migración. Se migraron datos a Huawei Cloud con herramientas de terceros para la selección de datos específicos, optimizando el tiempo de inactividad. Se consolidaron aproximadamente 34 TB de datos en la nube de Huawei, utilizando una copia del sistema PRD como base para los entornos DEV y QAS.</p>
+                        
+                        <h3>Duración</h3>
+                        <p>El proyecto tuvo una duración de 11 meses calendario, abarcando análisis, conversión, migración, pruebas y estabilización post-Go Live.</p>
+                        
+                        <h3>Inconvenientes</h3>
+                        <p>Se encontraron inconvenientes en la remediación de datos transaccionales y financieros, la eliminación de add-ons de terceros no soportados, las limitaciones en el ancho de banda entre el sitio principal y la nube de Huawei, la necesidad de conservar el direccionamiento IP existente, las capacidades insuficientes en la nube de Huawei que generaron interrupciones en la operación, y los problemas con interfaces no documentadas que no fueron probadas adecuadamente.</p>
+                    </div>
+                    
+                    <div class="caso-info-sidebar">
+                        <div class="sidebar-widget">
+                            <h3>Factores de Éxito</h3>
+                            <ul>
+                                <li>Uso de herramientas de migración selectiva.</li>
+                                <li>Colaboración con expertos externos.</li>
+                                <li>Enfoque en la modernización tecnológica.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="sidebar-widget">
+                            <h3>Resultados</h3>
+                            <ul>
+                                <li>Modernización a S/4HANA 2022.</li>
+                                <li>Consolidación de infraestructura en Huawei Cloud.</li>
+                                <li>Optimización del rendimiento del sistema.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <a href="casos-exito.html" class="btn-outline" style="margin-top: 40px;">Volver a Casos de Éxito</a> 
             </div>
         </section>
     </main>
@@ -55,5 +122,6 @@
             <p>&copy; 2025 Lamarr Tech. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

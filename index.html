@@ -6,7 +6,7 @@
     <title>LAMARR TECH | Data, IA y Estrategia Cloud</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
-    <link rel="stylesheet" href="css/hero.css">
+    
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/animations.css">
@@ -134,6 +134,10 @@
                             <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
                             <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
                             <li><a href="lamarr-automatizacion.html">LAMARR | AUTOMATIZACIÓN</a></li>
+                            <li><a href="services-sap.html">Servicios SAP</a></li>
+                            <li><a href="services-aws.html">Servicios AWS</a></li>
+                            <li><a href="services-google-cloud.html">Servicios Google Cloud</a></li>
+                            <li><a href="services-acronis.html">Servicios Acronis</a></li>
                         </ul>
                     </li>
                     <li><a href="casos-exito.html">CASOS DE ÉXITO</a></li>
@@ -161,6 +165,10 @@
                         <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
                         <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
                         <li><a href="lamarr-automatizacion.html">LAMARR | AUTOMATIZACIÓN</a></li>
+                        <li><a href="services-sap.html">Servicios SAP</a></li>
+                        <li><a href="services-aws.html">Servicios AWS</a></li>
+                        <li><a href="services-google-cloud.html">Servicios Google Cloud</a></li>
+                        <li><a href="services-acronis.html">Servicios Acronis</a></li>
                     </ul>
                 </li>
                 <li><a href="casos-exito.html">CASOS DE ÉXITO</a></li>
@@ -412,42 +420,9 @@
                 
                 map.fitBounds(L.geoJSON(locations.map(l => ({ type: "Point", coordinates: [l.lon, l.lat] }))).getBounds(), { padding: [50, 50] });
             }
-
-            const menuToggle = document.querySelector('.menu-toggle');
-            const mobileNavContainer = document.querySelector('.mobile-nav-container');
-            const menuIconOpen = document.getElementById('menu-icon-open');
-            const menuIconClose = document.getElementById('menu-icon-close');
-            const body = document.body;
-
-            menuToggle.addEventListener('click', function() {
-                const isOpen = mobileNavContainer.classList.toggle('open');
-                if (isOpen) {
-                    menuIconOpen.style.display = 'none';
-                    menuIconClose.style.display = 'block';
-                    body.style.overflow = 'hidden';
-                } else {
-                    menuIconOpen.style.display = 'block';
-                    menuIconClose.style.display = 'none';
-                    body.style.overflow = '';
-                }
-            });
-
-            const submenuToggle = document.querySelector('.mobile-submenu-toggle');
-            submenuToggle.addEventListener('click', function(e) {
-                e.preventDefault();
-                const submenu = this.nextElementSibling;
-                const arrow = this.querySelector('.dropdown-arrow');
-                
-                if (submenu.style.maxHeight) {
-                    submenu.style.maxHeight = null;
-                    arrow.style.transform = 'rotate(0deg)';
-                } else {
-                    submenu.style.maxHeight = submenu.scrollHeight + "px";
-                    arrow.style.transform = 'rotate(180deg)';
-                }
-            });
         });
     </script>
+    <script src="js/script.js"></script>
 
 </body>
 </html>

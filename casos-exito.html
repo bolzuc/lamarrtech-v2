@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/casos-exito.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/page-section.css">
 </head>
 <body>
     <header>
@@ -16,48 +18,91 @@
             <div class="logo">
                 <a href="index.html"><img src="img/logo-azul-oscuro.png" alt="Lamarr Tech Logo"></a>
             </div>
-            <nav>
+            <nav class="desktop-nav">
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="lamarr-cloud.html">LAMARR | CLOUD</a></li>
-                    <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
-                    <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
-                    <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
-                    <li><a href="casos-exito.html" class="active">Casos de Éxito</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li class="dropdown">
+                        <a href="#">LAMARR SERVICES
+                            <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </a>
+                        <ul class="dropdown-content">
+                            <li><a href="lamarr-cloud.html">LAMARR | CLOUD</a></li>
+                            <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
+                            <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
+                            <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
+                            <li><a href="lamarr-automatizacion.html">LAMARR | AUTOMATIZACIÓN</a></li>
+                            <li><a href="services-sap.html">Servicios SAP</a></li>
+                            <li><a href="services-aws.html">Servicios AWS</a></li>
+                            <li><a href="services-google-cloud.html">Servicios Google Cloud</a></li>
+                            <li><a href="services-acronis.html">Servicios Acronis</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="casos-exito.html" class="active">CASOS DE ÉXITO</a></li>
+                    <li><a href="contact.html">CONTACTO</a></li>
                 </ul>
             </nav>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
         </div>
     </header>
+
+    <div class="mobile-nav-container">
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li class="mobile-submenu">
+                    <a href="#" class="mobile-submenu-toggle">LAMARR
+                        <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    </a>
+                    <ul class="mobile-submenu-content">
+                        <li><a href="lamarr-cloud.html">LAMARR | CLOUD</a></li>
+                        <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
+                        <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
+                        <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
+                        <li><a href="lamarr-automatizacion.html">LAMARR | AUTOMATIZACIÓN</a></li>
+                        <li><a href="services-sap.html">Servicios SAP</a></li>
+                        <li><a href="services-aws.html">Servicios AWS</a></li>
+                        <li><a href="services-google-cloud.html">Servicios Google Cloud</a></li>
+                        <li><a href="services-acronis.html">Servicios Acronis</a></li>
+                    </ul>
+                </li>
+                <li><a href="casos-exito.html">CASOS DE ÉXITO</a></li>
+                <li><a href="contact.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </div>
+    
     <main>
         <section class="casos-exito">
             <div class="container">
                 <h1>Casos de Éxito</h1>
-                <div class="casos-lista">
+                <div class="page-details-grid">
 
-                    <div class="caso">
-                        <img src="img/cap-icon.png" alt="Logo CAP"> 
-                        <h2>CAP - Minería y Metalurgia</h2>
+                    <div class="page-detail-card caso-card">
+                        <img src="img/cap-icon.png" alt="Logo CAP" class="caso-logo"> 
+                        <h3>CAP - Minería y Metalurgia</h3>
                         <p><strong>Proyecto:</strong> Actualización y migración de SAP S/4HANA desde la nube privada de Entel a SAP RISE con Google Cloud Platform (GCP).</p>
-                        <p><strong>Alcance:</strong> Actualización de SAP S/4HANA 1709 a 2022, migración a SAP RISE con GCP, migración de sistemas complementarios a GCP, y actualización de sistemas operativos.</p>
-                        <div class="resultados">
-                            <h3>Resultados Clave</h3>
+                        
+                        <div class="card-results">
+                            <h4>Resultados Clave</h4>
                             <ul>
-                                <li>Modernización del entorno SAP con la última versión de S/4HANA (2022).</li>
-                                <li>Consolidación de sistemas críticos en una nube de última generación (GCP).</li>
-                                <li>Optimización de procesos internos y reducción de costos.</li>
+                                <li>Modernización del entorno SAP con S/4HANA 2022.</li>
+                                <li>Consolidación de sistemas críticos en GCP.</li>
+                                <li>Optimización de procesos y reducción de costos.</li>
                             </ul>
                         </div>
                         <a href="caso-cap.html" class="leer-mas">Leer más</a> 
                     </div>
 
-                    <div class="caso">
-                        <img src="img/transelec-icon.png" alt="Logo Transelec"> 
-                        <h2>Transelec - Transmisión de Energía</h2>
+                    <div class="page-detail-card caso-card">
+                        <img src="img/transelec-icon.png" alt="Logo Transelec" class="caso-logo"> 
+                        <h3>Transelec - Transmisión de Energía</h3>
                         <p><strong>Proyecto:</strong> Conversión a SAP S/4HANA y migración desde la nube privada de Entel a SAP RISE con Amazon Web Services (AWS).</p>
-                        <p><strong>Alcance:</strong> Conversión de SAP ERP 6 a S/4HANA 2022, migración a SAP RISE con AWS, implementación de SAP WebDispatcher.</p>
-                        <div class="resultados">
-                            <h3>Resultados Clave</h3>
+                        
+                        <div class="card-results">
+                            <h4>Resultados Clave</h4>
                             <ul>
                                 <li>Actualización exitosa a S/4HANA 2022.</li>
                                 <li>Consolidación en un entorno moderno y escalable en AWS.</li>
@@ -67,33 +112,33 @@
                         <a href="caso-transelec.html" class="leer-mas">Leer más</a> 
                     </div>
 
-                    <div class="caso">
-                        <img src="img/smu.icon.webp" alt="Logo SMU"> 
-                        <h2>SMU - Retail</h2>
+                    <div class="page-detail-card caso-card">
+                        <img src="img/smu.icon.webp" alt="Logo SMU" class="caso-logo"> 
+                        <h3>SMU - Retail</h3>
                         <p><strong>Proyecto:</strong> Conversión a SAP S/4HANA y migración desde la nube privada de Entel a la nube pública de Huawei.</p>
-                        <p><strong>Alcance:</strong> Conversión de SAP ERP 6 a S/4HANA 2022, migración a Huawei Cloud, uso de herramientas de migración selectiva.</p>
-                        <div class="resultados">
-                            <h3>Resultados Clave</h3>
+                        
+                        <div class="card-results">
+                            <h4>Resultados Clave</h4>
                             <ul>
-                                <li>Modernización del sistema central de gestión con S/4HANA 2022.</li>
-                                <li>Consolidación de toda la infraestructura en Huawei Cloud.</li>
+                                <li>Modernización del sistema central con S/4HANA 2022.</li>
+                                <li>Consolidación de infraestructura en Huawei Cloud.</li>
                                 <li>Optimización del rendimiento del sistema.</li>
                             </ul>
                         </div>
                         <a href="caso-smu.html" class="leer-mas">Leer más</a> 
                     </div>
 
-                    <div class="caso">
-                        <img src="img/pullman-icon.png" alt="Logo Pullman Bus"> 
-                        <h2>Pullman Bus - Transporte</h2>
+                    <div class="page-detail-card caso-card">
+                        <img src="img/pullman-icon.png" alt="Logo Pullman Bus" class="caso-logo"> 
+                        <h3>Pullman Bus - Transporte</h3>
                         <p><strong>Proyecto:</strong> Migración a la nube de Amazon Web Services (AWS).</p> 
-                        <p><strong>Alcance:</strong> Migración de la infraestructura tecnológica de Pullman Bus a AWS.</p>
-                        <div class="resultados">
-                            <h3>Resultados Clave</h3>
+                        
+                        <div class="card-results">
+                            <h4>Resultados Clave</h4>
                             <ul>
                                 <li>Mejora de la eficiencia de las operaciones.</li>
                                 <li>Aumento de la escalabilidad de la infraestructura.</li>
-                                <li>Fortalecimiento de la seguridad de datos y aplicaciones.</li>
+                                <li>Fortalecimiento de la seguridad de datos.</li>
                             </ul>
                         </div>
                         <a href="caso-pullman.html" class="leer-mas">Leer más</a> 
@@ -111,5 +156,6 @@
             <p>&copy; 2025 Lamarr Tech. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

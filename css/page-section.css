@@ -1,0 +1,297 @@
+.page-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: var(--color-background);
+    color: var(--color-text);
+}
+
+.page-section h1 {
+    font-size: 3em;
+    font-weight: 600;
+    margin-bottom: 30px;
+    color: var(--color-text);
+    position: relative; 
+    padding-bottom: 10px; 
+}
+
+.page-section h1::after { 
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 2px;
+    background-color: var(--color-primary);
+}
+
+.page-section > .container > p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.page-details-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+    gap: 30px;
+    margin-bottom: 40px;
+    padding: 0 20px; 
+    text-align: left;
+}
+
+.page-detail-card {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--color-border);
+    text-align: left;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.page-detail-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+}
+
+.page-detail-card h3 {
+    margin-bottom: 15px;
+    color: var(--color-primary);
+    font-size: 1.5em;
+    position: relative; 
+    padding-bottom: 8px; 
+    font-weight: 600;
+}
+
+.page-detail-card h3::after { 
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 40px;
+    height: 2px;
+    background-color: var(--color-primary);
+}
+
+.page-detail-card p {
+    margin-bottom: 20px;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.page-detail-card ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    padding-left: 0;
+    color: var(--color-text-secondary);
+}
+
+.page-detail-card li {
+    margin-bottom: 5px;
+    font-size: 1em;
+}
+
+.page-section .trust-message {
+    font-weight: 600;
+    font-size: 1.2em;
+    color: var(--color-primary);
+    padding: 0 20px; 
+}
+
+.page-section .contact-button-container {
+    text-align: center; 
+    margin-top: 40px; 
+}
+
+.page-section .estrategia-sap {
+    background-color: #f8f8f8; 
+    padding: 30px;
+    border-radius: 8px;
+    border: 1px solid var(--color-border);
+    font-family: var(--font-primary);
+    margin-bottom: 40px;
+    text-align: left;
+}
+  
+.page-section .estrategia-sap h2 {
+    color: var(--color-text);
+    margin-bottom: 20px;
+    text-align: left;
+}
+  
+.page-section .estrategia-sap ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+  
+.page-section .estrategia-sap li {
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 30px;
+    color: var(--color-text-secondary);
+}
+  
+.page-section .estrategia-sap li::before {
+    content: '\2713'; 
+    font-family: 'Arial', sans-serif;
+    font-weight: 900;
+    position: absolute;
+    left: 0;
+    top: 4px;
+    color: var(--color-primary); 
+}
+
+.page-section .certifications {
+    margin-bottom: 40px;
+    padding: 0 20px; 
+}
+
+.page-section.theme-dark {
+    background: #111827;
+    color: #f0f0f0;
+}
+
+.page-section.theme-dark h1 {
+    color: #ffffff;
+}
+
+.page-section.theme-dark h1::after {
+    background-color: #38BDF8;
+}
+
+.page-section.theme-dark .page-detail-card {
+    background-color: #1a202c;
+    border: 1px solid #38BDF8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.page-section.theme-dark .page-detail-card:hover {
+    box-shadow: 0 6px 12px rgba(56, 189, 248, 0.15);
+}
+
+.page-section.theme-dark .page-detail-card h3 {
+    color: #38BDF8;
+}
+
+.page-section.theme-dark .page-detail-card h3::after {
+    background-color: #38BDF8;
+}
+
+.page-section.theme-dark .page-detail-card p,
+.page-section.theme-dark .page-detail-card ul {
+    color: #f0f0f0;
+}
+
+.page-section.theme-dark .trust-message {
+    color: #38BDF8;
+}
+
+.page-section.caso-detalle-section .container {
+    max-width: 900px;
+}
+
+.caso-detalle-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    text-align: left;
+}
+
+.caso-info-main h3 {
+    font-size: 1.8em;
+    color: var(--color-text);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+.caso-info-main p, .caso-info-main li {
+    font-size: 1.1em;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.caso-info-main ul {
+    list-style-position: inside;
+    padding-left: 10px;
+}
+
+.sidebar-widget {
+    background-color: #f8f9fa;
+    border: 1px solid var(--color-border);
+    border-radius: 12px;
+    padding: 25px;
+    margin-top: 30px;
+}
+
+.sidebar-widget h3 {
+    font-size: 1.5em;
+    color: var(--color-text);
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--color-primary);
+    margin: 0 0 15px 0;
+}
+
+.sidebar-widget ul {
+    list-style: disc;
+    padding-left: 20px;
+    margin: 0;
+}
+
+.sidebar-widget li {
+    font-size: 1rem;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.page-section.caso-detalle-section h2 {
+    font-size: 2.5em;
+    color: var(--color-primary);
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.page-section.caso-detalle-section p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    color: var(--color-text-secondary);
+    max-width: 100%;
+}
+
+.page-section.caso-detalle-section h3 {
+    font-size: 1.8em;
+    color: var(--color-text);
+    margin-top: 30px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid var(--color-primary);
+    padding-bottom: 5px;
+    text-align: left;
+}
+
+.page-section.caso-detalle-section ul {
+    list-style-position: inside;
+    padding-left: 10px;
+    text-align: left;
+}
+
+.page-section.caso-detalle-section li {
+    margin-bottom: 10px;
+    line-height: 1.7;
+    color: var(--color-text-secondary);
+}
+
+@media (max-width: 768px) {
+    .caso-detalle-grid {
+        grid-template-columns: 1fr;
+    }
+}

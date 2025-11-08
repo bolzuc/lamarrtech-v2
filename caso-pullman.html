@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/caso-detalle.css"> 
+    <link rel="stylesheet" href="css/page-section.css"> 
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
     <header>
@@ -16,37 +17,89 @@
             <div class="logo">
                 <a href="index.html"><img src="img/logo-azul-oscuro.png" alt="Lamarr Tech Logo"></a>
             </div>
-            <nav>
+            <nav class="desktop-nav">
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="lamarr-cloud.html">LAMARR | CLOUD</a></li>
-                    <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
-                    <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
-                    <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
-                    <li><a href="casos-exito.html" class="active">Casos de Éxito</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li class="dropdown">
+                        <a href="#">LAMARR SERVICES
+                            <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </a>
+                        <ul class="dropdown-content">
+                            <li><a href="lamarr-cloud.html">LAMARR | CLOUD</a></li>
+                            <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
+                            <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
+                            <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
+                            <li><a href="lamarr-automatizacion.html">LAMARR | AUTOMATIZACIÓN</a></li>
+                            <li><a href="services-sap.html">Servicios SAP</a></li>
+                            <li><a href="services-aws.html">Servicios AWS</a></li>
+                            <li><a href="services-google-cloud.html">Servicios Google Cloud</a></li>
+                            <li><a href="services-acronis.html">Servicios Acronis</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="casos-exito.html" class="active">CASOS DE ÉXITO</a></li>
+                    <li><a href="contact.html">CONTACTO</a></li>
                 </ul>
             </nav>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
         </div>
     </header>
+
+    <div class="mobile-nav-container">
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li class="mobile-submenu">
+                    <a href="#" class="mobile-submenu-toggle">LAMARR
+                        <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    </a>
+                    <ul class="mobile-submenu-content">
+                        <li><a href="lamarr-cloud.html">LAMARR | CLOUD</a></li>
+                        <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
+                        <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
+                        <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
+                        <li><a href="lamarr-automatizacion.html">LAMARR | AUTOMATIZACIÓN</a></li>
+                        <li><a href="services-sap.html">Servicios SAP</a></li>
+                        <li><a href="services-aws.html">Servicios AWS</a></li>
+                        <li><a href="services-google-cloud.html">Servicios Google Cloud</a></li>
+                        <li><a href="services-acronis.html">Servicios Acronis</a></li>
+                    </ul>
+                </li>
+                <li><a href="casos-exito.html">CASOS DE ÉXITO</a></li>
+                <li><a href="contact.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <main>
-        <section class="caso-detalle">
+        <section class="page-section caso-detalle-section">
             <div class="container">
                 <h2>Pullman Bus - Transporte</h2>
                 <p><strong>Proyecto:</strong> Migración a la nube de Amazon Web Services (AWS).</p>
-                <p><strong>Alcance:</strong> Migración de la infraestructura tecnológica de Pullman Bus a AWS.</p> 
-                <h3>Descripción del Proyecto</h3>
-                <p>Pullman Bus, una de las principales empresas de transporte de pasajeros en Chile, decidió migrar su infraestructura tecnológica a la nube de AWS para mejorar la eficiencia, escalabilidad y seguridad de sus operaciones. El proyecto incluyó la migración de servidores, aplicaciones, bases de datos y otros componentes críticos a la plataforma de AWS.</p>
-                <p>Se utilizaron diferentes servicios de AWS, como Amazon EC2 para las máquinas virtuales, Amazon S3 para el almacenamiento de datos, y Amazon RDS para las bases de datos. La migración se realizó de forma gradual y controlada, minimizando el impacto en las operaciones de la empresa.</p>
-                <h3>Resultados</h3>
-                <p>Gracias a la migración a AWS, Pullman Bus logró:
-                <ul>
-                    <li>Mejorar la eficiencia de sus operaciones al reducir el tiempo de inactividad y los costos de mantenimiento.</li>
-                    <li>Aumentar la escalabilidad de su infraestructura para adaptarse a las fluctuaciones de la demanda.</li>
-                    <li>Fortalecer la seguridad de sus datos y aplicaciones mediante el uso de las herramientas de seguridad de AWS.</li>
-                </ul>
-                </p>
-                <a href="casos-exito.html" class="volver btn-outline">Volver a Casos de Éxito</a> 
+                
+                <div class="caso-detalle-grid">
+                    <div class="caso-info-main">
+                        <h3>Descripción del Proyecto</h3>
+                        <p>Pullman Bus, una de las principales empresas de transporte de pasajeros en Chile, decidió migrar su infraestructura tecnológica a la nube de AWS para mejorar la eficiencia, escalabilidad y seguridad de sus operaciones. El proyecto incluyó la migración de servidores, aplicaciones, bases de datos y otros componentes críticos a la plataforma de AWS.</p>
+                        <p>Se utilizaron diferentes servicios de AWS, como Amazon EC2 para las máquinas virtuales, Amazon S3 para el almacenamiento de datos, y Amazon RDS para las bases de datos. La migración se realizó de forma gradual y controlada, minimizando el impacto en las operaciones de la empresa.</p>
+                    </div>
+                    
+                    <div class="caso-info-sidebar">
+                        <div class="sidebar-widget">
+                            <h3>Resultados</h3>
+                            <ul>
+                                <li>Mejora de la eficiencia de las operaciones.</li>
+                                <li>Reducción del tiempo de inactividad y costos.</li>
+                                <li>Aumento de la escalabilidad de la infraestructura.</li>
+                                <li>Fortalecimiento de la seguridad de datos en AWS.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="casos-exito.html" class="btn-outline" style="margin-top: 40px;">Volver a Casos de Éxito</a> 
             </div>
         </section>
     </main>
@@ -55,5 +108,6 @@
             <p>&copy; 2025 Lamarr Tech. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>

@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/caso-detalle.css"> 
+    <link rel="stylesheet" href="css/page-section.css"> 
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/footer.css">
 </head>
 <body>
     <header>
@@ -16,36 +17,103 @@
             <div class="logo">
                 <a href="index.html"><img src="img/logo-azul-oscuro.png" alt="Lamarr Tech Logo"></a>
             </div>
-            <nav>
+            <nav class="desktop-nav">
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="lamarr-cloud.html">LAMARR | CLOUD</a></li>
-                    <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
-                    <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
-                    <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
-                    <li><a href="casos-exito.html" class="active">Casos de Éxito</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="index.html">INICIO</a></li>
+                    <li class="dropdown">
+                        <a href="#">LAMARR SERVICES
+                            <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </a>
+                        <ul class="dropdown-content">
+                            <li><a href="lamarr-cloud.html">LAMARR | CLOUD</a></li>
+                            <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
+                            <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
+                            <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
+                            <li><a href="lamarr-automatizacion.html">LAMARR | AUTOMATIZACIÓN</a></li>
+                            <li><a href="services-sap.html">Servicios SAP</a></li>
+                            <li><a href="services-aws.html">Servicios AWS</a></li>
+                            <li><a href="services-google-cloud.html">Servicios Google Cloud</a></li>
+                            <li><a href="services-acronis.html">Servicios Acronis</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="casos-exito.html" class="active">CASOS DE ÉXITO</a></li>
+                    <li><a href="contact.html">CONTACTO</a></li>
                 </ul>
             </nav>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
         </div>
     </header>
+
+    <div class="mobile-nav-container">
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li class="mobile-submenu">
+                    <a href="#" class="mobile-submenu-toggle">LAMARR
+                        <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    </a>
+                    <ul class="mobile-submenu-content">
+                        <li><a href="lamarr-cloud.html">LAMARR | CLOUD</a></li>
+                        <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
+                        <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
+                        <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
+                        <li><a href="lamarr-automatizacion.html">LAMARR | AUTOMATIZACIÓN</a></li>
+                        <li><a href="services-sap.html">Servicios SAP</a></li>
+                        <li><a href="services-aws.html">Servicios AWS</a></li>
+                        <li><a href="services-google-cloud.html">Servicios Google Cloud</a></li>
+                        <li><a href="services-acronis.html">Servicios Acronis</a></li>
+                    </ul>
+                </li>
+                <li><a href="casos-exito.html">CASOS DE ÉXITO</a></li>
+                <li><a href="contact.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </div>
+
     <main>
-        <section class="caso-detalle">
+        <section class="page-section caso-detalle-section">
             <div class="container">
                 <h2>Transelec - Transmisión de Energía</h2>
                 <p><strong>Proyecto:</strong> Conversión a SAP S/4HANA y migración desde la nube privada de Entel hacia SAP RISE con Amazon Web Services (AWS).</p>
-                <p><strong>Alcance:</strong> Conversión de SAP ERP 6 a S/4HANA 2022, migración de datos al entorno SAP RISE con AWS, implementación de un SAP WebDispatcher para habilitar el uso de aplicaciones Fiori dentro del entorno RISE.</p> 
-                <h3>Descripción del Proyecto</h3>
-                <p>Antes del proyecto, Transelec utilizaba SAP ERP 6 como sistema central para la gestión de su operación. El proyecto consistió en realizar la conversión de SAP ERP 6 a SAP S/4HANA 2022 utilizando un enfoque de "System Move". Este enfoque permitió mantener el sistema fuente operativo durante la conversión. La migración involucró aproximadamente 1 TB de datos al entorno SAP RISE, utilizando instancias EC2 en AWS como puente.  Además, se crearon nuevos entornos de desarrollo (DEV) y control de calidad (QAS) a partir de una copia del sistema productivo (PRD) para optimizar la implementación. La coordinación entre SAP y un partner estratégico fue clave para llevar a cabo la migración.</p>
-                <h3>Duración</h3>
-                <p>El proyecto tuvo una duración de 13 meses calendario, abarcando todas las etapas de análisis, conversión, migración, pruebas y estabilización post-Go Live.</p>
-                <h3>Inconvenientes</h3>
-                <p>Durante el proyecto, se encontraron algunos inconvenientes. En la fase de conversión y actualización, fue necesario realizar una remediación de datos transaccionales y financieros para resolver inconsistencias. También se encontraron add-ons de terceros no soportados en la nueva versión de S/4HANA, los cuales requirieron eliminación o ajuste. En la fase de implementación de la infraestructura, se presentaron problemas de conectividad para configurar las comunicaciones desde los diversos sitios operativos de Transelec hacia la nube de RISE, especialmente en interfaces relacionadas con el control de procesos.  Además, un dimensionamiento inicial incorrecto provocó problemas de rendimiento durante el Go Live, lo que requirió ajustes posteriores.</p>
-                <h3>Factores de Éxito</h3>
-                <p>A pesar de los desafíos, el proyecto logró el éxito gracias a la colaboración entre SAP, el partner de migración y el equipo interno de Transelec. El uso de instancias EC2 como puente de migración facilitó la transición hacia el entorno RISE. La implementación del SAP WebDispatcher permitió la adopción de Fiori y mejoró la experiencia de usuario.</p>
-                <h3>Resultados</h3>
-                <p>Como resultado del proyecto, Transelec logró la actualización exitosa a S/4HANA 2022, habilitando capacidades avanzadas para la gestión de procesos de transmisión de energía. La consolidación en un entorno moderno y escalable en AWS mejoró la flexibilidad y el tiempo de respuesta del sistema.  Finalmente, la optimización del rendimiento del sistema tras ajustes de dimensionamiento aseguró la estabilidad operativa en un entorno de alta demanda.</p>
-                <a href="casos-exito.html" class="volver btn-outline">Volver a Casos de Éxito</a> 
+                
+                <div class="caso-detalle-grid">
+                    <div class="caso-info-main">
+                        <h3>Descripción del Proyecto</h3>
+                        <p>Antes del proyecto, Transelec utilizaba SAP ERP 6 como sistema central para la gestión de su operación. El proyecto consistió en realizar la conversión de SAP ERP 6 a SAP S/4HANA 2022 utilizando un enfoque de "System Move". Este enfoque permitió mantener el sistema fuente operativo durante la conversión. La migración involucró aproximadamente 1 TB de datos al entorno SAP RISE, utilizando instancias EC2 en AWS como puente.  Además, se crearon nuevos entornos de desarrollo (DEV) y control de calidad (QAS) a partir de una copia del sistema productivo (PRD) para optimizar la implementación. La coordinación entre SAP y un partner estratégico fue clave para llevar a cabo la migración.</p>
+                        
+                        <h3>Duración</h3>
+                        <p>El proyecto tuvo una duración de 13 meses calendario, abarcando todas las etapas de análisis, conversión, migración, pruebas y estabilización post-Go Live.</p>
+                        
+                        <h3>Inconvenientes</h3>
+                        <p>Durante el proyecto, se encontraron algunos inconvenientes. En la fase de conversión y actualización, fue necesario realizar una remediación de datos transaccionales y financieros para resolver inconsistencias. También se encontraron add-ons de terceros no soportados en la nueva versión de S/4HANA, los cuales requirieron eliminación o ajuste. En la fase de implementación de la infraestructura, se presentaron problemas de conectividad para configurar las comunicaciones desde los diversos sitios operativos de Transelec hacia la nube de RISE, especialmente en interfaces relacionadas con el control de procesos.  Además, un dimensionamiento inicial incorrecto provocó problemas de rendimiento durante el Go Live, lo que requirió ajustes posteriores.</p>
+                    </div>
+                    
+                    <div class="caso-info-sidebar">
+                        <div class="sidebar-widget">
+                            <h3>Factores de Éxito</h3>
+                            <ul>
+                                <li>Colaboración entre SAP, partner y Transelec.</li>
+                                <li>Uso de instancias EC2 como puente de migración.</li>
+                                <li>Implementación del SAP WebDispatcher para Fiori.</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="sidebar-widget">
+                            <h3>Resultados</h3>
+                            <ul>
+                                <li>Actualización exitosa a S/4HANA 2022.</li>
+                                <li>Consolidación en entorno moderno en AWS.</li>
+                                <li>Optimización del rendimiento del sistema.</li>
+                                <li>Adopción de Fiori.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="casos-exito.html" class="btn-outline" style="margin-top: 40px;">Volver a Casos de Éxito</a> 
             </div>
         </section>
     </main>
@@ -54,5 +122,6 @@
             <p>&copy; 2025 Lamarr Tech. Todos los derechos reservados.</p>
         </div>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
