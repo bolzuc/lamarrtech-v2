@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/animations.css">
-    <link rel="stylesheet" href="css/responsive.css">
+    
 </head>
 <body>
     <header>
@@ -30,7 +30,6 @@
                             <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
                             <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
                             <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
-                            <li><a href="lamarr-automatizacion.html">LAMARR | AUTOMATIZACIÓN</a></li>
                             <li><a href="services-sap.html">Servicios SAP</a></li>
                             <li><a href="services-aws.html">Servicios AWS</a></li>
                             <li><a href="services-google-cloud.html">Servicios Google Cloud</a></li>
@@ -61,7 +60,6 @@
                         <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
                         <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
                         <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
-                        <li><a href="lamarr-automatizacion.html">LAMARR | AUTOMATIZACIÓN</a></li>
                         <li><a href="services-sap.html">Servicios SAP</a></li>
                         <li><a href="services-aws.html">Servicios AWS</a></li>
                         <li><a href="services-google-cloud.html">Servicios Google Cloud</a></li>
@@ -74,46 +72,141 @@
         </nav>
     </div>
 
-    <main class="contact-page">
-        <section class="contact-form">
+    <main>
+        <section class="contact-hero-section">
+            <div class="contact-video-wrapper">
+                <video class="contact-infinity-video" src="img/animacion-infinito-horizontal.mp4" autoplay loop muted playsinline>
+                    Tu navegador no soporta el tag de video.
+                </video>
+            </div>
+            
             <div class="container">
-                <h2>Contáctanos</h2>
-                <form>
-                    <div class="form-group">
-                        <input type="text" id="name" name="name" required placeholder=" ">
-                        <label for="name">Nombre</label>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" name="email" required placeholder=" ">
-                        <label for="email">Correo electrónico</label>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" name="message" required placeholder=" "></textarea>
-                        <label for="message">Mensaje</label>
-                    </div>
-                    <button type="submit">Enviar</button>
-                </form>
+                <div class="contact-form-container">
+                    <h2>Iniciemos la Conversación</h2>
+                    <p class="storytelling-text">
+                        Has explorado nuestra innovación global en IA y nuestra ejecución experta en Cloud y SAP. Has visto cómo transformamos datos en resultados para líderes de la industria.
+                    </p>
+                    <p class="storytelling-text">
+                        Ahora, es tu turno. Cada gran transformación comienza con una simple conversación. Ya sea que tengas un desafío complejo de migración, un proyecto de IA o una consulta sobre optimización, nuestro equipo está listo para escucharte.
+                    </p>
+
+                    <form id="lamarr-contact-form">
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <input type="text" id="name" name="name" required placeholder=" ">
+                                <label for="name">Nombre</label>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" id="apellido" name="apellido" required placeholder=" ">
+                                <label for="apellido">Apellido</label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" required placeholder=" ">
+                            <label for="email">Correo electrónico</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="telefono" name="telefono" placeholder=" ">
+                            <label for="telefono">Teléfono (Opcional)</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="empresa" name="empresa" placeholder=" ">
+                            <label for="empresa">Nombre de la Empresa (Opcional)</label>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="cargo" name="cargo" placeholder=" ">
+                            <label for="cargo">Cargo (Opcional)</label>
+                        </div>
+                        <div class="form-group">
+                            <select id="servicio" name="servicio" required>
+                                <option value="" disabled selected>Selecciona un servicio de interés...</option>
+                                <option value="data-ai">LAMARR | DATA+AI</option>
+                                <option value="cloud">LAMARR | CLOUD</option>
+                                <option value="integrate">LAMARR | INTEGRATE</option>
+                                <option value="secure">LAMARR | SECURE</option>
+                                <option value="sap">Servicios SAP</option>
+                                <option value="aws">Servicios AWS</option>
+                                <option value="google">Servicios Google Cloud</option>
+                                <option value="acronis">Servicios Acronis</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                            <label for="servicio" class="label-select">Servicio de Interés</label>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" required placeholder=" "></textarea>
+                            <label for="message">Mensaje</label>
+                        </div>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
             </div>
         </section>
 
-        <section class="contact-info">
+        <section class="contact-info-section">
             <div class="container">
-                <h2>Información de Contacto</h2>
-                <p>Estamos aquí para ayudarte. Contáctanos para más información.</p>
-                <ul>
-                    <li><strong>Teléfono:</strong> +123 456 7890</li>
-                    <li><strong>Correo Electrónico:</strong> info@lamarrtech.com</li>
-                    <li><strong>Dirección:</strong> 123 Calle Principal, Ciudad, País</li>
-                </ul>
+                <div class="contact-info-container">
+                    <h2>Información Directa</h2>
+                    <ul class="contact-info-list">
+                        <li><strong>Teléfono:</strong> +56 9 3199 3952</li>
+                        <li><strong>Correo Electrónico:</strong> info@lamarrtech.com</li>
+                        <li><strong>Dirección:</strong> 123 Calle Principal, Ciudad, País</li>
+                    </ul>
+                </div>
             </div>
         </section>
     </main>
+
+    <div id="whatsapp-popup" class="popup-container" style="display: none;">
+        <div class="popup-content">
+            <button id="popup-close" class="popup-close-btn">&times;</button>
+            <h3>¡Gracias por contactarnos!</h3>
+            <p>Tu mensaje ha sido enviado. Para una atención más rápida, puedes contactarnos directamente por WhatsApp.</p>
+            <a href="https://api.whatsapp.com/send/?phone=56931993952&text=Hola%2C+gracias+por+contactarte+con+Lamarr+Tech.+Nuestro+equipo+ha+recibido+tu+mensaje+y+te+responderemos+en+breve.+¡Nos+encantará+ayudarte%21&type=phone_number&app_absent=0" target="_blank" class="btn-primary" id="popup-whatsapp-link">Hablar por WhatsApp</a>
+        </div>
+    </div>
 
     <footer>
         <div class="container">
             <p>&copy; 2025 Lamarr Tech. Todos los derechos reservados.</p>
         </div>
     </footer>
+     
     <script src="js/script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            const form = document.getElementById('lamarr-contact-form');
+            const popup = document.getElementById('whatsapp-popup');
+            const closeBtn = document.getElementById('popup-close');
+            const whatsappLink = document.getElementById('popup-whatsapp-link');
+
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    if (popup) {
+                        popup.style.display = 'flex';
+                    }
+                });
+            }
+
+            if (closeBtn) {
+                closeBtn.addEventListener('click', function() {
+                    popup.style.display = 'none';
+                });
+            }
+
+            if (whatsappLink) {
+                whatsappLink.addEventListener('click', function() {
+                    popup.style.display = 'none';
+                });
+            }
+
+            window.addEventListener('click', function(e) {
+                if (e.target == popup) {
+                    popup.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>

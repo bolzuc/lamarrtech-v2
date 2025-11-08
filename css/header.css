@@ -137,7 +137,7 @@ nav.desktop-nav .dropdown-content a {
     width: 100%;
     height: calc(100vh - 71px);
     background-color: var(--color-background);
-    z-index: 999;
+    z-index: 9999;
     overflow-y: auto;
     padding: 30px;
     transform: translateX(100%);
@@ -183,6 +183,10 @@ nav.desktop-nav .dropdown-content a {
 
 .mobile-submenu-toggle .dropdown-arrow {
     transition: transform 0.3s ease;
+}
+
+.mobile-submenu-toggle .dropdown-arrow.rotated {
+    transform: rotate(180deg);
 }
 
 .mobile-submenu-content {

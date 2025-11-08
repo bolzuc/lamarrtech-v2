@@ -3,6 +3,8 @@
     text-align: center;
     background-color: var(--color-background);
     color: var(--color-text);
+    position: relative;
+    z-index: 1;
 }
 
 .page-section h1 {
