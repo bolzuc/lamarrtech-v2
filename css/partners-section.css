@@ -43,7 +43,7 @@
 }
   
 .partner-item {
-    margin: 0 20px;
+    margin: 0 40px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,6 +51,8 @@
   
 .partner-item img {
     width: auto;
+    height: 70px;
+    max-width: 160px;
     object-fit: contain;
     filter: grayscale(100%);
     opacity: 0.6;
@@ -63,54 +65,57 @@
 }
 
 .partner-group .partner-item:nth-child(1) img { 
-    height: 60px; 
 }
 .partner-group .partner-item:nth-child(2) img { 
-    height: 60px; 
 }
 .partner-group .partner-item:nth-child(3) img { 
-    height: 80px; 
 }
 .partner-group .partner-item:nth-child(4) img { 
-    height: 60px; 
 }
 .partner-group .partner-item:nth-child(5) img { 
-    height: 70px; 
 }
 .partner-group .partner-item:nth-child(6) img { 
-    height: 90px; 
 }
 .partner-group .partner-item:nth-child(7) img { 
-    height: 120px; 
-    max-width: 160px; 
+    height: 110px;
+    max-width: 240px;
 }
 
 
 @media (max-width: 768px) {
+    .partners-band {
+        width: 100%;
+        animation: none;
+    }
+
+    .partner-group {
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+        /* Reducimos el gap horizontal y confiamos en el padding del item */
+        gap: 30px 0; 
+    }
+
+    .partner-group:nth-child(2) {
+        display: none;
+    }
+
     .partner-item {
-        margin: 0 15px;
+        /* Damos a cada item un ancho fijo para una cuadrícula predecible, por ejemplo, 3 items por fila */
+        width: 33.33%; 
+        padding: 0 10px; /* Añadimos espacio interior para evitar colisiones */
+        margin: 0;
+        /* Aseguramos que el item no se haga más pequeño de lo necesario para contener el logo */
+        min-width: 100px;
+    }
+
+    .partner-item img {
+        height: 55px; /* Altura base mejorada para móvil */
+        max-width: 100%; /* Permitimos que la imagen ocupe el ancho del item */
     }
     
-    .partner-group .partner-item:nth-child(1) img { 
-        height: 45px; 
-    }
-    .partner-group .partner-item:nth-child(2) img { 
-        height: 45px; 
-    }
-    .partner-group .partner-item:nth-child(3) img { 
-        height: 60px; 
-    }
-    .partner-group .partner-item:nth-child(4) img { 
-        height: 45px; 
-    }
-    .partner-group .partner-item:nth-child(5) img { 
-        height: 50px; 
-    }
-    .partner-group .partner-item:nth-child(6) img { 
-        height: 65px; 
-    }
     .partner-group .partner-item:nth-child(7) img { 
-        height: 80px; 
-        max-width: 110px; 
+        /* Ajuste final de Noventiq en móvil */
+        height: 85px; /* Más alto para mejor visibilidad */
     }
 }
