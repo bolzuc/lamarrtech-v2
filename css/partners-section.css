@@ -44,15 +44,50 @@
   
 .partner-item {
     margin: 0 20px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
   
 .partner-item img {
-    max-width: 100px;
-    height: auto;
+    max-height: 100%;
+    width: auto;
+    object-fit: contain;
     filter: grayscale(100%);
     opacity: 0.6;
     transition: filter 0.3s ease, opacity 0.3s ease;
 }
+
+/* Logo 1: Google */
+.partner-group .partner-item:nth-child(1) img { 
+    max-width: 120px;
+}
+/* Logo 2: AWS */
+.partner-group .partner-item:nth-child(2) img { 
+    max-width: 100px;
+}
+/* Logo 3: Licencias On Line */
+.partner-group .partner-item:nth-child(3) img { 
+    max-width: 140px;
+}
+/* Logo 4: SAP */
+.partner-group .partner-item:nth-child(4) img { 
+    max-width: 100px;
+}
+/* Logo 5: Ubuntu */
+.partner-group .partner-item:nth-child(5) img { 
+    max-width: 130px;
+}
+/* Logo 6: Mercado Público */
+.partner-group .partner-item:nth-child(6) img { 
+    max-width: 150px;
+}
+/* Logo 7: Noventiq */
+.partner-group .partner-item:nth-child(7) img { 
+    max-width: 120px;
+}
+
 
 .partner-item img:hover {
     filter: grayscale(0%);

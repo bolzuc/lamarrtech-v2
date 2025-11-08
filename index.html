@@ -107,6 +107,11 @@
             color: var(--color-text-secondary);
             margin-bottom: 0;
         }
+        
+        .hero-solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05), 0 0 15px rgba(0, 123, 255, 0.4);
+        }
     </style>
 </head>
 <body>
@@ -116,19 +121,53 @@
             <div class="logo">
                 <a href="index.html"><img src="img/logo-azul-oscuro.png" alt="Lamarr Tech Logo"></a>
             </div>
-            <nav>
+            <nav class="desktop-nav">
                 <ul>
-                    <li><a href="index.html" class="active">Inicio</a></li>
-                    <li><a href="lamarr-cloud.html">Lamarr | Cloud</a></li>
-                    <li><a href="lamarr-integrate.html">Lamarr | Integrate</a></li>
-                    <li><a href="lamarr-data-ai.html">Lamarr | Data+AI</a></li>
-                    <li><a href="lamarr-secure.html">Lamarr | Secure</a></li>
-                    <li><a href="casos-exito.html">Casos de Éxito</a></li>
-                    <li><a href="contact.html">Contacto</a></li>
+                    <li><a href="index.html" class="active">INICIO</a></li>
+                    <li class="dropdown">
+                        <a href="#">LAMARR SERVICES
+                            <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                        </a>
+                        <ul class="dropdown-content">
+                            <li><a href="lamarr-cloud.html">LAMARR | CLOUD</a></li>
+                            <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
+                            <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
+                            <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
+                            <li><a href="lamarr-automatizacion.html">LAMARR | AUTOMATIZACIÓN</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="casos-exito.html">CASOS DE ÉXITO</a></li>
+                    <li><a href="contact.html">CONTACTO</a></li>
                 </ul>
             </nav>
+            <button class="menu-toggle" aria-label="Abrir menú">
+                <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+                <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+            </button>
         </div>
     </header>
+
+    <div class="mobile-nav-container">
+        <nav class="mobile-nav">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li class="mobile-submenu">
+                    <a href="#" class="mobile-submenu-toggle">LAMARR
+                        <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                    </a>
+                    <ul class="mobile-submenu-content">
+                        <li><a href="lamarr-cloud.html">LAMARR | CLOUD</a></li>
+                        <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
+                        <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
+                        <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
+                        <li><a href="lamarr-automatizacion.html">LAMARR | AUTOMATIZACIÓN</a></li>
+                    </ul>
+                </li>
+                <li><a href="casos-exito.html">CASOS DE ÉXITO</a></li>
+                <li><a href="contact.html">CONTACTO</a></li>
+            </ul>
+        </nav>
+    </div>
 
     <main>
         <section class="hero hero-premium">
@@ -178,34 +217,6 @@
                     <img src="img/transelec-icon.png" alt="Logo Transelec" class="client-logo">
                     <img src="img/smu.icon.webp" alt="Logo SMU" class="client-logo">
                     <img src="img/pullman-icon.png" alt="Logo Pullman Bus" class="client-logo">
-                </div>
-            </div>
-        </section>
-
-        <section class="partners-section">
-            <div class="container">
-                <h2>Nuestros Socios Tecnológicos</h2>
-                <div class="partners-container">
-                    <div class="partners-band"> 
-                        <div class="partner-group">
-                            <div class="partner-item"><img src="img/logo-google.png" alt="Logo Google"></div>
-                            <div class="partner-item"><img src="img/aws-logo.png" alt="Logo AWS"></div>
-                            <div class="partner-item"><img src="img/logo-licencia-on-line.png" alt="Logo Licencias On Line"></div>
-                            <div class="partner-item"><img src="img/sap-icon.png" alt="Logo SAP"></div>
-                            <div class="partner-item"><img src="img/logo-ubuntu.png" alt="Logo Ubuntu"></div>
-                            <div class="partner-item"><img src="img/logo-mercado-publico.png" alt="Logo Mercado Público"></div>
-                            <div class="partner-item"><img src="img/logo-noventiq.png" alt="Logo Noventiq"></div> 
-                        </div>
-                        <div class="partner-group">
-                            <div class="partner-item"><img src="img/logo-google.png" alt="Logo Google"></div>
-                            <div class="partner-item"><img src="img/aws-logo.png" alt="Logo AWS"></div>
-                            <div class="partner-item"><img src="img/logo-licencia-on-line.png" alt="Logo Licencias On Line"></div>
-                            <div class="partner-item"><img src="img/sap-icon.png" alt="Logo SAP"></div>
-                            <div class="partner-item"><img src="img/logo-ubuntu.png" alt="Logo Ubuntu"></div>
-                            <div class="partner-item"><img src="img/logo-mercado-publico.png" alt="Logo Mercado Público"></div>
-                            <div class="partner-item"><img src="img/logo-noventiq.png" alt="Logo Noventiq"></div> 
-                        </div>
-                    </div>
                 </div>
             </div>
         </section>
@@ -276,6 +287,33 @@
             </div>
         </section>
 
+        <section class="partners-section">
+            <div class="container">
+                <h2>Nuestros Socios Tecnológicos</h2>
+                <div class="partners-container">
+                    <div class="partners-band"> 
+                        <div class="partner-group">
+                            <div class="partner-item"><img src="img/logo-google.png" alt="Logo Google"></div>
+                            <div class="partner-item"><img src="img/aws-logo.png" alt="Logo AWS"></div>
+                            <div class="partner-item"><img src="img/logo-licencia-on-line.png" alt="Logo Licencias On Line"></div>
+                            <div class="partner-item"><img src="img/sap-icon.png" alt="Logo SAP"></div>
+                            <div class="partner-item"><img src="img/logo-ubuntu.png" alt="Logo Ubuntu"></div>
+                            <div class="partner-item"><img src="img/logo-mercado-publico.png" alt="Logo Mercado Público"></div>
+                            <div class="partner-item"><img src="img/logo-noventiq.png" alt="Logo Noventiq"></div> 
+                        </div>
+                        <div class="partner-group">
+                            <div class="partner-item"><img src="img/logo-google.png" alt="Logo Google"></div>
+                            <div class="partner-item"><img src="img/aws-logo.png" alt="Logo AWS"></div>
+                            <div class="partner-item"><img src="img/logo-licencia-on-line.png" alt="Logo Licencias On Line"></div>
+                            <div class="partner-item"><img src="img/sap-icon.png" alt="Logo SAP"></div>
+                            <div class="partner-item"><img src="img/logo-ubuntu.png" alt="Logo Ubuntu"></div>
+                            <div class="partner-item"><img src="img/logo-mercado-publico.png" alt="Logo Mercado Público"></div>
+                            <div class="partner-item"><img src="img/logo-noventiq.png" alt="Logo Noventiq"></div> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <section id="presencia-global">
             <div class="container">
@@ -290,21 +328,21 @@
                 <div class="team-grid">
                     
                     <div class="team-card">
-                        <img class="team-photo" src="https://placehold.co/300x300/EBF8FF/007BFF?text=Foto" alt="Foto de Cianciarulo De la Santo">
-                        <h3 class="team-name">Cianciarulo De la Santo</h3>
-                        <p class="team-role">Chief Executive Officer</p>
+                        <img class="team-photo" src="https://placehold.co/300x300/EBF8FF/007BFF?text=Foto" alt="Foto de Nombre Apellido">
+                        <h3 class="team-name">Nombre Apellido</h3>
+                        <p class="team-role">Rol en la Compañía</p>
                     </div>
                     
                     <div class="team-card">
                         <img class="team-photo" src="https://placehold.co/300x300/EBF8FF/007BFF?text=Foto" alt="Foto de Nombre Apellido">
                         <h3 class="team-name">Nombre Apellido</h3>
-                        <p class="team-role">Chief Technology Officer</p>
+                        <p class="team-role">Rol en la Compañía</p>
                     </div>
                     
                     <div class="team-card">
                         <img class="team-photo" src="https://placehold.co/300x300/EBF8FF/007BFF?text=Foto" alt="Foto de Nombre Apellido">
                         <h3 class="team-name">Nombre Apellido</h3>
-                        <p class="team-role">VP de Alianzas Estratégicas</p>
+                        <p class="team-role">Rol en la Compañía</p>
                     </div>
                     
                 </div>
@@ -374,6 +412,40 @@
                 
                 map.fitBounds(L.geoJSON(locations.map(l => ({ type: "Point", coordinates: [l.lon, l.lat] }))).getBounds(), { padding: [50, 50] });
             }
+
+            const menuToggle = document.querySelector('.menu-toggle');
+            const mobileNavContainer = document.querySelector('.mobile-nav-container');
+            const menuIconOpen = document.getElementById('menu-icon-open');
+            const menuIconClose = document.getElementById('menu-icon-close');
+            const body = document.body;
+
+            menuToggle.addEventListener('click', function() {
+                const isOpen = mobileNavContainer.classList.toggle('open');
+                if (isOpen) {
+                    menuIconOpen.style.display = 'none';
+                    menuIconClose.style.display = 'block';
+                    body.style.overflow = 'hidden';
+                } else {
+                    menuIconOpen.style.display = 'block';
+                    menuIconClose.style.display = 'none';
+                    body.style.overflow = '';
+                }
+            });
+
+            const submenuToggle = document.querySelector('.mobile-submenu-toggle');
+            submenuToggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                const submenu = this.nextElementSibling;
+                const arrow = this.querySelector('.dropdown-arrow');
+                
+                if (submenu.style.maxHeight) {
+                    submenu.style.maxHeight = null;
+                    arrow.style.transform = 'rotate(0deg)';
+                } else {
+                    submenu.style.maxHeight = submenu.scrollHeight + "px";
+                    arrow.style.transform = 'rotate(180deg)';
+                }
+            });
         });
     </script>
 
