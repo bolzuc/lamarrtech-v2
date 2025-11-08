@@ -7,9 +7,33 @@
 .hero.hero-premium {
     padding: 100px 0 100px 0;
     text-align: left;
-    background-image: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.95)), url(../img/lamarrtechfondo.232Z.png);
+    background-color: #000;
     background-size: cover;
     background-position: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-video-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background: #000;
+}
+
+.hero-video-wrapper video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.4;
+}
+
+.hero.hero-premium .hero-content {
+    position: relative;
+    z-index: 2;
 }
 
 .hero-premium .container {
@@ -20,7 +44,7 @@
     font-size: 3.8em;
     font-weight: 700;
     line-height: 1.15;
-    color: var(--color-text);
+    color: #FFFFFF;
     max-width: 800px;
     margin-bottom: 25px;
     animation: none;
@@ -30,7 +54,7 @@
 
 .hero-premium .hero-subtitle {
     font-size: 1.3em;
-    color: var(--color-text-secondary);
+    color: #FFFFFF;
     max-width: 750px;
     margin-bottom: 50px;
     line-height: 1.6;

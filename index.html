@@ -54,8 +54,28 @@
         .marker-operaciones { background-color: #6f42c1; }
         .marker-desarrollo { background-color: #dc3545; }
 
-        .hero.hero-premium {
-            background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85)), url(./img/lamarrtechfondo.232Z.png);
+        .marker-hq-logo {
+            width: 20px;
+            height: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 50%;
+            padding: 2px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            border: 2px solid var(--color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .marker-hq-logo img {
+            width: 12px; 
+            height: auto;
+            display: block;
+        }
+        .connection-line {
+            stroke: var(--color-primary);
+            stroke-opacity: 0.6;
+            stroke-width: 2;
+            stroke-dasharray: 5, 5;
         }
 
         .partners-section {
@@ -133,10 +153,6 @@
                             <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
                             <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
                             <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
-                            <li><a href="services-sap.html">Servicios SAP</a></li>
-                            <li><a href="services-aws.html">Servicios AWS</a></li>
-                            <li><a href="services-google-cloud.html">Servicios Google Cloud</a></li>
-                            <li><a href="services-acronis.html">Servicios Acronis</a></li>
                         </ul>
                     </li>
                     <li><a href="casos-exito.html">CASOS DE ÉXITO</a></li>
@@ -163,10 +179,6 @@
                         <li><a href="lamarr-integrate.html">LAMARR | INTEGRATE</a></li>
                         <li><a href="lamarr-data-ai.html">LAMARR | DATA+AI</a></li>
                         <li><a href="lamarr-secure.html">LAMARR | SECURE</a></li>
-                        <li><a href="services-sap.html">Servicios SAP</a></li>
-                        <li><a href="services-aws.html">Servicios AWS</a></li>
-                        <li><a href="services-google-cloud.html">Servicios Google Cloud</a></li>
-                        <li><a href="services-acronis.html">Servicios Acronis</a></li>
                     </ul>
                 </li>
                 <li><a href="casos-exito.html">CASOS DE ÉXITO</a></li>
@@ -177,6 +189,11 @@
 
     <main>
         <section class="hero hero-premium">
+            <div class="hero-video-wrapper">
+                <video src="img/Loop-infinito.mp4" autoplay loop muted playsinline>
+                    Tu navegador no soporta el tag de video.
+                </video>
+            </div>
             <div class="hero-content">
                 <div class="container">
                     <h1>Innovación Global en IA. Ejecución Experta en LATAM.</h1>
@@ -388,16 +405,26 @@
                     maxZoom: 10
                 }).addTo(map);
 
+                const logoIcon = L.divIcon({
+                    html: '<div class="marker-hq-logo"><img src="img/infinity-modern-bluedark.png" alt="Lamarr Tech HQ"></div>',
+                    className: '',
+                    iconSize: [20, 20],
+                    iconAnchor: [10, 10]
+                });
+
                 const icons = {
-                    hq: L.divIcon({ className: 'custom-marker marker-hq', iconSize: [28, 28] }),
-                    hub: L.divIcon({ className: 'custom-marker marker-hub', iconSize: [24, 24] }),
-                    delivery: L.divIcon({ className: 'custom-marker marker-delivery', iconSize: [24, 24] }),
-                    desarrollo: L.divIcon({ className: 'custom-marker marker-desarrollo', iconSize: [24, 24] })
+                    hq: logoIcon,
+                    hub: L.divIcon({ className: 'custom-marker marker-hub', iconSize: [24, 24], iconAnchor: [12, 12] }),
+                    delivery: L.divIcon({ className: 'custom-marker marker-delivery', iconSize: [24, 24], iconAnchor: [12, 12] }),
+                    desarrollo: L.divIcon({ className: 'custom-marker marker-desarrollo', iconSize: [24, 24], iconAnchor: [12, 12] })
                 };
                 
                 function getIcon(tipo) {
                     return icons[tipo] || icons.delivery;
                 }
+
+                const hqLocation = locations.find(loc => loc.tipo === 'hq');
+                const hqLatLng = [hqLocation.lat, hqLocation.lon];
 
                 locations.forEach(loc => {
                     const popupContent = `<h3>${loc.ciudad}</h3><p>${loc.funcion}</p>`;
@@ -414,6 +441,12 @@
                     marker.on('mouseout', function (e) {
                         this.closePopup();
                     });
+
+                    if (loc.tipo !== 'hq') {
+                        L.polyline([hqLatLng, [loc.lat, loc.lon]], {
+                            className: 'connection-line'
+                        }).addTo(map);
+                    }
                 });
                 
                 map.fitBounds(L.geoJSON(locations.map(l => ({ type: "Point", coordinates: [l.lon, l.lat] }))).getBounds(), { padding: [50, 50] });
