@@ -40,19 +40,22 @@
     width: 50%;
     justify-content: space-around;
     align-items: center;
+    padding: 0 10px; 
 }
   
 .partner-item {
-    margin: 0 20px;
+    padding: 0 15px; 
     display: flex;
     align-items: center;
     justify-content: center;
+    /* Eliminamos min-width para evitar solapamiento horizontal en escritorio */
+    min-width: 0; 
 }
   
 .partner-item img {
     width: auto;
-    height: 70px;
-    max-width: 160px;
+    height: 60px;
+    max-width: 150px;
     object-fit: contain;
     filter: grayscale(100%);
     opacity: 0.6;
@@ -62,6 +65,12 @@
 .partner-item img:hover {
     filter: grayscale(0%);
     opacity: 1;
+}
+
+/* Ajuste más agresivo para Noventiq en escritorio para compensar el padding del PNG */
+.partner-item img[alt="Logo Noventiq"] {
+    height: 55px; 
+    max-width: 130px;
 }
 
 .partner-group .partner-item:nth-child(1) img { 
@@ -81,22 +90,71 @@
 
 
 @media (max-width: 768px) {
-    .partner-item {
-        margin: 0 15px;
+    
+    .partners-band {
+        animation: none; 
+        width: 100%; 
+        flex-direction: column; 
     }
     
-    .partner-group .partner-item:nth-child(1) img { 
+    .partners-container {
+        overflow: visible;
     }
-    .partner-group .partner-item:nth-child(2) img { 
+
+    .partner-group {
+        width: 100%; 
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        justify-content: center; 
+        gap: 20px 15px; 
+        flex-wrap: wrap; 
+        padding: 0 10px;
+        margin-bottom: 20px;
     }
-    .partner-group .partner-item:nth-child(3) img { 
+
+    .partner-group:nth-child(2) {
+        display: none; 
     }
-    .partner-group .partner-item:nth-child(4) img { 
+    
+    .partner-item:nth-child(8) {
+        display: none; 
     }
-    .partner-group .partner-item:nth-child(5) img { 
+
+
+    .partner-item {
+        margin: 0; 
+        min-width: 0; 
+        height: 70px; 
+        border: 1px solid var(--color-border);
+        border-radius: 8px;
+        padding: 10px;
+        background-color: #fff;
     }
-    .partner-group .partner-item:nth-child(6) img { 
+    
+    .partner-item img {
+        height: 45px; 
+        max-width: 100%; 
+        filter: grayscale(0%); 
+        opacity: 1;
     }
-    .partner-group .partner-item:nth-child(7) img { 
+    
+    /* Ajuste más agresivo para Noventiq en móvil */
+    .partner-item img[alt="Logo Noventiq"] {
+        height: 50px; 
+    }
+    
+    /* Mostrar todos los 7 logos del primer grupo y organizar en filas 2-2-2-1 */
+    .partner-group .partner-item:nth-child(6),
+    .partner-group .partner-item:nth-child(7) {
+        display: flex; 
+        height: 70px;
+    }
+    
+    /* Centrar el último elemento (Noventiq, que es el 7mo) si quedan 7 */
+    .partner-group .partner-item:nth-child(7) {
+        grid-column: 1 / 3; 
+        justify-self: center; 
+        width: 50%;
+        margin: 0 auto;
     }
 }
