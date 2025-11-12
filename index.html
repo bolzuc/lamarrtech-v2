@@ -260,6 +260,69 @@
             font-weight: 600;
             color: var(--color-text);
         }
+        
+        .intro-section {
+            padding: 80px 0;
+            background-color: #fff;
+        }
+        .intro-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 30px;
+            color: var(--color-text);
+        }
+        .intro-text-block {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .intro-text-block p {
+            font-size: 1.2rem;
+            color: var(--color-text-secondary);
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+        
+        .diferencia-section {
+            padding: 80px 0;
+            background-color: var(--color-bg-light);
+        }
+        .diferencia-section h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 50px;
+            color: var(--color-text);
+        }
+        .diferencia-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            text-align: left;
+        }
+        .diferencia-card {
+            background-color: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--color-border);
+            display: flex;
+            flex-direction: column;
+        }
+        .diferencia-card h3 {
+            font-size: 1.5em;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 10px;
+            flex-grow: 1;
+        }
+        .diferencia-card p {
+            font-size: 1rem;
+            color: var(--color-text-secondary);
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
     </style>
 </head>
 <body>
@@ -281,6 +344,7 @@
                             <li><a href="lamarr-integrate.html">INTEGRATE</a></li>
                             <li><a href="lamarr-data-ai.html">DATA+AI</a></li>
                             <li><a href="lamarr-secure.html">SECURE</a></li>
+                            <li><a href="services-sap.html">SAP</a></li>
                         </ul>
                     </li>
                     <li><a href="nuestro-equipo.html">EQUIPO</a></li>
@@ -308,6 +372,7 @@
                         <li><a href="lamarr-integrate.html">INTEGRATE</a></li>
                         <li><a href="lamarr-data-ai.html">DATA+AI</a></li>
                         <li><a href="lamarr-secure.html">SECURE</a></li>
+                        <li><a href="services-sap.html">SAP</a></li>
                     </ul>
                 </li>
                 <li><a href="nuestro-equipo.html">EQUIPO</a></li>
@@ -461,6 +526,45 @@
                 </div>
                 <div style="text-align: center; margin-top: 40px;">
                     <a href="casos-exito.html" class="btn-primary">Ver Todos los Casos</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="intro-section">
+            <div class="container">
+                <h2>Nuestra Visión End-to-End</h2>
+                <div class="intro-text-block">
+                    <p>Creemos que la tecnología solo genera valor cuando está <strong>conectada</strong> y cuando hay <strong>personas reales</strong> acompañando el proceso.</p>
+                    <p>Por eso trabajamos con una visión End-to-End: Integramos SAP, tus aplicaciones y la nube para que tu operación funcione como un solo sistema — <strong>sin islas, sin fricción y sin retrabajos.</strong></p>
+                    <p>Y lo hacemos con un soporte verdaderamente humano: Hablas con consultores, no con tickets. Estamos presentes, entendemos tu negocio y te acompañamos en cada etapa.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="diferencia-section">
+            <div class="container">
+                <h2>Nuestro Valor Diferencial</h2>
+                <div class="diferencia-grid">
+                    <div class="diferencia-card">
+                        <h3>☁️ Arquitectura Multicloud para tu Negocio</h3>
+                        <p>Elegimos y combinamos AWS, Google Cloud y Huawei para construir una infraestructura flexible, eficiente y preparada para crecer. Sin dependencias forzadas. Tú eliges. Tu negocio manda.</p>
+                    </div>
+                    <div class="diferencia-card">
+                        <h3>🔗 Integración de tu Ecosistema Tecnológico</h3>
+                        <p>Conectamos SAP, nube, aplicaciones y datos para que la operación fluya sin silos, sin retrabajos y sin fricción.</p>
+                    </div>
+                    <div class="diferencia-card">
+                        <h3>📊 Del Dato a la Acción (Data + IA)</h3>
+                        <p>Convertimos tus datos en conocimiento accionable. Decisiones más rápidas, precisas y estratégicas con impacto directo en tu operación.</p>
+                    </div>
+                    <div class="diferencia-card">
+                        <h3>🔒 Protección Integral de Datos y Operaciones</h3>
+                        <p>Diseñamos seguridad multinube con control de accesos, respaldo inteligente y monitoreo continuo. Menos riesgo, más continuidad y total visibilidad.</p>
+                    </div>
+                    <div class="diferencia-card">
+                        <h3>👨‍💼 Dominio Profundo del Ecosistema SAP</h3>
+                        <p>+20 años de experiencia real en SAP Business One y SAP ECC. Implementamos y optimizamos con criterio y conocimiento de procesos. Resultados desde el día uno.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -625,7 +729,7 @@
                 if (typeof L.bezier === 'undefined') {
                     L.bezier = {};
                     L.bezier.default = function (latLngs, controlPoint) {
-                        return L.polyline([latLngs[0], controlPoint, latLngg[1]], { renderer: L.svg({ smoothFactor: 1.0 }) });
+                        return L.polyline([latLngs[0], controlPoint, latLngs[1]], { renderer: L.svg({ smoothFactor: 1.0 }) });
                     };
                 }
 
