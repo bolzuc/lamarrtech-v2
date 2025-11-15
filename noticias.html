@@ -9,33 +9,8 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/page-section.css">
     <link rel="stylesheet" href="css/footer.css">
-    <style>
-        .page-detail-card ul {
-            list-style-type: disc;
-            margin-left: 20px;
-            padding-left: 0;
-            color: var(--color-text-secondary);
-        }
-        .page-detail-card li {
-            margin-bottom: 5px;
-            font-size: 1em;
-        }
-        .cierre-institucional {
-            background-color: var(--color-bg-light);
-            border: 1px solid var(--color-border);
-            border-radius: 12px;
-            padding: 30px;
-            margin-top: 50px;
-            text-align: center;
-        }
-        .cierre-institucional p {
-            font-size: 1.2rem;
-            font-weight: 500;
-            color: var(--color-text);
-            margin: 0;
-            line-height: 1.6;
-        }
-    </style>
+    <!-- CSS de noticias actualizado -->
+    <link rel="stylesheet" href="css/noticias.css">
 </head>
 <body>
     <header>
@@ -63,6 +38,20 @@
                     <li><a href="contact.html">CONTACTO</a></li>
                 </ul>
             </nav>
+            
+            <!-- Botón de Idioma AÑADIDO -->
+            <div class="language-switcher">
+                <button class="lang-btn" aria-label="Seleccionar idioma">
+                    ES
+                    <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+                <div class="lang-dropdown">
+                    <a href="#">ES (Español)</a>
+                    <a href="#">PT (Português)</a>
+                    <a href="#">EN (English)</a>
+                </div>
+            </div>
+
             <button class="menu-toggle" aria-label="Abrir menú">
                 <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                 <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
@@ -99,38 +88,67 @@
                 <h1>Noticias: Lo que estamos construyendo</h1>
                 <p>Crecemos junto a nuestros partners, nuestros clientes y nuestra comunidad. Cada paso fortalece nuestra capacidad de entregar soluciones integradas, seguras y escalables en SAP, Cloud e IA.</p>
                 
-                <div class="page-details-grid" style="margin-top: 50px;">
-                    <div class="page-detail-card">
-                        <h3>Huawei Cloud reconoce a Lamarr como Partner con Potencial</h3>
-                        <p>Lamarr participó en el Huawei Cloud Summit, donde fuimos reconocidos como Partner con Potencial en la región por nuestra experiencia en modernización SAP, estrategias multicloud y arquitecturas híbridas. Este hito refleja nuestro compromiso con soluciones de alto impacto, con ejecución técnica propia y acompañamiento continuo.</p>
-                    </div>
-
-                    <div class="page-detail-card">
-                        <h3>Evento Presencial: SAP Business One en Huawei Cloud</h3>
-                        <p>Estamos preparando un encuentro ejecutivo orientado a organizaciones que operan SAP Business One y desean migrar u optimizar su infraestructura en la nube, manteniendo continuidad operativa y control de costos. Presentaremos rutas de transición, casos reales y modelos de arquitectura.</p>
-                        <p style="font-weight: 600; color: var(--color-text);">→ Próximamente • Cupos limitados</p>
-                    </div>
-
-                    <div class="page-detail-card">
-                        <h3>Lamarr + WIT: Alianza para Desarrollo de Nuevos Negocios</h3>
-                        <p>Hemos formalizado una alianza con WIT para fortalecer la apertura y calificación de oportunidades comerciales en Chile y LATAM. Este trabajo conjunto nos permite llegar a empresas que buscan modernizar SAP y escalar hacia arquitecturas multicloud, con acompañamiento consultivo y visión estratégica.</p>
-                    </div>
-
-                    <div class="page-detail-card">
-                        <h3>Lamarr + La Araucaria Software: Soluciones Conjuntas en Ciberseguridad</h3>
-                        <p>Junto a La Araucaria Software, estamos desarrollando soluciones orientadas a ciberseguridad aplicada, protección de datos críticos y monitoreo inteligente de riesgos. La combinación de ingeniería segura + integración SAP + arquitectura cloud nos permite entregar soluciones escalables, eficientes y alineadas a los desafíos actuales.</p>
-                    </div>
-
-                    <div class="page-detail-card">
-                        <h3>Webinar Ejecutivo junto a Noventiq: El Fin de Soporte de SAP ECC</h3>
-                        <p>En un encuentro ejecutivo reciente, conversamos junto a Noventiq sobre el fin de soporte de SAP ECC, sus implicancias y las opciones de transición hacia SAP en la nube. El enfoque fue claro: tomar decisiones informadas, no apresuradas.</p>
-                    </div>
-
-                    <div class="page-detail-card">
-                        <h3>Convenio Marco con Noventiq</h3>
-                        <p>Este convenio formaliza nuestra capacidad de ejecutar proyectos SAP + Cloud de manera conjunta, asegurando continuidad, trazabilidad y escalabilidad en la entrega de servicios.</p>
-                    </div>
+                <!-- Sección: Nuevas Alianzas -->
+                <h2 class="section-title-h2">Nuevas Alianzas Estratégicas</h2>
+                <!-- Contenedor del nuevo listado de noticias -->
+                <div class="noticia-list-container">
                     
+                    <article class="noticia-item item-image-left">
+                        <div class="noticia-item-content">
+                            <h3>Lamarr + WIT: Alianza para Desarrollo de Nuevos Negocios</h3>
+                            <p>Hemos formalizado una alianza con WIT para fortalecer la apertura y calificación de oportunidades comerciales en Chile y LATAM. Este trabajo conjunto nos permite llegar a empresas que buscan modernizar SAP y escalar hacia arquitecturas multicloud, con acompañamiento consultivo y visión estratégica.</p>
+                        </div>
+                    </article>
+
+                    <article class="noticia-item item-image-left">
+                        <div class="noticia-item-content">
+                            <h3>Lamarr + La Araucaria Software: Soluciones Conjuntas en Ciberseguridad</h3>
+                            <p>Junto a La Araucaria Software, estamos desarrollando soluciones orientadas a ciberseguridad aplicada, protección de datos críticos y monitoreo inteligente de riesgos. La combinación de ingeniería segura + integración SAP + arquitectura cloud nos permite entregar soluciones escalables, eficientes y alineadas a los desafíos actuales.</p>
+                        </div>
+                    </article>
+
+                    <article class="noticia-item item-image-left">
+                        <div class="noticia-item-content">
+                            <h3>Convenio Marco con Noventiq</h3>
+                            <p>Este convenio formaliza nuestra capacidad de ejecutar proyectos SAP + Cloud de manera conjunta, asegurando continuidad, trazabilidad y escalabilidad en la entrega de servicios.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Sección: Eventos y Noticias Pasadas -->
+                <h2 class="section-title-h2">Eventos y Noticias Pasadas</h2>
+                <div class="noticia-list-container">
+                    
+                    <article class="noticia-item item-image-left">
+                        <div class="noticia-item-content">
+                            <h3>Huawei Cloud reconoce a Lamarr como Partner con Potencial</h3>
+                            <p>Lamarr participó en el Huawei Cloud Summit, donde fuimos reconocidos como Partner con Potencial en la región por nuestra experiencia en modernización SAP, estrategias multicloud y arquitecturas híbridas. Este hito refleja nuestro compromiso con soluciones de alto impacto, con ejecución técnica propia y acompañamiento continuo.</p>
+                        </div>
+                    </article>
+
+                    <article class="noticia-item noticia-item-huawei item-image-right">
+                        <div class="noticia-item-image">
+                            <img src="img/reunion-huawei-one.jpg" alt="Reunión Huawei One">
+                        </div>
+                        <div class="noticia-item-content">
+                            <h3>Evento Presencial: SAP Business One en Huawei Cloud</h3>
+                            <p>Realizamos un encuentro ejecutivo orientado a organizaciones que operan SAP Business One y desean migrar u optimizar su infraestructura en la nube, manteniendo continuidad operativa y control de costos. Presentamos rutas de transición, casos reales y modelos de arquitectura.</p>
+                            <a href="noticia-sap-huawei.html" class="btn-primary" style="margin-top: 10px;">Leer más y ver video</a>
+                        </div>
+                    </article>
+
+                    <article class="noticia-item item-image-left">
+                        <div class="noticia-item-content">
+                            <h3>Webinar Ejecutivo junto a Noventiq: El Fin de Soporte de SAP ECC</h3>
+                            <p>En un encuentro ejecutivo reciente, conversamos junto a Noventiq sobre el fin de soporte de SAP ECC, sus implicancias y las opciones de transición hacia SAP en la nube. El enfoque fue claro: tomar decisiones informadas, no apresuradas.</p>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Sección: Próximos Eventos -->
+                <h2 class="section-title-h2">Próximos Eventos</h2>
+                <div class="proximos-eventos-container" style="margin-top: 30px;">
+                    <!-- Mantenemos la tarjeta para el evento destacado -->
                     <div class="page-detail-card">
                         <h3>Invitación a Próximo Evento | IA en la Contabilidad</h3>
                         <p><strong>IA Aplicada a Procesos Contables y Financieros</strong><br>
@@ -144,10 +162,19 @@
                     </div>
                 </div>
 
+
+                <!-- Lema Institucional -->
                 <div class="cierre-institucional">
                     <p>En Lamarr avanzamos con una visión clara:<br>
                     Tecnología integrada. Operación fluida.<br>
                     Ejecución responsable y acompañamiento real.</p>
+                </div>
+
+                <!-- Nueva Sección CTA -->
+                <div class="cta-section">
+                    <h3>No te pierdas nuestras futuras invitaciones</h3>
+                    <p>Si no quieres perderte nuestros próximos eventos y quieres que te invitemos directamente a tu correo, regístrate en nuestra página de contacto.</p>
+                    <a href="contact.html" class="btn-primary">Inscríbete aquí</a>
                 </div>
 
             </div>

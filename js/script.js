@@ -40,6 +40,36 @@ document.addEventListener("DOMContentLoaded", function() {
         });
     }
 
+    // --- AÑADIDO: Función para el botón de idioma ---
+    function initLanguageSwitcher() {
+        const langBtn = document.querySelector('.lang-btn');
+        const langDropdown = document.querySelector('.lang-dropdown');
+
+        if (langBtn && langDropdown) {
+            langBtn.addEventListener('click', function(e) {
+                e.stopPropagation(); // Evita que el clic se propague al window
+                
+                // Alterna la visibilidad del dropdown
+                const isVisible = langDropdown.style.display === 'block';
+                langDropdown.style.display = isVisible ? 'none' : 'block';
+            });
+
+            // Cierra el dropdown si se hace clic fuera de él
+            window.addEventListener('click', function(e) {
+                if (langDropdown.style.display === 'block') {
+                    langDropdown.style.display = 'none';
+                }
+            });
+
+            // Evita que el clic en el dropdown lo cierre
+            langDropdown.addEventListener('click', function(e) {
+                e.stopPropagation();
+            });
+        }
+    }
+    // --- FIN AÑADIDO ---
+
+
     function initAnimations() {
         try {
             if (typeof lucide !== 'undefined') {
@@ -74,10 +104,12 @@ document.addEventListener("DOMContentLoaded", function() {
     if (document.readyState === 'complete' || (document.readyState !== 'loading' && !document.documentElement.doScroll)) {
         initAnimations();
         initMobileMenu();
+        initLanguageSwitcher(); // --- AÑADIDO: Llamada a la función
     } else {
         document.addEventListener('load', () => {
             initAnimations();
             initMobileMenu();
+            initLanguageSwitcher(); // --- AÑADIDO: Llamada a la función
         }, false);
     }
 });

@@ -1,0 +1,107 @@
+/* * Nuevos estilos para las páginas de servicios (Cloud y SAP)
+ */
+
+/* --- Layout de Cuadrícula "Dos y Dos" (Usado en Cloud y SAP) --- */
+
+.service-feature-list {
+    display: grid;
+    /* Forzamos 2 columnas en escritorio, 1 en móvil */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px; /* Espacio entre items */
+    max-width: 1000px; /* Centramos la lista */
+    margin: 40px auto 0 auto;
+    align-items: stretch; /* Asegura que las filas tengan la misma altura */
+}
+
+.service-feature-item {
+    display: flex;
+    /* flex-direction: column; */ /* Cambiado a fila */
+    flex-direction: row; /* Ícono a la izquierda, texto a la derecha */
+    align-items: flex-start; /* Alinea ícono y texto arriba */
+    text-align: left;
+    gap: 20px; /* Espacio entre ícono y texto */
+    background-color: #ffffff;
+    border: 1px solid var(--color-border);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    height: 100%; /* Hace que todas las cajas en una fila de la grilla crezcan igual */
+}
+
+.service-feature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,123,255,0.1);
+    border-color: rgba(0,123,255,0.3);
+}
+
+.service-feature-icon {
+    flex-shrink: 0; /* Evita que el ícono se encoja */
+    width: 48px;
+    height: 48px;
+    background-color: var(--color-primary);
+    color: #ffffff;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.service-feature-icon svg {
+    width: 100%;
+    height: 100%;
+}
+
+.service-feature-content {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Hace que el contenido ocupe el espacio restante */
+}
+
+.service-feature-content h3 {
+    font-size: 1.3em; /* Tamaño ajustado */
+    font-weight: 600;
+    color: var(--color-primary); /* Título en azul */
+    margin-bottom: 8px;
+    text-transform: uppercase; /* Títulos en mayúscula */
+    line-height: 1.3;
+}
+
+.service-feature-content p {
+    font-size: 0.95rem; /* Texto ligeramente más pequeño */
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin: 0;
+    flex-grow: 1; /* Empuja el contenido de abajo (como listas) */
+}
+
+/* Estilos para listas dentro del contenido (para SAP) */
+.service-feature-content ul {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--color-text-secondary);
+    margin: 10px 0 0 0;
+    padding-left: 20px; /* Añade espacio para los bullets */
+}
+
+.service-feature-content li {
+    margin-bottom: 5px;
+}
+
+
+@media (max-width: 900px) {
+    .service-feature-list {
+        grid-template-columns: 1fr; /* Apila en móvil y tablet */
+    }
+}
+
+@media (max-width: 768px) {    
+    .service-feature-item {
+        /* Mantenemos el ícono a la izquierda en móvil */
+        flex-direction: row; 
+        align-items: flex-start;
+        text-align: left;
+        gap: 15px;
+    }
+}

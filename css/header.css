@@ -207,6 +207,63 @@ nav.desktop-nav .dropdown-content a {
     font-weight: 500;
 }
 
+/* --- AÑADIDO: Estilos del Botón de Idioma --- */
+.language-switcher {
+    position: relative;
+    margin-left: 15px;
+}
+
+.lang-btn {
+    background-color: #f8f9fa;
+    border: 1px solid var(--color-border);
+    color: var(--color-text-secondary);
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.lang-btn:hover {
+    background-color: #f1f3f5;
+}
+
+.lang-btn .dropdown-arrow {
+    width: 14px;
+    height: 14px;
+    margin-left: 5px;
+}
+
+.lang-dropdown {
+    display: none; /* Oculto por defecto, JS lo controla */
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--color-background);
+    min-width: 120px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    z-index: 1001; /* Asegura que esté sobre el contenido */
+    border-radius: 8px;
+    padding: 8px 0;
+    margin-top: 5px;
+}
+
+.lang-dropdown a {
+    color: var(--color-text);
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 0.9rem;
+}
+
+.lang-dropdown a:hover {
+    background-color: #f1f3f5;
+}
+/* --- FIN AÑADIDO: Estilos del Botón de Idioma --- */
+
+
 @media (max-width: 992px) {
     nav.desktop-nav {
         display: none;
@@ -214,5 +271,10 @@ nav.desktop-nav .dropdown-content a {
 
     .menu-toggle {
         display: block;
+    }
+
+    /* Oculta el botón de idioma en móvil (ya no estaba) */
+    .language-switcher {
+        display: none; 
     }
 }

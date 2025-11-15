@@ -3,53 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LAMARR | INTEGRATE - Lamarr Tech</title>
+    <title>Evento SAP Business One en Huawei Cloud - Lamarr Tech</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/components.css">
-    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/page-section.css">
-    <style>
-        .content-wrapper {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 40px;
-            text-align: left;
-            align-items: center;
-        }
-        .content-text {
-            flex: 1;
-            min-width: 300px;
-        }
-        .content-text h2 {
-            font-size: 2.2em;
-            font-weight: 600;
-            color: var(--color-text);
-            margin-bottom: 20px;
-            text-align: left;
-        }
-        .content-text ul {
-            list-style-position: inside;
-            padding-left: 10px;
-            margin-top: 20px;
-        }
-        .content-text li {
-            font-size: 1.1em;
-            color: var(--color-text-secondary);
-            margin-bottom: 10px;
-            line-height: 1.6;
-        }
-        .content-image {
-            flex: 1;
-            min-width: 300px;
-            text-align: center;
-        }
-        .content-image img {
-            max-width: 100%;
-            border-radius: 12px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
-    </style>
+    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/noticias.css"> <!-- Reutilizamos los estilos de noticias -->
 </head>
 <body>
     <header>
@@ -61,7 +21,7 @@
                 <ul>
                     <li><a href="index.html">INICIO</a></li>
                     <li class="dropdown">
-                        <a href="#" class="active">SERVICIOS
+                        <a href="#">SERVICIOS
                             <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
                         </a>
                         <ul class="dropdown-content">
@@ -73,7 +33,7 @@
                         </ul>
                     </li>
                     <li><a href="nuestro-equipo.html">EQUIPO</a></li>
-                    <li><a href="noticias.html">NOTICIAS</a></li>
+                    <li><a href="noticias.html" class="active">NOTICIAS</a></li>
                     <li><a href="contact.html">CONTACTO</a></li>
                 </ul>
             </nav>
@@ -123,27 +83,35 @@
 
     <main>
         <section class="page-section">
-            <div class="container">
-                <h1>LAMARR | INTEGRATE</h1>
-                <p>Conectamos tus sistemas, datos y aplicaciones. Creamos flujos de información fluidos entre SAP, tus plataformas cloud y aplicaciones de terceros para una operación unificada.</p>
+            <div class="container noticia-detalle-container">
                 
-                <div class="content-wrapper">
-                    <div class="content-text">
-                        <h2>Integra tu Ecosistema Tecnológico</h2>
-                        <p>En el núcleo de la transformación digital está la integración. LAMARR | INTEGRATE asegura que tus aplicaciones críticas (ERP, CRM, SCM) se comuniquen de manera eficiente, eliminando silos de datos y automatizando procesos de negocio de extremo a extremo.</p>
-                        <ul>
-                            <li><strong>SAP Cloud Platform Integration (CPI):</strong> Diseño y gestión de flujos de integración.</li>
-                            <li><strong>Conectividad Híbrida:</strong> Unificamos tus entornos On-Premise y Multi-Cloud.</li>
-                            <li><strong>Integración de APIs:</strong> Creamos y gestionamos APIs para conectar tus servicios.</li>
-                            <li><strong>Flujos de Datos (ETL/ELT):</strong> Movemos tus datos de forma segura para analítica y IA.</li>
-                        </ul>
-                        <div class="contact-button-container" style="text-align: left; margin-top: 30px;">
-                            <a href="contact.html" class="btn-primary">Agenda una Consultoría</a>
+                <div class="noticia-detalle-header">
+                    <p class="noticia-meta">Evento Pasado</p>
+                    <h1>Evento Presencial: SAP Business One en Huawei Cloud</h1>
+                </div>
+
+                <div class="noticia-detalle-content">
+                    <img src="img/reunion-huawei-one.jpg" alt="Foto del evento SAP Business One en Huawei Cloud" class="detalle-imagen-principal">
+                    
+                    <p>Realizamos un exitoso encuentro ejecutivo enfocado en organizaciones que operan SAP Business One y buscan optimizar su infraestructura en la nube. El evento se centró en presentar rutas de transición claras, casos de éxito reales y modelos de arquitectura eficientes en Huawei Cloud.</p>
+                    <p>La jornada permitió a los asistentes resolver dudas sobre continuidad operativa, control de costos y las ventajas estratégicas de la migración. Fue una excelente instancia de networking y colaboración junto a nuestros partners y clientes.</p>
+
+                    <h2>Video Resumen del Evento</h2>
+                    <p>Aquí puedes ver un resumen de cómo fue la jornada, las presentaciones y los testimonios de los asistentes.</p>
+                    
+                    <!-- Marcador de posición para el video -->
+                    <div class="video-placeholder">
+                        <div>
+                            <svg class="video-placeholder-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="m15.75 10.5 4.72-4.72a.75.75 0 0 1 1.28.53v11.38a.75.75 0 0 1-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 0 0 2.25-2.25v-9A2.25 2.25 0 0 0 13.5 5.25h-9A2.25 2.25 0 0 0 2.25 7.5v9A2.25 2.25 0 0 0 4.5 18.75Z" />
+                            </svg>
+                            <p>Video del evento próximamente</p>
                         </div>
                     </div>
-                    <div class="content-image">
-                        <img src="img/lamarr-integrate-visual.png" alt="Integración de Sistemas SAP, Cloud y API">
-                    </div>
+                </div>
+
+                <div class="back-to-noticias">
+                    <a href="noticias.html" class="btn-outline">← Volver a Noticias</a>
                 </div>
 
             </div>

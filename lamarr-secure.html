@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/page-section.css">
+    <!-- CSS de servicio-page ELIMINADO para restaurar el diseño de tarjetas -->
     <style>
         .section-subtitle {
             font-size: 2.2em;
@@ -46,6 +47,20 @@
                     <li><a href="contact.html">CONTACTO</a></li>
                 </ul>
             </nav>
+            
+            <!-- Botón de Idioma AÑADIDO -->
+            <div class="language-switcher">
+                <button class="lang-btn" aria-label="Seleccionar idioma">
+                    ES
+                    <svg class="dropdown-arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </button>
+                <div class="lang-dropdown">
+                    <a href="#">ES (Español)</a>
+                    <a href="#">PT (Português)</a>
+                    <a href="#">EN (English)</a>
+                </div>
+            </div>
+
             <button class="menu-toggle" aria-label="Abrir menú">
                 <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
                 <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="display:none;"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
@@ -83,19 +98,23 @@
                 <p>Ciberprotección nativa para tu negocio. Ofrecemos una plataforma integrada de backup, DR, seguridad avanzada y monitoreo continuo, potenciada por las mejores alianzas tecnológicas, para proteger tus datos, aplicaciones y sistemas.</p>
                 
                 <h2 class="section-subtitle">Productos y Servicios de Ciberprotección</h2>
+                
+                <!-- Contenedor revertido al diseño de tarjetas (page-details-grid) -->
                 <div class="page-details-grid">
                     <div class="page-detail-card">
                         <h3>Cyber Backup & Recovery</h3>
-                        <p>Copias de seguridad rápidas y fiables de cualquier carga de trabajo. Almacenamiento seguro en Acronis Cloud, AWS, GCP o local, con restauración instantánea de datos críticos.</p>
+                        <p>Copias de seguridad rápidas y fiables de cualquier carga de trabajo. Almacenamiento seguro en nuestra nube, AWS, GCP o local, con restauración instantánea de datos críticos.</p>
                     </div>
                     <div class="page-detail-card">
                         <h3>Disaster Recovery (DRaaS)</h3>
-                        <p>Recuperación ante desastres como servicio. Minimice el tiempo de inactividad y garantice la continuidad del negocio con conmutación por error a la nube de Acronis.</p>
+                        <p>Recuperación ante desastres como servicio. Minimice el tiempo de inactividad y garantice la continuidad del negocio con conmutación por error a nuestra plataforma en la nube.</p>
                     </div>
                     <div class="page-detail-card">
                         <h3>Advanced Security</h3>
                         <p>Protección proactiva contra ransomware y malware impulsada por IA. Antivirus, antimalware y análisis de vulnerabilidades en una sola solución.</p>
                     </div>
+                    
+                    <!-- ERROR CORREGIDO: El typo que rompía la grilla está arreglado -->
                     <div class="page-detail-card">
                         <h3>Endpoint Defense</h3>
                         <p>Protección inteligente en cada dispositivo. Protección con IA para estaciones de trabajo y servidores contra malware, phishing y amenazas desconocidas.</p>
@@ -103,10 +122,6 @@
                     <div class="page-detail-card">
                         <h3>SaaS Protect</h3>
                         <p>Protección completa para Microsoft 365 y Google Workspace. Garantizamos backups nube a nube para correos, archivos (OneDrive, SharePoint) y colaboraciones (Teams).</p>
-                    </div>
-                    <div class="page-detail-card">
-                        <h3>SOC & NOC 24x7</h3>
-                        <p>Monitoreamos tu seguridad todo el tiempo. Nuestro centro de operaciones supervisa infraestructura, aplicaciones y eventos de seguridad en tiempo real.</p>
                     </div>
                 </div>
 
