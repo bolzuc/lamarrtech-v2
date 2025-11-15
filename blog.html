@@ -3,12 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Lamarr Tech</title>
+    <title>Actualidad - Lamarr Tech</title>
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/components.css">
     <link rel="stylesheet" href="css/page-section.css">
     <link rel="stylesheet" href="css/footer.css">
+    <style>
+        .page-detail-card ul {
+            list-style-type: disc;
+            margin-left: 20px;
+            padding-left: 0;
+            color: var(--color-text-secondary);
+        }
+        .page-detail-card li {
+            margin-bottom: 5px;
+            font-size: 1em;
+        }
+        .cierre-institucional {
+            background-color: var(--color-bg-light);
+            border: 1px solid var(--color-border);
+            border-radius: 12px;
+            padding: 30px;
+            margin-top: 50px;
+            text-align: center;
+        }
+        .cierre-institucional p {
+            font-size: 1.2rem;
+            font-weight: 500;
+            color: var(--color-text);
+            margin: 0;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -32,7 +59,7 @@
                         </ul>
                     </li>
                     <li><a href="nuestro-equipo.html">EQUIPO</a></li>
-                    <li><a href="blog.html" class="active">BLOG</a></li>
+                    <li><a href="actualidad.html" class="active">ACTUALIDAD</a></li>
                     <li><a href="contact.html">CONTACTO</a></li>
                 </ul>
             </nav>
@@ -60,7 +87,7 @@
                     </ul>
                 </li>
                 <li><a href="nuestro-equipo.html">EQUIPO</a></li>
-                <li><a href="blog.html">BLOG</a></li>
+                <li><a href="actualidad.html">ACTUALIDAD</a></li>
                 <li><a href="contact.html">CONTACTO</a></li>
             </ul>
         </nav>
@@ -69,28 +96,58 @@
     <main>
         <section class="page-section">
             <div class="container">
-                <h1>Blog de Lamarr Tech</h1>
-                <p>Mantente al día con las últimas noticias, tendencias y análisis de nuestros expertos en Cloud, IA y SAP.</p>
+                <h1>Lo que estamos construyendo juntos</h1>
+                <p>Crecemos junto a nuestros partners, nuestros clientes y nuestra comunidad. Cada paso fortalece nuestra capacidad de entregar soluciones integradas, seguras y escalables en SAP, Cloud e IA.</p>
                 
                 <div class="page-details-grid" style="margin-top: 50px;">
                     <div class="page-detail-card">
-                        <img src="https://placehold.co/600x400/F0F7FF/DE1A22?text=Huawei+Talk" alt="Charla Huawei y Lamarr Tech" style="width:100%; border-radius: 8px; margin-bottom: 20px;">
-                        <h3>Próxima Charla: IA y Cloud con Huawei</h3>
-                        <p>No te pierdas nuestra próxima charla este jueves junto a Huawei. Exploraremos las últimas tendencias en IA y Cloud. ¡Regístrate y participa!</p>
-                        <a href="https://huawei.dsantos-6f3.workers.dev/conocimiento#conocimiento" target="_blank" rel="noopener noreferrer" class="btn-primary" style="margin-top: 15px;">Regístrate aquí</a>
+                        <h3>Huawei Cloud reconoce a Lamarr como Partner con Potencial</h3>
+                        <p>Lamarr participó en el Huawei Cloud Summit, donde fuimos reconocidos como Partner con Potencial en la región por nuestra experiencia en modernización SAP, estrategias multicloud y arquitecturas híbridas. Este hito refleja nuestro compromiso con soluciones de alto impacto, con ejecución técnica propia y acompañamiento continuo.</p>
                     </div>
+
                     <div class="page-detail-card">
-                        <img src="https://placehold.co/600x400/F0F7FF/007BFF?text=SAP+en+GCP" alt="Innovar con SAP en Google Cloud Platform" style="width:100%; border-radius: 8px; margin-bottom: 20px;">
-                        <h3>Noventiq & Lamarr Tech: ¿Por qué innovar con SAP en Google Cloud Platform?</h3>
-                        <p>Descubre la alianza entre Noventiq y Lamarr Tech para potenciar la innovación con SAP en Google Cloud Platform.</p>
-                        <a href="https://www.itwarelatam.com/2025/10/20/noventiq-lamarr-tech-por-que-innovar-con-sap-en-google-cloud-platform/" target="_blank" rel="noopener noreferrer" class="btn-primary" style="margin-top: 15px;">Leer más</a>
+                        <h3>Evento Presencial: SAP Business One en Huawei Cloud</h3>
+                        <p>Estamos preparando un encuentro ejecutivo orientado a organizaciones que operan SAP Business One y desean migrar u optimizar su infraestructura en la nube, manteniendo continuidad operativa y control de costos. Presentaremos rutas de transición, casos reales y modelos de arquitectura.</p>
+                        <p style="font-weight: 600; color: var(--color-text);">→ Próximamente • Cupos limitados</p>
                     </div>
+
                     <div class="page-detail-card">
-                        <img src="https://placehold.co/600x400/F0F7FF/007BFF?text=Noticia+1" alt="Imagen de noticia" style="width:100%; border-radius: 8px; margin-bottom: 20px;">
-                        <h3>Título de la Noticia 1</h3>
-                        <p>Una breve descripción de la entrada del blog. Aquí se resume el contenido principal del artículo para atraer al lector...</p>
-                        <a href="#" class="btn-primary" style="margin-top: 15px;">Leer más</a>
+                        <h3>Lamarr + WIT: Alianza para Desarrollo de Nuevos Negocios</h3>
+                        <p>Hemos formalizado una alianza con WIT para fortalecer la apertura y calificación de oportunidades comerciales en Chile y LATAM. Este trabajo conjunto nos permite llegar a empresas que buscan modernizar SAP y escalar hacia arquitecturas multicloud, con acompañamiento consultivo y visión estratégica.</p>
                     </div>
+
+                    <div class="page-detail-card">
+                        <h3>Lamarr + La Araucaria Software: Soluciones Conjuntas en Ciberseguridad</h3>
+                        <p>Junto a La Araucaria Software, estamos desarrollando soluciones orientadas a ciberseguridad aplicada, protección de datos críticos y monitoreo inteligente de riesgos. La combinación de ingeniería segura + integración SAP + arquitectura cloud nos permite entregar soluciones escalables, eficientes y alineadas a los desafíos actuales.</p>
+                    </div>
+
+                    <div class="page-detail-card">
+                        <h3>Webinar Ejecutivo junto a Noventiq: El Fin de Soporte de SAP ECC</h3>
+                        <p>En un encuentro ejecutivo reciente, conversamos junto a Noventiq sobre el fin de soporte de SAP ECC, sus implicancias y las opciones de transición hacia SAP en la nube. El enfoque fue claro: tomar decisiones informadas, no apresuradas.</p>
+                    </div>
+
+                    <div class="page-detail-card">
+                        <h3>Convenio Marco con Noventiq</h3>
+                        <p>Este convenio formaliza nuestra capacidad de ejecutar proyectos SAP + Cloud de manera conjunta, asegurando continuidad, trazabilidad y escalabilidad en la entrega de servicios.</p>
+                    </div>
+                    
+                    <div class="page-detail-card">
+                        <h3>Invitación a Próximo Evento | IA en la Contabilidad</h3>
+                        <p><strong>IA Aplicada a Procesos Contables y Financieros</strong><br>
+                           Realizaremos un Happy Hour Ejecutivo para conversar sobre cómo la Inteligencia Artificial está optimizando conciliaciones, reportes, auditorías internas y análisis financiero en pymes y sector público.</p>
+                        <ul>
+                            <li>Casos reales</li>
+                            <li>Integración con SAP, ERP locales y sistemas mixtos</li>
+                            <li>Conversación + Networking en un formato cercano</li>
+                        </ul>
+                        <a href="contact.html" class="btn-primary" style="margin-top: 15px;">→ Registra tu interés para asegurar cupo</a>
+                    </div>
+                </div>
+
+                <div class="cierre-institucional">
+                    <p>En Lamarr avanzamos con una visión clara:<br>
+                    Tecnología integrada. Operación fluida.<br>
+                    Ejecución responsable y acompañamiento real.</p>
                 </div>
 
             </div>
