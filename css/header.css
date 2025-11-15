@@ -207,61 +207,89 @@ nav.desktop-nav .dropdown-content a {
     font-weight: 500;
 }
 
-/* --- AÑADIDO: Estilos del Botón de Idioma --- */
+/* --- INICIO: Estilos del Botón de Idioma MODIFICADOS --- */
 .language-switcher {
     position: relative;
     margin-left: 15px;
 }
 
 .lang-btn {
-    background-color: #f8f9fa;
+    background-color: transparent;
     border: 1px solid var(--color-border);
-    color: var(--color-text-secondary);
+    color: var(--color-text);
     padding: 8px 12px;
     border-radius: 8px;
     cursor: pointer;
     display: flex;
     align-items: center;
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: 600;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .lang-btn:hover {
-    background-color: #f1f3f5;
+    background-color: var(--color-bg-light);
+    color: var(--color-primary);
 }
 
 .lang-btn .dropdown-arrow {
     width: 14px;
     height: 14px;
     margin-left: 5px;
+    color: var(--color-text-secondary);
 }
 
 .lang-dropdown {
     display: none; /* Oculto por defecto, JS lo controla */
     position: absolute;
-    top: 100%;
+    top: calc(100% + 8px); /* Un poco más de espacio */
     right: 0;
     background-color: var(--color-background);
-    min-width: 120px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
-    z-index: 1001; /* Asegura que esté sobre el contenido */
+    min-width: 180px;
+    box-shadow: 0px 8px 20px 0px rgba(0,0,0,0.1);
+    z-index: 1001; 
     border-radius: 8px;
-    padding: 8px 0;
-    margin-top: 5px;
+    border: 1px solid var(--color-border);
+    padding: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0.3s ease;
+}
+
+/* Clase 'show' que añadirá JS */
+.lang-dropdown.show {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
 }
 
 .lang-dropdown a {
-    color: var(--color-text);
+    color: var(--color-text-secondary);
     padding: 10px 15px;
     text-decoration: none;
-    display: block;
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Espacio para el emoji */
     font-size: 0.9rem;
+    font-weight: 500;
+    border-radius: 6px;
+    transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 .lang-dropdown a:hover {
-    background-color: #f1f3f5;
+    background-color: var(--color-bg-light);
+    color: var(--color-text);
 }
-/* --- FIN AÑADIDO: Estilos del Botón de Idioma --- */
+
+/* Estilo para el idioma activo */
+.lang-dropdown a.active {
+    background-color: rgba(0, 123, 255, 0.05);
+    color: var(--color-primary);
+    font-weight: 600;
+}
+/* --- FIN: Estilos del Botón de Idioma --- */
 
 
 @media (max-width: 992px) {
@@ -273,7 +301,6 @@ nav.desktop-nav .dropdown-content a {
         display: block;
     }
 
-    /* Oculta el botón de idioma en móvil (ya no estaba) */
     .language-switcher {
         display: none; 
     }
