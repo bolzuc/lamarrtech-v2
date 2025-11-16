@@ -94,6 +94,25 @@
     border: 1px solid var(--color-border);
 }
 
+/* NUEVO: Caso especial para la imagen del certificado */
+.noticia-item-certificado .noticia-item-image {
+    max-height: 400px; /* Damos un poco más de espacio si es necesario, pero contenida */
+    background-color: #f8f9fa; /* Fondo claro para el contenedor */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px; /* Espacio interno para que la imagen "respire" */
+}
+
+.noticia-item-certificado .noticia-item-image img {
+    width: 100%; /* Que se ajuste al contenedor */
+    height: auto; /* Altura automática */
+    object-fit: contain; /* Asegura que se vea completa */
+    border: 1px solid #ddd; /* Un borde sutil para la imagen */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* Sombra suave */
+    max-height: 100%; /* Que no supere el contenedor */
+}
+
 
 .noticia-item-content {
     display: flex;
