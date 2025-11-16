@@ -11,6 +11,122 @@
     <link rel="stylesheet" href="css/footer.css">
     <!-- CSS de noticias actualizado -->
     <link rel="stylesheet" href="css/noticias.css">
+    
+    <!-- INICIO: Estilos para el Carrusel del Webinar -->
+    <style>
+        .webinar-carousel-container {
+            position: relative;
+            width: 100%;
+            max-width: 100%; /* El contenedor del grid ya lo limita */
+            margin: 0 auto;
+            overflow: hidden;
+            border-radius: 8px;
+            background-color: #f8f9fa;
+            border: 1px solid var(--color-border);
+        }
+
+        .webinar-carousel-track {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .webinar-carousel-slide {
+            flex-shrink: 0;
+            width: 100%;
+            padding: 20px; /* Espacio interno para que la imagen "respire" */
+            box-sizing: border-box; /* Incluir padding en el ancho */
+            
+            /* --- CAMBIO 1: Altura fija y centrado --- */
+            height: 450px; /* Altura fija para el slide en escritorio */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .webinar-carousel-slide img {
+            width: 100%;
+            /* --- CAMBIO 1: Altura y max-height actualizados --- */
+            height: 100%; /* La imagen ocupa el alto del contenedor */
+            max-height: 100%; /* Se ajusta al padding del contenedor */
+            object-fit: contain; /* Mostrar la imagen completa */
+            border-radius: 4px;
+            border: 1px solid #ddd;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+
+        .webinar-carousel-btn {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.9);
+            border: 1px solid var(--color-border);
+            border-radius: 50%;
+            width: 44px;
+            height: 44px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 10;
+            color: var(--color-text);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            transition: all 0.2s ease;
+        }
+
+        .webinar-carousel-btn:hover {
+            background-color: #fff;
+            color: var(--color-primary);
+            border-color: var(--color-primary);
+        }
+
+        .webinar-carousel-btn.prev { left: 15px; }
+        .webinar-carousel-btn.next { right: 15px; }
+
+        .webinar-carousel-dots {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 8px;
+            z-index: 10;
+        }
+
+        .webinar-carousel-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            background-color: #ccc;
+            border: 1px solid rgba(0,0,0,0.1);
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .webinar-carousel-dot.active {
+            background-color: var(--color-primary);
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 768px) {
+            .webinar-carousel-slide {
+                padding: 10px; /* Menos padding en móvil */
+                /* --- CAMBIO 1: Altura fija en móvil --- */
+                height: 300px; /* Altura fija para el slide en móvil */
+            }
+            .webinar-carousel-slide img {
+                /* --- CAMBIO 1: Quitado max-height, ya controlado por el padre --- */
+                max-height: 100%; /* Se ajusta al padding del contenedor */
+            }
+            .webinar-carousel-btn {
+                width: 36px;
+                height: 36px;
+            }
+            .webinar-carousel-dots {
+                bottom: 15px;
+            }
+        }
+    </style>
+    <!-- FIN: Estilos para el Carrusel del Webinar -->
 </head>
 <body>
     <header>
@@ -119,13 +235,38 @@
                 <h2 class="section-title-h2" data-lang-key="news_s2_h2">Eventos y Noticias Pasadas</h2>
                 <div class="noticia-list-container">
                     
-                    <!-- ARTÍCULO MODIFICADO: Se añadió la clase 'noticia-item-certificado' -->
+                    <!-- ARTÍCULO MODIFICADO: Contenido reemplazado por el carrusel -->
                     <article class="noticia-item item-image-right noticia-item-certificado">
-                        <!-- IMAGEN AÑADIDA -->
-                        <div class="noticia-item-image">
-                            <!-- Se asume que 'certificado-huawei.jpg' está en la carpeta 'img/' -->
-                            <img src="img/certificado-huawei.jpg" alt="Certificado Huawei Cloud Partner Lamarr Tech" data-lang-key="news_s2_c1_alt" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/212529?text=Certificado+Huawei';">
+                        
+                        <!-- INICIO: Carrusel del Webinar -->
+                        <div class="webinar-carousel-container" id="webinar-carousel">
+                            <div class="webinar-carousel-track">
+                                <div class="webinar-carousel-slide">
+                                    <img src="img/certificado-huawei.jpg" alt="Certificado Huawei Cloud Partner Lamarr Tech" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/212529?text=Certificado+Huawei';">
+                                </div>
+                                <div class="webinar-carousel-slide">
+                                    <img src="img/webinar-1.jpg" alt="Foto del webinar 1" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/212529?text=Foto+Webinar+1';">
+                                </div>
+                                <div class="webinar-carousel-slide">
+                                    <img src="img/webinar-2.jpg" alt="Foto del webinar 2" onerror="this.onerror=null;this.src='https://placehold.co/600x400/e9ecef/212529?text=Foto+Webinar+2';">
+                                </div>
+                            </div>
+                            
+                            <!-- Botones de Navegación -->
+                            <button class="webinar-carousel-btn prev" aria-label="Slide anterior">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                            </button>
+                            <button class="webinar-carousel-btn next" aria-label="Siguiente slide">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                            </button>
+
+                            <!-- Puntos de Paginación -->
+                            <div class="webinar-carousel-dots">
+                                <!-- Los puntos se generarán con JS -->
+                            </div>
                         </div>
+                        <!-- FIN: Carrusel del Webinar -->
+
                         <div class="noticia-item-content">
                             <h3 data-lang-key="news_s2_c1_h3">Huawei Cloud reconoce a Lamarr como Partner con Potencial</h3>
                             <p data-lang-key="news_s2_c1_p">Lamarr participó en el Huawei Cloud Summit, donde fuimos reconocidos como Partner con Potencial en la región por nuestra experiencia en modernización SAP, estrategias multicloud y arquitecturas híbridas. Este hito refleja nuestro compromiso con soluciones de alto impacto, con ejecución técnica propia y acompañamiento continuo.</p>
@@ -172,9 +313,8 @@
 
                 <!-- Lema Institucional -->
                 <div class="cierre-institucional">
-                    <p data-lang-key="news_cierre">En Lamarr avanzamos con una visión clara:<br>
-                    Tecnología integrada. Operación fluida.<br>
-                    Ejecución responsable y acompañamiento real.</p>
+                    <!-- CORRECCIÓN: Se vacía el <p> para que el script 'js/idiomas.js' lo llene correctamente con HTML -->
+                    <p data-lang-key="news_cierre"></p>
                 </div>
 
                 <!-- Nueva Sección CTA -->
@@ -195,5 +335,130 @@
     </footer>
     <script src="js/idiomas.js"></script>
     <script src="js/script.js"></script>
+
+    <!-- INICIO: Script para el Carrusel del Webinar -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.getElementById('webinar-carousel');
+            if (carousel) {
+                const track = carousel.querySelector('.webinar-carousel-track');
+                const slides = Array.from(track.children);
+                const nextButton = carousel.querySelector('.webinar-carousel-btn.next');
+                const prevButton = carousel.querySelector('.webinar-carousel-btn.prev');
+                const dotsContainer = carousel.querySelector('.webinar-carousel-dots');
+                
+                let currentIndex = 0;
+                let slideWidth = slides.length > 0 ? slides[0].getBoundingClientRect().width : 0;
+                let autoplayInterval; // <-- CAMBIO 2: Variable para autoplay
+
+                // Crear puntos de navegación
+                slides.forEach((slide, index) => {
+                    const dot = document.createElement('button');
+                    dot.classList.add('webinar-carousel-dot');
+                    if (index === 0) dot.classList.add('active');
+                    dot.setAttribute('aria-label', `Ir a slide ${index + 1}`);
+                    dot.addEventListener('click', () => {
+                        goToSlide(index);
+                        resetAutoplay(); // <-- CAMBIO 2: Reiniciar autoplay al hacer clic
+                    });
+                    dotsContainer.appendChild(dot);
+                });
+
+                const dots = Array.from(dotsContainer.children);
+
+                // Función para ir a un slide
+                const goToSlide = (index) => {
+                    if (slides.length === 0) return; // No hacer nada si no hay slides
+                    
+                    if (index < 0) {
+                        index = slides.length - 1;
+                    } else if (index >= slides.length) {
+                        index = 0;
+                    }
+                    
+                    // Recalcular ancho por si acaso
+                    const currentSlideWidth = slides[0].getBoundingClientRect().width;
+                    if (currentSlideWidth !== 0) {
+                        slideWidth = currentSlideWidth;
+                    }
+
+                    if (slideWidth !== 0) {
+                        track.style.transform = `translateX(-${slideWidth * index}px)`;
+                        currentIndex = index;
+                        updateDots();
+                    }
+                };
+
+                // Función para actualizar los puntos
+                const updateDots = () => {
+                    dots.forEach((dot, index) => {
+                        dot.classList.toggle('active', index === currentIndex);
+                    });
+                };
+                
+                // --- CAMBIO 2: Funciones de Autoplay ---
+                const startAutoplay = () => {
+                    clearInterval(autoplayInterval); // Limpiar intervalo existente
+                    autoplayInterval = setInterval(() => {
+                        goToSlide(currentIndex + 1);
+                    }, 8000); // 8000ms = 8 segundos
+                };
+
+                const resetAutoplay = () => {
+                    clearInterval(autoplayInterval);
+                    startAutoplay();
+                };
+                // --- FIN CAMBIO 2 ---
+
+                // Eventos de botones
+                nextButton.addEventListener('click', () => {
+                    goToSlide(currentIndex + 1);
+                    resetAutoplay(); // <-- CAMBIO 2: Reiniciar autoplay
+                });
+
+                prevButton.addEventListener('click', () => {
+                    goToSlide(currentIndex - 1);
+                    resetAutoplay(); // <-- CAMBIO 2: Reiniciar autoplay
+                });
+
+                // Recalcular ancho en re-dimensionamiento (para responsividad)
+                let resizeTimer;
+                window.addEventListener('resize', () => {
+                    clearTimeout(resizeTimer);
+                    resizeTimer = setTimeout(() => {
+                        const newSlideWidth = slides.length > 0 ? slides[0].getBoundingClientRect().width : 0;
+                        if (newSlideWidth !== 0) { 
+                            slideWidth = newSlideWidth; // Actualizar ancho
+                            track.style.transition = 'none'; // Desactivar transición para el ajuste
+                            track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+                            // Forzar reflow
+                            track.offsetHeight; 
+                            track.style.transition = 'transform 0.5s ease-in-out'; // Reactivar transición
+                        }
+                        resetAutoplay(); // <-- CAMBIO 2: Reiniciar autoplay
+                    }, 250);
+                });
+                
+                 // Ajuste inicial por si las imágenes cargan lento
+                window.addEventListener('load', () => {
+                     const initialSlideWidth = slides.length > 0 ? slides[0].getBoundingClientRect().width : 0;
+                     if (initialSlideWidth !== 0) {
+                        slideWidth = initialSlideWidth;
+                        track.style.transform = `translateX(-${slideWidth * currentIndex}px)`;
+                     }
+                     startAutoplay(); // <-- CAMBIO 2: Iniciar autoplay al cargar
+                });
+
+                // --- CAMBIO 2: Pausar en hover ---
+                carousel.addEventListener('mouseenter', () => {
+                    clearInterval(autoplayInterval);
+                });
+                carousel.addEventListener('mouseleave', () => {
+                    startAutoplay();
+                });
+            }
+        });
+    </script>
+    <!-- FIN: Script para el Carrusel del Webinar -->
 </body>
 </html>

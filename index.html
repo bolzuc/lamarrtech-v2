@@ -324,6 +324,50 @@
             margin-bottom: 0;
         }
     </style>
+
+    <!-- INICIO: Estilos para centrar las tarjetas de servicio (Pirámide Invertida) -->
+    <style>
+        .hero-solutions-grid {
+            /* Cambiamos de Grid a Flexbox para centrar la última fila */
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center; /* Esto centrará la fila de 2 tarjetas */
+            gap: 30px;
+        }
+
+        .hero-solution-card {
+            /* Definimos el tamaño de las tarjetas para Flexbox */
+            flex-grow: 1;
+            flex-basis: 300px; /* El 'min' del minmax original */
+            max-width: 380px;  /* (1200px container - 60px gaps) / 3 items = 380px */
+            
+            /* Mantenemos el display flex interno para alinear el botón */
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+    <!-- FIN: Estilos para centrar las tarjetas -->
+
+    <!-- INICIO: Estilos para la tabla de Región/Rol (formato de lista) -->
+    <style>
+        .presencia-tabla-body .td-merged-region {
+            vertical-align: top;
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+        .presencia-tabla-body .region-description {
+            font-size: 0.95rem;
+            color: var(--color-text-secondary);
+            line-height: 1.5;
+            margin-top: 5px; /* Separación del título */
+            margin-bottom: 0;
+        }
+        /* AÑADIDO: Pone el título de la región en negrita */
+        .presencia-tabla-body .region-title {
+            font-weight: 700; /* O 'bold' */
+        }
+    </style>
+    <!-- FIN: Estilos para la tabla de Región/Rol -->
 </head>
 <body>
 
@@ -347,7 +391,7 @@
                             <li><a href="services-sap.html" data-lang-key="nav_servicios_sap">SAP</a></li>
                         </ul>
                     </li>
-                    <li><a href="nuestro-equipo.html" data-lang-key="nav_equipo">EQUIPO</a></li>
+                    <!-- <li><a href="nuestro-equipo.html" data-lang-key="nav_equipo">EQUIPO</a></li> -->
                     <li><a href="noticias.html" data-lang-key="nav_noticias">NOTICIAS</a></li>
                     <li><a href="contact.html" data-lang-key="nav_contacto">CONTACTO</a></li>
                 </ul>
@@ -389,7 +433,7 @@
                         <li><a href="services-sap.html" data-lang-key="nav_servicios_sap">SAP</a></li>
                     </ul>
                 </li>
-                <li><a href="nuestro-equipo.html" data-lang-key="nav_equipo">EQUIPO</a></li>
+                <!-- <li><a href="nuestro-equipo.html" data-lang-key="nav_equipo">EQUIPO</a></li> -->
                 <li><a href="noticias.html" data-lang-key="nav_noticias">NOTICIAS</a></li>
                 <li><a href="contact.html" data-lang-key="nav_contacto">CONTACTO</a></li>
             </ul>
@@ -410,7 +454,8 @@
                                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15a4.5 4.5 0 0 0 4.5 4.5H18a4.5 4.5 0 0 0 4.5-4.5V8.25a4.5 4.5 0 0 0-4.5-4.5H6.75a4.5 4.5 0 0 0-4.5 4.5v6.75Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 15.75c0-1.01.37-1.93.97-2.656a4.498 4.498 0 0 1 .31-3.186c.14-1.29.9-2.429 1.93-3.185S8.28 6 9.75 6h4.5c1.47 0 2.855.23 4.09.629a4.486 4.486 0 0 1 1.93 3.185c.14 1.29.37 2.429.97 3.186C21.38 13.82 21.75 14.74 21.75 15.75v.21c0 .09-.01.18-.02.269a4.49 4.49 0 0 1-1.1 2.36c-.23.23-.48.43-.75.6A4.48 4.48 0 0 1 18 19.5H6.75a4.48 4.48 0 0 1-1.88-.361 4.49 4.49 0 0 1-.75-.6 4.49 4.49 0 0 1-1.1-2.36c-.01-.09-.02-.18-.02-.27v-.21Z" /></svg>
                             </div>
                             <h3 data-lang-key="card_cloud_h3">Arquitectura Multicloud para tu Negocio</h3>
-                            <p data-lang-key="card_cloud_p">Elegimos y combinamos AWS, Google Cloud y Huawei para construir una infraestructura flexible, eficiente y preparada para crecer. Sin dependencias forzadas. Tú eliges. Tu negocio manda.</p>
+                            <!-- CAMBIO 2: Texto de la tarjeta actualizado -->
+                            <p data-lang-key="card_cloud_p">Elegimos y combinamos AWS, Google Cloud Platform y Huawei Cloud para construir una infraestructura flexible, eficiente y preparada para crecer. Sin dependencias forzadas. Tú eliges. Tu negocio manda.</p>
                             <a href="lamarr-cloud.html" class="btn-primary" data-lang-key="card_cloud_btn">Ver Cloud</a>
                         </div>
                         
@@ -457,7 +502,8 @@
         <!-- SECCIÓN DE SOCIOS ACTUALIZADA -->
         <section class="partners-section">
             <div class="container">
-                <h2 data-lang-key="partners_h2">Nuestros Socios Tecnológicos</h2>
+                <!-- CAMBIO 1: Título de Socios actualizado -->
+                <h2 data-lang-key="partners_h2">Aliados que construyen un futuro con Lamarr</h2>
                 
                 <!-- INICIO DE LA NUEVA ESTRUCTURA DEL SLIDER -->
                 <div class="partners-slider-container">
@@ -524,9 +570,9 @@
 
         <section id="presencia-global">
             <div class="container">
+                <!-- CAMBIO 3: Título actualizado, <p> eliminado -->
                 <div class="presencia-section-header">
                     <h3 data-lang-key="map_h3">Nuestra Presencia y Capacidad Global</h3>
-                    <p data-lang-key="map_p">Un resumen de nuestras sedes, roles estratégicos y el valor que entregamos.</p>
                 </div>
 
                 <div class="presencia-grid">
@@ -538,47 +584,38 @@
                     <div class="presencia-tabla-container">
                         <div class="presencia-tabla-body">
                             <table>
-                                <thead>
-                                    <tr>
-                                        <th data-lang-key="map_table_region">Región / Sede</th>
-                                        <th data-lang-key="map_table_role">Rol Estratégico</th>
-                                    </tr>
-                                </thead>
+                                <!-- CABEZAL ELIMINADO SEGÚN DISEÑO -->
                                 <tbody>
+                                    <!-- CAMBIO 4: Roles actualizados en el HTML -->
                                     <tr>
-                                        <td class="td-region">
+                                        <td colspan="2" class="td-merged-region">
                                             <div class="region-title" data-lang-key="map_table_hq_title">Chile (HQ)</div>
-                                            <div class="region-role" data-lang-key="map_table_hq_role">Delivery Técnico Principal</div>
+                                            <p class="region-description" data-lang-key="map_table_hq_desc">Arquitectura, dirección técnica, liderazgo de proyectos.</p>
                                         </td>
-                                        <td data-lang-key="map_table_hq_desc">Arquitectura, dirección técnica, liderazgo de proyectos.</td>
                                     </tr>
                                     <tr>
-                                        <td class="td-region">
+                                        <td colspan="2" class="td-merged-region">
                                             <div class="region-title" data-lang-key="map_table_br_title">Brasil</div>
-                                            <div class="region-role" data-lang-key="map_table_br_role">Delivery Técnico Principal</div>
+                                            <p class="region-description" data-lang-key="map_table_br_desc">Proyectos SAP, Integración, Operación Multicloud.</p>
                                         </td>
-                                        <td data-lang-key="map_table_br_desc">Proyectos SAP, Integración, Operación Multicloud.</td>
                                     </tr>
                                     <tr>
-                                        <td class="td-region">
+                                        <td colspan="2" class="td-merged-region">
                                             <div class="region-title" data-lang-key="map_table_cr_ve_title">Costa Rica & Venezuela</div>
-                                            <div class="region-role" data-lang-key="map_table_cr_ve_role">Soporte y Continuidad</div>
+                                            <p class="region-description" data-lang-key="map_table_cr_ve_desc">"Follow-the-sun" operativo / Soporte regional.</p>
                                         </td>
-                                        <td data-lang-key="map_table_cr_ve_desc">"Follow-the-sun" operativo / Soporte regional.</td>
                                     </tr>
                                     <tr>
-                                        <td class="td-region">
+                                        <td colspan="2" class="td-merged-region">
                                             <div class="region-title" data-lang-key="map_table_mia_title">Miami</div>
-                                            <div class="region-role" data-lang-key="map_table_mia_role">Hub de Alianzas</div>
+                                            <p class="region-description" data-lang-key="map_table_mia_desc">Hub de alianzas (AWS, Google, Huawei, ScaleUp AI).</p>
                                         </td>
-                                        <td data-lang-key="map_table_mia_desc">Hub de alianzas (AWS, Google, Huawei, ScaleUp AI).</td>
                                     </tr>
                                     <tr>
-                                        <td class="td-region">
+                                        <td colspan="2" class="td-merged-region">
                                             <div class="region-title" data-lang-key="map_table_in_title">India</div>
-                                            <div class="region-role" data-lang-key="map_table_in_role">Acelerador de Desarrollo</div>
+                                            <p class="region-description" data-lang-key="map_table_in_desc">Data Engineering + Automatización + Dev SecOps.</p>
                                         </td>
-                                        <td data-lang-key="map_table_in_desc">Data Engineering + Automatización + Dev SecOps.</td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -586,11 +623,12 @@
                     </div>
 
                 </div>
-
+                
+                <!-- CAMBIO 5: Texto de compromiso actualizado -->
                 <div class="presencia-tabla-footer">
                     <h4 data-lang-key="map_footer_h4">Nuestro Compromiso</h4>
                     <blockquote> 
-                        <span data-lang-key="map_footer_q">"Operamos con equipos propios globales, sin tercerizar. Tu punto de contacto es un consultor senior, no un ticket."</span>
+                        <span data-lang-key="map_footer_q">"Tu negocio, impulsado por experiencia global y compromiso real"</span>
                     </blockquote>
                 </div>
             </div>
