@@ -72,9 +72,12 @@ const translations = {
         form_message: "Mensaje",
         form_submit_btn: "Enviar",
         contact_info_h2: "Información Directa",
+        contact_info_company: "Razón Social:", // NUEVA
+        contact_info_rut: "Rut:", // NUEVA
+        contact_info_giro: "Giro:", // NUEVA
         contact_info_phone: "Teléfono:",
         contact_info_email: "Correo Electrónico:",
-        contact_info_address: "Dirección:",
+        contact_info_address: "Dirección:", // ACTUALIZADA
         popup_title: "¡Gracias por contactarnos!",
         popup_p: "Tu mensaje ha sido enviado. Para una atención más rápida, puedes contactarnos directamente por WhatsApp.",
         popup_btn: "Hablar por WhatsApp",
@@ -327,9 +330,12 @@ const translations = {
         form_message: "Message",
         form_submit_btn: "Send",
         contact_info_h2: "Direct Information",
+        contact_info_company: "Business Name:", // NUEVA
+        contact_info_rut: "Tax ID:", // NUEVA
+        contact_info_giro: "Business Activity:", // NUEVA
         contact_info_phone: "Phone:",
         contact_info_email: "Email:",
-        contact_info_address: "Address:",
+        contact_info_address: "Address:", // ACTUALIZADA
         popup_title: "Thank you for contacting us!",
         popup_p: "Your message has been sent. For faster assistance, you can contact us directly on WhatsApp.",
         popup_btn: "Chat on WhatsApp",
@@ -423,7 +429,7 @@ const translations = {
         news_s2_h2: "Past Events and News",
         news_s2_c1_h3: "Huawei Cloud recognizes Lamarr as a Partner with Potential",
         news_s2_c1_p: "Lamarr participated in the Huawei Cloud Summit, where we were recognized as a Partner with Potential in the region for our experience in SAP modernization, multicloud strategies, and hybrid architectures. This milestone reflects our commitment to high-impact solutions, with our own technical execution and continuous support.",
-        news_s2_c1_alt: "Lamarr Tech Huawei Cloud Partner Certificate", // NUEVA CLAVE
+        news_s2_c1_alt: "Lamarr Tech Huawei Cloud Partner Certificate", 
         news_s2_c2_h3: "In-Person Event: SAP Business One on Huawei Cloud",
         news_s2_c2_p: "We held an executive meeting aimed at organizations operating SAP Business One that wish to migrate or optimize their cloud infrastructure, maintaining operational continuity and cost control. We presented transition paths, real cases, and architecture models.",
         news_s2_c2_btn: "Read more and see video",
@@ -582,9 +588,12 @@ const translations = {
         form_message: "Mensagem",
         form_submit_btn: "Enviar",
         contact_info_h2: "Informações Diretas",
+        contact_info_company: "Razão Social:", // NUEVA
+        contact_info_rut: "RUT:", // NUEVA
+        contact_info_giro: "Atividade Econômica:", // NUEVA
         contact_info_phone: "Telefone:",
         contact_info_email: "Email:",
-        contact_info_address: "Endereço:",
+        contact_info_address: "Endereço:", // ACTUALIZADA
         popup_title: "Obrigado por nos contatar!",
         popup_p: "Sua mensagem foi enviada. Para um atendimento más rápido, você pode nos contatar diretamente pelo WhatsApp.",
         popup_btn: "Falar pelo WhatsApp",
@@ -678,7 +687,7 @@ const translations = {
         news_s2_h2: "Eventos e Notícias Passadas",
         news_s2_c1_h3: "Huawei Cloud reconhece a Lamarr como Parceira com Potencial",
         news_s2_c1_p: "A Lamarr participou do Huawei Cloud Summit, onde fomos reconhecidos como Parceira com Potencial na região por nossa experiência em modernização SAP, estratégias multicloud e arquiteturas híbridas. Este marco reflete nosso compromisso com soluções de alto impacto, com execução técnica própria e acompanhamento contínuo.",
-        news_s2_c1_alt: "Certificado de Parceiro Huawei Cloud Lamarr Tech", // NUEVA CLAVE
+        news_s2_c1_alt: "Certificado de Parceiro Huawei Cloud Lamarr Tech", 
         news_s2_c2_h3: "Evento Presencial: SAP Business One na Huawei Cloud",
         news_s2_c2_p: "Realizamos um encontro executivo voltado para organizações que operam SAP Business One e desejam migrar ou otimizar sua infraestrutura na nuvem, mantendo a continuidade operacional e o controle de custos. Apresentamos rotas de transição, casos reais e modelos de arquitetura.",
         news_s2_c2_btn: "Ler mais e ver vídeo",
