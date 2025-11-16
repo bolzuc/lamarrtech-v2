@@ -67,26 +67,7 @@
     opacity: 1;
 }
 
-/* Ajuste más agresivo para Noventiq en escritorio para compensar el padding del PNG */
-.partner-item img[alt="Logo Noventiq"] {
-    height: 55px; 
-    max-width: 130px;
-}
-
-.partner-group .partner-item:nth-child(1) img { 
-}
-.partner-group .partner-item:nth-child(2) img { 
-}
-.partner-group .partner-item:nth-child(3) img { 
-}
-.partner-group .partner-item:nth-child(4) img { 
-}
-.partner-group .partner-item:nth-child(5) img { 
-}
-.partner-group .partner-item:nth-child(6) img { 
-}
-.partner-group .partner-item:nth-child(7) img { 
-}
+/* --- SE ELIMINARON LAS REGLAS ESPECÍFICAS nth-child y [alt] PARA UNIFICAR TAMAÑOS --- */
 
 
 @media (max-width: 768px) {
@@ -116,9 +97,7 @@
         display: none; 
     }
     
-    .partner-item:nth-child(8) {
-        display: none; 
-    }
+    /* Se elimina la regla nth-child(8) ya que ahora tenemos un número diferente de logos */
 
 
     .partner-item {
@@ -138,23 +117,5 @@
         opacity: 1;
     }
     
-    /* Ajuste más agresivo para Noventiq en móvil */
-    .partner-item img[alt="Logo Noventiq"] {
-        height: 50px; 
-    }
-    
-    /* Mostrar todos los 7 logos del primer grupo y organizar en filas 2-2-2-1 */
-    .partner-group .partner-item:nth-child(6),
-    .partner-group .partner-item:nth-child(7) {
-        display: flex; 
-        height: 70px;
-    }
-    
-    /* Centrar el último elemento (Noventiq, que es el 7mo) si quedan 7 */
-    .partner-group .partner-item:nth-child(7) {
-        grid-column: 1 / 3; 
-        justify-self: center; 
-        width: 50%;
-        margin: 0 auto;
-    }
+    /* --- SE ELIMINARON LAS REGLAS ESPECÍFICAS DE MOBILE --- */
 }
