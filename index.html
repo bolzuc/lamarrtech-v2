@@ -458,52 +458,66 @@
         <section class="partners-section">
             <div class="container">
                 <h2 data-lang-key="partners_h2">Nuestros Socios Tecnológicos</h2>
-                <div class="partners-container">
-                    <div class="partners-band"> 
-                        <div class="partner-group">
+                
+                <!-- INICIO DE LA NUEVA ESTRUCTURA DEL SLIDER -->
+                <div class="partners-slider-container">
+                    <div class="partners-slider-track">
+                        
+                        <!-- Slide 1 (5 logos) -->
+                        <div class="partners-slide">
                             <div class="partner-item"><img src="img/logos/Amazon_Web_Services-Logo.png" alt="Logo AWS"></div>
                             <div class="partner-item"><img src="img/logos/Araucaria Software Logo (1).png" alt="Logo Araucaria Software"></div>
                             <div class="partner-item"><img src="img/logos/camara colombochilena.png" alt="Logo Cámara Colombo Chilena"></div>
                             <div class="partner-item"><img src="img/logos/dimarsa.png" alt="Logo Dimarsa"></div>
                             <div class="partner-item"><img src="img/logos/DSP INDUSTRIAL.png" alt="Logo DSP Industrial"></div>
+                        </div>
+
+                        <!-- Slide 2 (5 logos) -->
+                        <div class="partners-slide">
                             <div class="partner-item"><img src="img/logos/google-cloud-platform.png" alt="Logo Google Cloud"></div>
                             <div class="partner-item"><img src="img/logos/grupocrea.png" alt="Logo Grupo Crea"></div>
                             <div class="partner-item"><img src="img/logos/huawei blanco.png" alt="Logo Huawei"></div>
                             <div class="partner-item"><img src="img/logos/j-jaher-.png" alt="Logo Comercial Jaher"></div>
                             <div class="partner-item"><img src="img/logos/logo_chilecompra.png" alt="Logo ChileCompra"></div>
+                        </div>
+
+                        <!-- Slide 3 (5 logos) -->
+                        <div class="partners-slide">
                             <div class="partner-item"><img src="img/logos/LOL_versiones-blanco.png" alt="Logo Licencias OnLine"></div>
                             <div class="partner-item"><img src="img/logos/Noventiq_ideAkdwnX9_0.png" alt="Logo Noventiq"></div>
                             <div class="partner-item"><img src="img/logos/ofkelia.png" alt="Logo Ofkelia"></div>
                             <div class="partner-item"><img src="img/logos/penagos hermanos.png" alt="Logo Penagos Hermanos"></div>
                             <div class="partner-item"><img src="img/logos/Pullman_Bus.png" alt="Logo Pullman Bus"></div>
-                            <div class="partner-item"><img src="img/logos/scaleup.jpg" alt="Logo ScaleUp"></div>
+                        </div>
+                        
+                        <!-- Slide 4 (4 logos) -->
+                        <div class="partners-slide">
+                             <div class="partner-item"><img src="img/logos/scaleup.jpg" alt="Logo ScaleUp"></div>
                             <div class="partner-item"><img src="img/logos/td-synnex-logo-png.png" alt="Logo TD Synnex"></div>
                             <div class="partner-item"><img src="img/logos/ubuntu.png" alt="Logo Ubuntu"></div>
                             <div class="partner-item"><img src="img/logos/WIT.png" alt="Logo WIT"></div>
                         </div>
-                        <div class="partner-group">
-                            <div class="partner-item"><img src="img/logos/Amazon_Web_Services-Logo.png" alt="Logo AWS"></div>
-                            <div class="partner-item"><img src="img/logos/Araucaria Software Logo (1).png" alt="Logo Araucaria Software"></div>
-                            <div class="partner-item"><img src="img/logos/camara colombochilena.png" alt="Logo Cámara Colombo Chilena"></div>
-                            <div class="partner-item"><img src="img/logos/dimarsa.png" alt="Logo Dimarsa"></div>
-                            <div class="partner-item"><img src="img/logos/DSP INDUSTRIAL.png" alt="Logo DSP Industrial"></div>
-                            <div class="partner-item"><img src="img/logos/google-cloud-platform.png" alt="Logo Google Cloud"></div>
-                            <div class="partner-item"><img src="img/logos/grupocrea.png" alt="Logo Grupo Crea"></div>
-                            <div class="partner-item"><img src="img/logos/huawei blanco.png" alt="Logo Huawei"></div>
-                            <div class="partner-item"><img src="img/logos/j-jaher-.png" alt="Logo Comercial Jaher"></div>
-                            <div class="partner-item"><img src="img/logos/logo_chilecompra.png" alt="Logo ChileCompra"></div>
-                            <div class="partner-item"><img src="img/logos/LOL_versiones-blanco.png" alt="Logo Licencias OnLine"></div>
-                            <div class="partner-item"><img src="img/logos/Noventiq_ideAkdwnX9_0.png" alt="Logo Noventiq"></div>
-                            <div class="partner-item"><img src="img/logos/ofkelia.png" alt="Logo Ofkelia"></div>
-                            <div class="partner-item"><img src="img/logos/penagos hermanos.png" alt="Logo Penagos Hermanos"></div>
-                            <div class="partner-item"><img src="img/logos/Pullman_Bus.png" alt="Logo Pullman Bus"></div>
-                            <div class="partner-item"><img src="img/logos/scaleup.jpg" alt="Logo ScaleUp"></div>
-                            <div class="partner-item"><img src="img/logos/td-synnex-logo-png.png" alt="Logo TD Synnex"></div>
-                            <div class="partner-item"><img src="img/logos/ubuntu.png" alt="Logo Ubuntu"></div>
-                            <div class="partner-item"><img src="img/logos/WIT.png" alt="Logo WIT"></div>
-                        </div>
+
+                    </div>
+
+                    <!-- Flechas de Navegación -->
+                    <button class="slider-arrow prev" aria-label="Slide anterior">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"></polyline></svg>
+                    </button>
+                    <button class="slider-arrow next" aria-label="Siguiente slide">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"></polyline></svg>
+                    </button>
+
+                    <!-- Puntos de Paginación -->
+                    <div class="slider-dots">
+                        <button class="slider-dot active" aria-label="Ir a slide 1"></button>
+                        <button class="slider-dot" aria-label="Ir a slide 2"></button>
+                        <button class="slider-dot" aria-label="Ir a slide 3"></button>
+                        <button class="slider-dot" aria-label="Ir a slide 4"></button>
                     </div>
                 </div>
+                <!-- FIN DE LA NUEVA ESTRUCTURA DEL SLIDER -->
+
             </div>
         </section>
         <!-- FIN DE LA SECCIÓN DE SOCIOS -->
@@ -708,6 +722,80 @@
     <!-- Se carga el script principal de JS que ahora incluye la lógica de idioma -->
     <script src="js/script.js"></script>
     <script src="js/idiomas.js"></script>
+
+    <!-- INICIO: Script del nuevo slider de socios -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sliderTrack = document.querySelector('.partners-slider-track');
+            if (sliderTrack) {
+                const slides = Array.from(sliderTrack.children);
+                const nextButton = document.querySelector('.slider-arrow.next');
+                const prevButton = document.querySelector('.slider-arrow.prev');
+                const dotsNav = document.querySelector('.slider-dots');
+                const dots = Array.from(dotsNav.children);
+                const slideCount = slides.length;
+                let currentIndex = 0;
+                let autoPlayInterval;
+
+                // Función para mover a un slide específico
+                const goToSlide = (index) => {
+                    // Asegurarse de que el índice esté en el rango correcto
+                    if (index < 0) {
+                        index = slideCount - 1;
+                    } else if (index >= slideCount) {
+                        index = 0;
+                    }
+
+                    sliderTrack.style.transform = 'translateX(-' + (index * 100) + '%)';
+                    
+                    // Actualizar punto activo
+                    dots.forEach(dot => dot.classList.remove('active'));
+                    dots[index].classList.add('active');
+                    
+                    currentIndex = index;
+                };
+
+                // Función para ir al siguiente slide
+                const nextSlide = () => {
+                    goToSlide(currentIndex + 1);
+                };
+
+                // Función para ir al slide anterior
+                const prevSlide = () => {
+                    goToSlide(currentIndex - 1);
+                };
+
+                // Reiniciar el intervalo de autoplay
+                const resetAutoPlay = () => {
+                    clearInterval(autoPlayInterval);
+                    autoPlayInterval = setInterval(nextSlide, 4000); // 4 segundos
+                };
+
+                // Event Listeners para las flechas
+                nextButton.addEventListener('click', () => {
+                    nextSlide();
+                    resetAutoPlay();
+                });
+
+                prevButton.addEventListener('click', () => {
+                    prevSlide();
+                    resetAutoPlay();
+                });
+
+                // Event Listeners para los puntos
+                dots.forEach((dot, index) => {
+                    dot.addEventListener('click', () => {
+                        goToSlide(index);
+                        resetAutoPlay();
+                    });
+                });
+
+                // Iniciar autoplay
+                resetAutoPlay();
+            }
+        });
+    </script>
+    <!-- FIN: Script del nuevo slider de socios -->
 
 </body>
 </html>

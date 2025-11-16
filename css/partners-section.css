@@ -2,7 +2,7 @@
     background-color: var(--color-background);
     padding: 40px 0;
     text-align: center;
-    overflow: hidden;
+    /* overflow: hidden;  QUITADO: Esto podría estar causando el recorte de las flechas */
     border-top: 1px solid #f0f0f0;
     border-bottom: 1px solid #f0f0f0;
 }
@@ -11,52 +11,55 @@
     font-size: 1.2rem;
     font-weight: 600;
     color: var(--color-text-secondary);
-    margin-bottom: 30px;
+    margin-bottom: 40px; 
     text-transform: uppercase;
     letter-spacing: 0.5px;
 }
-  
-.partners-container {
+
+/* --- INICIO: Nuevos estilos del Slider --- */
+
+.partners-slider-container {
+    position: relative;
+    width: 100%; /* Permite que las flechas se posicionen sin ser cortadas por un overflow del padre */
+    max-width: 1100px; /* Mantener un ancho máximo para el contenido de los logos */
+    margin: 0 auto;
+    overflow: hidden; /* Esto es para el track del slider, no para las flechas */
+}
+
+.partners-slider-track {
     display: flex;
-    align-items: center;
+    transition: transform 0.5s ease-in-out;
     width: 100%;
-    overflow: hidden;
 }
-  
-.partners-band {
-    display: flex;
-    width: 200%; 
-    animation: scroll 30s linear infinite;
-}
-  
-@keyframes scroll {
-    0% { transform: translateX(0%); }
-    100% { transform: translateX(-50%); } 
-}
-  
-.partner-group {
+
+.partners-slide {
     display: flex;
     flex-shrink: 0;
-    width: 50%;
-    justify-content: space-around;
+    width: 100%;
+    justify-content: center; /* Centrar logos horizontalmente */
     align-items: center;
-    padding: 0 10px; 
+    padding: 0 40px; /* Aumentado el padding para dar espacio a las flechas sin que se solapen con los logos */
+    box-sizing: border-box;
 }
-  
+
 .partner-item {
-    padding: 0 15px; 
+    padding: 0 15px; /* Espacio entre logos */
     display: flex;
     align-items: center;
     justify-content: center;
-    /* Eliminamos min-width para evitar solapamiento horizontal en escritorio */
     min-width: 0; 
+    flex: 1 1 auto; /* Permitir que los items se ajusten pero con base automática */
+    max-width: 20%; /* Para 5 logos, cada uno ocupa max 20%. Para 4, crecerán hasta el 25% */
+    box-sizing: border-box;
+    /* Añadido un ancho base para ayudar a la consistencia */
+    width: 150px; 
 }
   
 .partner-item img {
-    width: auto;
-    height: 60px;
-    max-width: 150px;
-    object-fit: contain;
+    width: 100%; /* Ocupa el 100% del ancho disponible en su contenedor */
+    max-width: 150px; /* Máximo ancho del logo */
+    height: 70px; /* Altura fija para todos los logos */
+    object-fit: contain; /* Asegura que la imagen se escala sin recortarse y mantiene su relación de aspecto */
     filter: grayscale(100%);
     opacity: 0.6;
     transition: filter 0.3s ease, opacity 0.3s ease;
@@ -67,55 +70,113 @@
     opacity: 1;
 }
 
-/* --- SE ELIMINARON LAS REGLAS ESPECÍFICAS nth-child y [alt] PARA UNIFICAR TAMAÑOS --- */
+/* Ajuste específico para el logo de Huawei para que las letras blancas se vean */
+.partner-item img[alt="Logo Huawei"] {
+    background-color: #333; /* Un gris oscuro para hacer contraste */
+    border-radius: 5px; /* Bordes ligeramente redondeados para el fondo */
+    padding: 5px 10px; /* Espacio alrededor del logo dentro del fondo */
+    box-sizing: border-box;
+    max-height: 70px; 
+    max-width: 180px; 
+}
+
+/* Estilos de las flechas */
+.slider-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.9); 
+    border: 1px solid var(--color-border);
+    border-radius: 50%;
+    width: 44px; 
+    height: 44px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 10;
+    color: var(--color-text);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15); 
+    transition: all 0.2s ease;
+}
+
+.slider-arrow:hover {
+    background-color: #fff;
+    color: var(--color-primary);
+    border-color: var(--color-primary);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.slider-arrow.prev {
+    left: 0; /* Posicionar en el borde izquierdo del .partners-slider-container */
+}
+
+.slider-arrow.next {
+    right: 0; /* Posicionar en el borde derecho del .partners-slider-container */
+}
+
+/* Estilos de los puntos */
+.slider-dots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: -30px; 
+    width: 100%;
+    left: 0;
+}
+
+.slider-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--color-border);
+    border: none;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.slider-dot.active {
+    background-color: var(--color-primary); 
+    transform: scale(1.2);
+}
+
+/* --- FIN: Nuevos estilos del Slider --- */
 
 
 @media (max-width: 768px) {
-    
-    .partners-band {
-        animation: none; 
+    .partners-slider-container {
         width: 100%; 
-        flex-direction: column; 
-    }
-    
-    .partners-container {
-        overflow: visible;
     }
 
-    .partner-group {
-        width: 100%; 
-        display: grid;
-        grid-template-columns: repeat(2, 1fr); 
-        justify-content: center; 
-        gap: 20px 15px; 
-        flex-wrap: wrap; 
-        padding: 0 10px;
-        margin-bottom: 20px;
+    /* Mostrar flechas también en móvil si es necesario, o mantenerlas ocultas */
+    .slider-arrow {
+        display: none; /* Dejamos ocultas las flechas en móvil para una interfaz más limpia */
     }
 
-    .partner-group:nth-child(2) {
-        display: none; 
+    .partners-slide {
+        padding: 0 10px; /* Ajuste de padding en móvil */
+        justify-content: space-evenly; /* Distribuir uniformemente los logos */
     }
-    
-    /* Se elimina la regla nth-child(8) ya que ahora tenemos un número diferente de logos */
-
 
     .partner-item {
-        margin: 0; 
-        min-width: 0; 
-        height: 70px; 
-        border: 1px solid var(--color-border);
-        border-radius: 8px;
-        padding: 10px;
-        background-color: #fff;
+        max-width: 30%; /* Para que quepan 3-4 logos mejor en móvil */
+        padding: 0 8px;
+        width: auto; /* Dejar que flex lo calcule mejor en móvil */
     }
-    
+
     .partner-item img {
-        height: 45px; 
-        max-width: 100%; 
-        filter: grayscale(0%); 
+        height: 55px; /* Logos un poco más grandes en móvil para mejor visibilidad */
+        max-width: 120px; /* Ancho máximo en móvil */
+        filter: grayscale(0%); /* Quitar grayscale en móvil */
         opacity: 1;
     }
-    
-    /* --- SE ELIMINARON LAS REGLAS ESPECÍFICAS DE MOBILE --- */
+
+    /* Ajuste específico para el logo de Huawei en móvil */
+    .partner-item img[alt="Logo Huawei"] {
+        padding: 4px 9px; /* Ajuste de padding en móvil */
+        max-width: 140px;
+        height: 55px;
+    }
 }
