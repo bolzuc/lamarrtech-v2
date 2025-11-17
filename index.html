@@ -369,6 +369,75 @@
         .presencia-tabla-body .region-title {
             font-weight: 700; /* O 'bold' */
         }
+
+        /* --- INICIO: NUEVOS ESTILOS RESPONSIVE --- */
+        @media (max-width: 767px) {
+            .hero-premium h1 {
+                font-size: 2.5em; /* Reducir H1 en móvil */
+            }
+            .hero-premium .hero-subtitle {
+                font-size: 1.1em; /* Reducir subtítulo en móvil */
+                margin-bottom: 30px;
+            }
+            .hero-solutions-grid {
+                /* Switch to 2 columns on mobile */
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 15px;
+            }
+            .hero-solution-card {
+                flex-basis: auto; /* Reset flex basis */
+                max-width: 100%; /* Reset max-width */
+                padding: 20px; /* Reduce padding */
+            }
+            .hero-solution-card h3 {
+                font-size: 1.1em; /* Smaller title */
+            }
+            .hero-solution-card p {
+                font-size: 0.9rem; /* Smaller text */
+                margin-bottom: 15px;
+            }
+            .hero-solution-card .btn-primary {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+            .hero-solution-card .card-icon {
+                width: 36px;
+                height: 36px;
+                margin-bottom: 15px;
+            }
+            #map {
+                height: 350px; /* Make map shorter on mobile */
+            }
+            .presencia-section-header h3 {
+                font-size: 2rem; /* Smaller title */
+            }
+            /* --- Hacemos la tabla más responsiva --- */
+            .presencia-tabla-body td {
+                display: block; /* Apilar celdas de tabla */
+                width: 100%;
+                border-bottom: none; /* Quitar borde inferior de celda */
+            }
+            .presencia-tabla-body tr {
+                display: block;
+                border-bottom: 1px solid var(--color-border); /* Poner borde en la fila */
+                padding: 15px 0;
+            }
+            .presencia-tabla-body tr:last-child {
+                border-bottom: none;
+            }
+            .presencia-tabla-body .td-merged-region {
+                padding: 0 5px; /* Ajustar padding */
+            }
+        }
+        @media (max-width: 400px) {
+            /* Stack to 1 column on very small screens */
+            .hero-solutions-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        /* --- FIN: NUEVOS ESTILOS RESPONSIVE --- */
+
     </style>
     <!-- FIN: Estilos para la tabla de Región/Rol -->
 </head>
@@ -698,17 +767,18 @@
                     { lat: 17.3850,  lon: 78.4867,  tipo: 'desarrollo', ciudad: "Hyderabad, India", funcion: "Acelerador de desarrollo, datos y automatización." }
                 ];
 
+                // --- INICIO: MAPA INTERACTIVO ACTUALIZADO ---
                 const map = L.map('map', {
-                    scrollWheelZoom: false,
-                    zoomControl: false,
-                    dragging: false,
-                    touchZoom: false,
-                    doubleClickZoom: false,
-                    scrollWheelZoom: false,
-                    boxZoom: false,
-                    keyboard: false,
-                    tap: false
+                    scrollWheelZoom: true,  // Habilitamos zoom con rueda
+                    zoomControl: true,    // Habilitamos controles de zoom
+                    dragging: true,     // Habilitamos el arrastre
+                    touchZoom: true,    // Habilitamos el pinch-to-zoom en móvil
+                    doubleClickZoom: true,  // Habilitamos zoom con doble clic
+                    boxZoom: false,       // Mantenemos deshabilitado
+                    keyboard: false,    // Mantenemos deshabilitado
+                    tap: true         // Habilitamos tap en móvil
                 }).setView([4.7110, -50.0721], 2);
+                // --- FIN: MAPA INTERACTIVO ACTUALIZADO ---
 
                 L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
                     attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
