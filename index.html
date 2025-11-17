@@ -373,17 +373,18 @@
         /* --- INICIO: NUEVOS ESTILOS RESPONSIVE --- */
         @media (max-width: 767px) {
             .hero-premium h1 {
-                font-size: 2.5em; /* Reducir H1 en móvil */
+                /* CAMBIO: Reducir el H1 en móvil */
+                font-size: 2.2em; 
             }
             .hero-premium .hero-subtitle {
                 font-size: 1.1em; /* Reducir subtítulo en móvil */
                 margin-bottom: 30px;
             }
             .hero-solutions-grid {
-                /* Switch to 2 columns on mobile */
+                /* CAMBIO: Apilar en 1 columna en móvil */
                 display: grid;
-                grid-template-columns: 1fr 1fr;
-                gap: 15px;
+                grid-template-columns: 1fr;
+                gap: 20px; /* Aumentar espacio vertical */
             }
             .hero-solution-card {
                 flex-basis: auto; /* Reset flex basis */
@@ -430,12 +431,9 @@
                 padding: 0 5px; /* Ajustar padding */
             }
         }
-        @media (max-width: 400px) {
-            /* Stack to 1 column on very small screens */
-            .hero-solutions-grid {
-                grid-template-columns: 1fr;
-            }
-        }
+        
+        /* CAMBIO: Eliminada la regla @media (max-width: 400px) ya que ahora 1 columna es el default en 767px */
+        
         /* --- FIN: NUEVOS ESTILOS RESPONSIVE --- */
 
     </style>
@@ -596,7 +594,7 @@
                             <div class="partner-item"><img src="img/logos/grupocrea.png" alt="Logo Grupo Crea"></div>
                             <div class="partner-item"><img src="img/logos/huawei blanco.png" alt="Logo Huawei"></div>
                             <div class="partner-item"><img src="img/logos/j-jaher-.png" alt="Logo Comercial Jaher"></div>
-                            <div class="partner-item"><img src="img/logos/logo_chilecompra.png" alt="Logo ChileCompra"></div>
+                            <div class="partner-item"><img src="imgimg/logos/logo_chilecompra.png" alt="Logo ChileCompra"></div>
                         </div>
 
                         <!-- Slide 3 (5 logos) -->

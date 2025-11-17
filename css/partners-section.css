@@ -167,16 +167,17 @@
     }
 
     .partner-item img {
-        height: 55px; /* Logos un poco más grandes en móvil para mejor visibilidad */
+        /* CAMBIO: Logos más pequeños en móvil */
+        height: 45px; 
         max-width: 120px; /* Ancho máximo en móvil */
         filter: grayscale(0%); /* Quitar grayscale en móvil */
         opacity: 1;
     }
 
-    /* Ajuste específico para el logo de Huawei en móvil */
+    /* CAMBIO: Ajuste específico para el logo de Huawei en móvil */
     .partner-item img[alt="Logo Huawei"] {
         padding: 4px 9px; /* Ajuste de padding en móvil */
         max-width: 140px;
-        height: 55px;
+        height: 45px;
     }
 }

@@ -1,5 +1,4 @@
-// Este archivo contiene únicamente las traducciones.
-// Debe cargarse ANTES que script.js
+
 
 const translations = {
     es: {
@@ -36,24 +35,39 @@ const translations = {
         card_sap_p: "+20 años de experiencia real en SAP Business One y SAP ECC. Implementamos y optimizamos con criterio y conocimiento de procesos. Resultados desde el día uno.",
         card_sap_btn: "Ver SAP",
         partners_h2: "Aliados que construyen un futuro con Lamarr",
-        map_h3: "Nuestra Presencia y Capacidad Global",
-        map_table_region: "Región / Sede",
-        map_table_role: "Rol Estratégico",
-        map_table_hq_title: "Chile (HQ)",
-        map_table_hq_role: "Rol Estratégico",
-        map_table_hq_desc: "Arquitectura, dirección técnica, liderazgo de proyectos.",
-        map_table_br_title: "Brasil",
-        map_table_br_role: "Rol Estratégico",
-        map_table_br_desc: "Proyectos SAP, Integración, Operación Multicloud.",
-        map_table_cr_ve_title: "Costa Rica & Venezuela",
-        map_table_cr_ve_role: "Rol Estratégico",
-        map_table_cr_ve_desc: "\"Follow-the-sun\" operativo / Soporte regional.",
-        map_table_mia_title: "Miami",
-        map_table_mia_role: "Rol Estratégico",
-        map_table_mia_desc: "Hub de alianzas (AWS, Google, Huawei, ScaleUp AI).",
-        map_table_in_title: "India",
-        map_table_in_role: "Rol Estratégico",
-        map_table_in_desc: "Data Engineering + Automatización + Dev SecOps.",
+        
+        // --- Claves de Mapa y Tabla (ACTUALIZADAS) ---
+        map_h3: "Presencia y Capacidad Global", // MODIFICADO
+        
+        // Claves antiguas (eliminadas o comentadas para limpieza)
+        // map_table_region: "Región / Sede",
+        // map_table_role: "Rol Estratégico",
+        // map_table_hq_title: "Chile (HQ)",
+        // map_table_hq_role: "Rol Estratégico",
+        // map_table_hq_desc: "Arquitectura, dirección técnica, liderazgo de proyectos.",
+        // map_table_br_title: "Brasil",
+        // map_table_br_role: "Rol Estratégico",
+        // map_table_br_desc: "Proyectos SAP, Integración, Operación Multicloud.",
+        // map_table_cr_ve_title: "Costa Rica & Venezuela",
+        // map_table_cr_ve_role: "Rol Estratégico",
+        // map_table_cr_ve_desc: "\"Follow-the-sun\" operativo / Soporte regional.",
+        // map_table_mia_title: "Miami",
+        // map_table_mia_role: "Rol Estratégico",
+        // map_table_mia_desc: "Hub de alianzas (AWS, Google, Huawei, ScaleUp AI).",
+        // map_table_in_title: "India",
+        // map_table_in_role: "Rol Estratégico",
+        // map_table_in_desc: "Data Engineering + Automatización + Dev SecOps.",
+        
+        // NUEVAS Claves para la tabla de index.html
+        map_table_row1_title: "Chile",
+        map_table_row1_desc: "HeadQuarters",
+        map_table_row2_title: "Brasil, Costa Rica & Venezuela",
+        map_table_row2_desc: "Proyectos SAP, Integración, Operación Multicloud, Soporte Regional",
+        map_table_row3_title: "Miami",
+        map_table_row3_desc: "Hub de Alianza",
+        map_table_row4_title: "India",
+        map_table_row4_desc: "Acelerador de Desarrollo",
+
         map_footer_h4: "Nuestro Compromiso",
         map_footer_q: "\"Tu negocio, impulsado por experiencia global y compromiso real\"",
         
@@ -294,24 +308,20 @@ const translations = {
         card_sap_p: "20+ years of real experience in SAP Business One and SAP ECC. We implement and optimize with criteria and process knowledge. Results from day one.",
         card_sap_btn: "View SAP",
         partners_h2: "Allies building a future with Lamarr",
-        map_h3: "Our Global Presence and Capability",
-        map_table_region: "Region / Location",
-        map_table_role: "Strategic Role",
-        map_table_hq_title: "Chile (HQ)",
-        map_table_hq_role: "Strategic Role",
-        map_table_hq_desc: "Architecture, technical direction, project leadership.",
-        map_table_br_title: "Brazil",
-        map_table_br_role: "Strategic Role",
-        map_table_br_desc: "SAP projects, Integration, Multicloud Operation.",
-        map_table_cr_ve_title: "Costa Rica & Venezuela",
-        map_table_cr_ve_role: "Strategic Role",
-        map_table_cr_ve_desc: "Operational \"Follow-the-sun\" / Regional support.",
-        map_table_mia_title: "Miami",
-        map_table_mia_role: "Strategic Role",
-        map_table_mia_desc: "Alliance hub (AWS, Google, Huawei, ScaleUp AI).",
-        map_table_in_title: "India",
-        map_table_in_role: "Strategic Role",
-        map_table_in_desc: "Data Engineering + Automation + Dev SecOps.",
+        
+        // --- Claves de Mapa y Tabla (ACTUALIZADAS) ---
+        map_h3: "Global Presence and Capability", // MODIFICADO
+
+        // NUEVAS Claves para la tabla de index.html
+        map_table_row1_title: "Chile",
+        map_table_row1_desc: "HeadQuarters",
+        map_table_row2_title: "Brazil, Costa Rica & Venezuela",
+        map_table_row2_desc: "SAP Projects, Integration, Multicloud Operation, Regional Support",
+        map_table_row3_title: "Miami",
+        map_table_row3_desc: "Alliance Hub",
+        map_table_row4_title: "India",
+        map_table_row4_desc: "Development Accelerator",
+
         map_footer_h4: "Our Commitment",
         map_footer_q: "\"Your business, driven by global experience and real commitment\"",
         
@@ -552,24 +562,20 @@ const translations = {
         card_sap_p: "+20 anos de experiência real em SAP Business One e SAP ECC. Implementamos e otimizamos com critério e conocimiento de processos. Resultados desde o primeiro dia.",
         card_sap_btn: "Ver SAP",
         partners_h2: "Aliados que constroem um futuro com a Lamarr",
-        map_h3: "Nossa Presença e Capacidade Global",
-        map_table_region: "Região / Sede",
-        map_table_role: "Papel Estratégico",
-        map_table_hq_title: "Chile (HQ)",
-        map_table_hq_role: "Papel Estratégico",
-        map_table_hq_desc: "Arquitetura, direção técnica, liderança de projetos.",
-        map_table_br_title: "Brasil",
-        map_table_br_role: "Papel Estratégico",
-        map_table_br_desc: "Projetos SAP, Integração, Operação Multicloud.",
-        map_table_cr_ve_title: "Costa Rica & Venezuela",
-        map_table_cr_ve_role: "Papel Estratégico",
-        map_table_cr_ve_desc: "Operacional \"Follow-the-sun\" / Suporte regional.",
-        map_table_mia_title: "Miami",
-        map_table_mia_role: "Papel Estratégico",
-        map_table_mia_desc: "Hub de alianças (AWS, Google, Huawei, ScaleUp AI).",
-        map_table_in_title: "Índia",
-        map_table_in_role: "Papel Estratégico",
-        map_table_in_desc: "Data Engineering + Automação + Dev SecOps.",
+        
+        // --- Claves de Mapa y Tabla (ACTUALIZADAS) ---
+        map_h3: "Presença e Capacidade Global", // MODIFICADO
+
+        // NUEVAS Claves para la tabla de index.html
+        map_table_row1_title: "Chile",
+        map_table_row1_desc: "HeadQuarters",
+        map_table_row2_title: "Brasil, Costa Rica & Venezuela",
+        map_table_row2_desc: "Projetos SAP, Integração, Operação Multicloud, Suporte Regional",
+        map_table_row3_title: "Miami",
+        map_table_row3_desc: "Hub de alianças",
+        map_table_row4_title: "Índia",
+        map_table_row4_desc: "Acelerador de desenvolvimento",
+
         map_footer_h4: "Nosso Compromisso",
         map_footer_q: "\"Seu negócio, impulsionado pela experiência global e compromisso real\"",
         
